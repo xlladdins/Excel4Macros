@@ -5,7 +5,7 @@ MD = $(DOCX:.docx=.md)
 	pandoc -t gfm --ascii --extract-media=. $^ -o $@
 
 all: $(MD)
-	./macros.awk Excel4Macros*.md
+	(cd docs; ../macros.awk ../Excel4Macros*.md)
 
 clean:
 	rm *.md
