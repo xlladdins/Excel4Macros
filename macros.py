@@ -34,6 +34,7 @@ def split_html(html):
 				print(f'closing docs/{id}.html')
 			id = x.attrib['id']
 			tx = x.text
+			#!!! split text on , to get all functons
 			if len(id) > 1:
 				of = open(f'docs/{id}.html', 'w')
 				of.write(header(tx))

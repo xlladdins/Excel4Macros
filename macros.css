@@ -1,0 +1,25 @@
+body {
+	font-family: 'Segoe UI Light','Segoe WP Light','wf_segoe-ui_light','wf_segoe-ui_normal','Segoe UI','Segoe WP',Helvetica,Tahoma,Arial,sans-serif;
+}
+h1 {
+	font-size: 4.6em;
+	line-height: 1.217;
+	color: #1e1e1e;
+	font-weight: 300;
+	margin-top: 28px;
+	margin-bottom: 30px;
+}
+h2 {
+	font-weight: 300;
+	font-size: 3em;
+	line-height: 1.33;
+	color: #1e1e1e;
+	margin-top: 48px;
+	margin-bottom: 20px;
+}
+p {
+color: #1e1e1e;
+font-size: 1.6em;
+line-height: 1.5;
+padding: 0;
+}
