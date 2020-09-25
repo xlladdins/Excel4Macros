@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import glob
-import sys
 import lxml.etree as etree
 import lxml.html
 #from lxml import html

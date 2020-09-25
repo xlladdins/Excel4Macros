@@ -2,24 +2,18 @@ body {
 	font-family: 'Segoe UI Light','Segoe WP Light','wf_segoe-ui_light','wf_segoe-ui_normal','Segoe UI','Segoe WP',Helvetica,Tahoma,Arial,sans-serif;
 }
 h1 {
-	font-size: 4.6em;
-	line-height: 1.217;
-	color: #1e1e1e;
-	font-weight: 300;
-	margin-top: 28px;
-	margin-bottom: 30px;
-}
-h2 {
-	font-weight: 300;
-	font-size: 3em;
-	line-height: 1.33;
-	color: #1e1e1e;
-	margin-top: 48px;
-	margin-bottom: 20px;
+	font-size: x-large;
+	//color: rgb(54, 54, 54);
+	//margin-top: 28px;
+	//margin-bottom: 30px;
 }
 p {
-color: #1e1e1e;
-font-size: 1.6em;
-line-height: 1.5;
-padding: 0;
+	color: rgb(30, 30, 30);
+	font-size: 16px;
+	//line-height: 24px;
+	padding: 0;
 }
+strong {
+	font-weight: bold;
+}
+
