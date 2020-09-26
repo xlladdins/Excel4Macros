@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>promote</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="promote">PROMOTE macro</h1>
+<p>Equivalent to clicking the Ungroup button. Promotes, or ungroups, the currently selected rows or columns in an outline. Use PROMOTE to change the configuration of an outline by promoting rows or columns of information.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PROMOTE</strong>(rowcol)</p>
+<p><strong>PROMOTE</strong>?(rowcol)</p>
+<p>Rowcol    specifies whether to promote rows or columns.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Rowcol</strong></td>
+<td><strong>Demotes</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Rows</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Columns</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the selection consists of an entire row or rows, then rows are promoted even if rowcol is 2. Similarly, selection of an entire column overrides rowcol 1.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Also, if the selection is unambiguous (an entire row or column), then PROMOTE? will not display the dialog box.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="demote.html">DEMOTE</a>   Demotes the selection in an outline</p><p><a href="show.detail.html">SHOW.DETAIL</a>   Expands or collapses a portion of an outline</p><p><a href="show.levels.html">SHOW.LEVELS</a>   Displays a specific number of levels of an outline</p>
+</body>
+</html>

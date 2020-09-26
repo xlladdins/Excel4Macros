@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>press.tool</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="press.tool">PRESS.TOOL macro</h1>
+<p>Formats a button so that it appears either normal or depressed into the screen.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PRESS.TOOL</strong>(<strong>bar_id, position</strong>, down)</p>
+<p>Bar_id    specifies the number or name of the toolbar in which you want to change the button appearance. For detailed information about bar_id, see ADD.TOOL.</p>
+<p>Position    specifies the position of the button within the toolbar. Position starts with 1 at the left side (if horizontal) or at the top (if vertical).</p>
+<p>Down    is a logical value specifying the appearance of the button. If down is TRUE, the button appears depressed into the screen; if FALSE or omitted, it appears normal (up).</p>
+<p><strong>Remarks</strong></p>
+<p>This function applies only to custom buttons to which macros have already been assigned. An error occurs if you try to process any other type of button.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula sets the third button image on Toolbar4 to normal (up).</p>
+<p>PRESS.TOOL("Toolbar4", 3, FALSE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds one or more buttons to a toolbar</p><p><a href="delete.tool.html">DELETE.TOOL</a>   Deletes a button from a toolbar</p>
+</body>
+</html>

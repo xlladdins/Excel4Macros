@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>add.bar</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="add.bar">ADD.BAR macro</h1>
+<p>Creates a new menu bar and returns the bar ID number. Use the bar ID number to identify the menu in functions that display and add menus and commands to the menu bar. You can also use ADD.BAR to restore a built-in menu bar with its original menus and commands.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ADD.BAR</strong>(bar_num)</p>
+<p>Bar_num    is the number of a built-in menu bar that you want to restore. Use ADD.BAR(bar_num) to restore an unaltered version of a built-in menu bar after you have made changes to the menu bar's menus and commands. See ADD.COMMAND for a list of ID numbers for built-in menu bars.</p>
+<p><strong>Important   </strong>Restoring a built-in menu bar will remove menus and commands added by other macros. Use ADD.COMMAND and ADD.MENU to restore individual commands and menus.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>ADD.BAR just creates a new menu bar; it does not display it. Use SHOW.BAR to display a menu bar. The argument to the SHOW.BAR function should be the number returned by ADD.BAR or a reference to the cell containing ADD.BAR.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You can define up to 15 custom menu bars at one time. If you carry out an ADD.BAR function when more than 15 custom menu bars are already defined, Microsoft Excel returns the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<p><strong>Example</strong></p>
+<p>The following formula creates a new menu bar and returns a bar ID number:</p>
+<p>ADD.BAR()</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="add.menu.html">ADD.MENU</a>   Adds a menu to a menu bar</p><p><a href="delete.bar.html">DELETE.BAR</a>   Deletes a menu bar</p><p><a href="show.bar.html">SHOW.BAR</a>   Displays a menu bar</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>caller</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="caller">CALLER macro</h1>
+<p>Returns information about the cell, range of cells, command on a menu, tool on a toolbar, or object that called the macro that is currently running. Use CALLER in a subroutine or custom function whose behavior depends on the location, size, name, or other attribute of the caller.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CALLER</strong>( )</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the custom function is entered in a single cell, CALLER returns the reference of that cell.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the custom function was part of an array formula entered in a range of cells, CALLER returns the reference of the range.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro called by an Auto_Open, Auto_Close, Auto_Activate, or Auto_Deactivate macro, it returns the name of the calling sheet.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro called by a command on a menu, it returns a horizontal array of three elements including the command's position number, the menu number, and the menu bar number.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro called by an assigned-to-object macro, it returns the object identifier.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro called by a tool on a toolbar, it returns a horizontal array containing the position number and the toolbar name.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro called by an ON.DOUBLECLICK or ON.ENTRY function, CALLER returns the name of the chart object identifier or cell reference, if applicable, to which the ON.DOUBLECLICK or ON.ENTRY macro applies.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If CALLER appears in a macro that was run manually, or for any reason not described above, it returns the #REF! error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>If the custom function MACROS!VALUEONE is entered in cell B3 on a sheet named SALES, the nested CALLER function returns the following values.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Nested function</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>COLUMN(CALLER())</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>COLUMNS(CALLER())</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>GET.CELL(1, CALLER())</td>
+<td>SALES!$B$3</td>
+</tr>
+<tr class="odd">
+<td>ROW(CALLER())</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>ROWS(CALLER())</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>If the same custom function was entered into an array in cells B2:C3, the following values would be returned.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Nested function</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>COLUMN(CALLER())</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>COLUMNS(CALLER())</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>ROW(CALLER())</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>ROWS(CALLER())</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.bar.html">GET.BAR</a>   Returns the name or position number of menu bars, menus, and commands</p><p><a href="get.cell.html">GET.CELL</a>   Returns information about the specified cell</p>
+</body>
+</html>

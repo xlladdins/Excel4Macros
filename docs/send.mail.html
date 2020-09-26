@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>send.mail</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="send.mail">SEND.MAIL macro</h1>
+<p>Equivalent to clicking the Send Mail command on the File menu. Sends the active workbook using email.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SEND.MAIL</strong>(<strong>recipients</strong>, subject, return_receipt)</p>
+<p><strong>SEND.MAIL</strong>?(recipients, subject, return_receipt)</p>
+<p><strong>Important</strong>   To use SEND.MAIL in Microsoft Excel for Windows, you must be using a mail client that supports the Messaging Applications Programming Interface (MAPI) or Vendor-Independent Messaging (VIM). To use SEND.MAIL in Microsoft Excel for the Macintosh, you must be using Microsoft Mail version 2.0 or later.</p>
+<p>Recipients    is the name of the person to whom you want to send the mail. The name should be given as text.</p>
+<ul>
+<li><blockquote>
+<p>To specify more than one name, give the list of names as an array. For example, SEND.MAIL({"John", "Paul", "George", "Ringo"}) would send the active workbook to the four names in the array. You can also refer to a range on a sheet or macro sheet that contains a list of names to whom you want the mail to be sent.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To send mail to users on different Microsoft Mail for the Macintosh servers, specify the server name along with the user name. The following text, as the recipients argument, sends mail to wandagr on server2, gregpr on the current server, and victorge on server7:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>{"wandagr@server2", "gregpr", "victorge@server7"}</p>
+<p> </p>
+</blockquote>
+<p>Subject    is a text string that specifies the subject of the message. If subject is omitted, the name of the active workbook is used as the subject.</p>
+<p>Return_receipt    is a logical value that corresponds to the Return Receipt check box. If return_receipt is TRUE, Microsoft Excel selects the check box and sends a return receipt; if FALSE or omitted, Microsoft Excel clears the check box.</p>
+<p><strong>Related Function</strong></p>
+<p>OPEN.MAIL   Opens files sent via Microsoft Mail that Microsoft Excel can open</p>
+
+</body>
+</html>

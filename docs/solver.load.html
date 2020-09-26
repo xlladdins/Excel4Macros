@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>solver.load</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="solver.load">SOLVER.LOAD macro</h1>
+<p>Equivalent to clicking the Solver command on the Tools menu, clicking the Options button in the Solver Parameters dialog box, and clicking the Load Model button in the Solver Options dialog box. Loads Solver problem specifications that you have previously saved on the worksheet.</p>
+<p>If this function is not available, you must install the Solver add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SOLVER.LOAD</strong>(<strong>load_area</strong>)</p>
+<p>Load_area    is a reference on the active sheet to a range of cells from which you want to load a complete problem specification.</p>
+<ul>
+<li><blockquote>
+<p>The first cell in load_area contains a formula for the Set Cell box; the second cell contains a formula for the changing cells; subsequent cells contain constraints in the form of logical formulas. The last cell optionally contains an array of Solver option values. The order of the Solver option values is the same as the top-to-bottom order in the Solver Options dialog box.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Although load_area must be on the active sheet, it need not be the current selection.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>chart.wizard</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="chart.wizard">CHART.WIZARD macro</h1>
+<p>Equivalent to clicking the ChartWizard button on the standard or chart toolbar. Creates a chart. It is generally easier to use the macro recorder to enter this function on your macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CHART.WIZARD</strong>(long, <strong>ref</strong>, gallery_num, type_num, plot_by, categories, ser_titles, legend, title, x_title, y_title, z_title, number_cats, number_titles)</p>
+<p><strong>CHART.WIZARD</strong>?(long, ref, gallery_num, type_num, plot_by, categories, ser_titles, legend, title, x_title, y_title, z_title, number_cats, number_titles)</p>
+<p>Long    is a logical value that determines which type of ChartWizard button CHART.WIZARD is equivalent to.</p>
+<ul>
+<li><blockquote>
+<p>If long is TRUE, CHART.WIZARD is equivalent to using the five-step ChartWizard button.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If long is FALSE or omitted, CHART.WIZARD is equivalent to using the two-step ChartWizard button, and gallery_num, type_num, legend, and the title arguments are ignored.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Ref    is a reference to the range of cells on the active worksheet that contains the source data for the chart, or the object identifier of the chart if it has already been created.</p>
+<p>Gallery_num    is a number from 1 to 15 specifying the type of chart you want to create.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Gallery_num</strong></td>
+<td><strong>Chart</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Area</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bar</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Column</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Line</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Pie</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Radar</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>XY (scatter)</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Combination</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>3-D area</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>3-D bar</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>3-D column</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>3-D line</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>3-D pie</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>3-D surface</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>Doughnut</td>
+</tr>
+</tbody>
+</table>
+<p>Type_num    is a number identifying a formatting option. The first formatting option in any gallery is 1.</p>
+<p>Plot_by    is the number 1 or 2 and specifies whether the data for each data series is in rows or columns. 1 specifies rows; 2 specifies columns. If plot_by is omitted, Microsoft Excel uses the appropriate value for the chart you're creating.</p>
+<p>Categories    is the number 1 or 2 and specifies whether the first row or column contains a list of x-axis labels, or data for the first data series. 1 specifies x-axis labels; 2 specifies the first data series. If categories is omitted, Microsoft Excel uses the appropriate value for the chart you're creating. If number_cats is specified, this argument is ignored.</p>
+<p>Ser_titles    is the number 1 or 2 and specifies whether the first column or row contains series titles, or data for the first data point in each series. 1 specifies series titles; 2 specifies the first data point. If ser_titles is omitted, Microsoft Excel uses the appropriate value for the chart you're creating. If number_titles is specified, this argument is ignored.</p>
+<p>Legend    is the number 1 or 2 and specifies whether to include a legend. 1 specifies a legend; 2 specifies no legend. If legend is omitted, Microsoft Excel does not include a legend.</p>
+<p>For the following arguments, if an argument is omitted or is empty text (""), no title is specified.</p>
+<p>Title    is text that you want to use as a chart title.</p>
+<p>X_title    is text that you want to use as an x-axis title.</p>
+<p>Y_title    is text that you want to use as a y-axis title.</p>
+<p>Z_title    is text that you want to use as a z-axis title.</p>
+<p>Number_cats    specifies the number of rows or columns (depending on the value of plot_by) to use for the category labels in the chart. This argument overrides the categories argument.</p>
+<p>Number_titles    specifies the number of rows or columns (depending on the value of plot_by) to use for the series labels in the chart. This argument overrides the ser_title argument.</p>
+<p><strong>Remarks</strong></p>
+<p>If you are using the macro recorder, Microsoft Excel records a CREATE.OBJECT and a COPY function when the chart is created and a CHART.WIZARD function when the chart is formatted. You must precede this function with a CREATE.OBJECT function if you are not using the macro recorder.</p>
+<p><strong>Related Function</strong></p>
+<p>CREATE.OBJECT   Creates an object</p>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>add.tool</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="add.tool">ADD.TOOL macro</h1>
+<p>Adds one or more buttons to a toolbar.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ADD.TOOL</strong>(<strong>bar_id, position, tool_ref</strong>)</p>
+<p>Bar_id    is either a number specifying one of the built-in toolbars or the name of a custom toolbar.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Bar_id</strong></td>
+<td><strong>Built-in toolbar</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Standard</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Formatting</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Query and Pivot</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Chart</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Drawing</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>TipWizard</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Forms</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Stop Recording</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Visual Basic</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Auditing</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>WorkGroup</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Microsoft</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Full Screen</td>
+</tr>
+</tbody>
+</table>
+<p>Position    specifies the position of the button within the toolbar. Position starts with 1 at the left side (if horizontal) or at the top (if vertical).</p>
+<p>Tool_ref    is either a number specifying a built-in button or a reference to an area on the macro sheet that defines a custom button or set of buttons (or an array containing this information).</p>
+<p>For customized buttons, the following example shows the components of a button reference area on a macro sheet and defines custom tools. The range A1:I5 is a valid tool_ref. Row 1 refers to a built-in tool. Row 2 defines a gap. For this illustration, values are displayed instead of formulas so that text can wrap in cells.</p>
+<p><img src="./media/image2.png" /></p>
+<ul>
+<li><blockquote>
+<p>Tool_id is a number associated with the tool. A zero specifies a gap on the toolbar. To specify a custom button, use a name, or a number between 201 and 231.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Macro is the name of, or a quoted R1C1-style reference to, the macro you want to run when the button is clicked.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Down is a logical value specifying the default image of the tool. If down is TRUE, the button appears depressed into the screen; if FALSE or omitted, it appears normal (up).</p>
+</blockquote></li>
+<li><blockquote>
+<p>Enabled is a logical value specifying whether the button can be used. If enabled is TRUE, the button is enabled; if FALSE, it is disabled.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Face specifies a face associated with the tool. Face must be a reference to a picture-type object, for example "Picture 1". If face is omitted, Microsoft Excel uses the default face for the tool.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Status_text is the text, if any, that you want displayed in the status bar when the button is selected.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Balloon_text is the balloon help text, if any, associated with the tool. Balloon_text is available only in Microsoft Excel for the Macintosh using system software version 7.0 or later.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Help_topics is a reference to a topic in a Help file, in the form "filename!topic_number". Help_topics must be text. If help_topics is omitted, HELP displays the Contents topic for Microsoft Excel Help.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Tip_text is the text, if any, that you want displayed as a ToolTip when the mouse pointer moves over a tool button.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>To indicate that a particular component of tool_ref is not used, clear the contents of the corresponding cell.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If you do not want to reserve a section of your macro sheet to define the buttons, you can use an array as the tool_ref argument as shown in the following syntax:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>ADD.TOOL</strong>(<strong>bar_id</strong>, position, {<strong>tool_id1</strong>, macro1, down1, enabled1, face1,<br />
+status_text1, balloon_text1, help_topics1;tool_id2, macro2, down2, enabled2,<br />
+face2, status_text2, balloon_text2, help_topics2;...})</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Picture objects can be created with the camera button or pasted in from another application. In Microsoft Excel for Windows, the graphic object must be either a Windows bitmap or picture object. In Microsoft Excel for the Macintosh, the object must be a picture object.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>The following macro formula adds a button to Toolbar5. The cell range B6:I6 contains tool_ref.</p>
+<p>ADD.TOOL("Toolbar5", 6, B6:I6)</p>
+<p>The following macro formula adds the New Macro Sheet button to the fifth position on the Standard toolbar:</p>
+<p>ADD.TOOL(1, 5, 6)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="add.toolbar.html">ADD.TOOLBAR</a>   Creates a toolbar with the specified tools</p><p><a href="delete.tool.html">DELETE.TOOL</a>   Deletes a button from a toolbar</p><p><a href="delete.toolbar.html">DELETE.TOOLBAR</a>   Deletes custom toolbars</p><p><a href="reset.toolbar.html">RESET.TOOLBAR</a>   Resets a built-in toolbar to its default initial setting</p>
+</body>
+</html>

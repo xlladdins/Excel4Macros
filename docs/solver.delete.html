@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>solver.delete</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="solver.delete">SOLVER.DELETE macro</h1>
+<p>Equivalent to clicking the Solver command on the Tools menu and clicking the Delete button in the Solver Parameters dialog box. Deletes an existing constraint.</p>
+<p>If this function is not available, you must install the Solver add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SOLVER.DELETE</strong>(<strong>cell_ref, relation</strong>, formula)</p>
+<p>For an explanation of the arguments and constraints, see SOLVER.ADD.</p>
+<p><strong>Remarks</strong></p>
+<p>If the combination of cell_ref and relation does not match any existing constraint, the function returns the value 4 and no action is taken. If the constraint is found, it is deleted, and the function returns the value 0.</p>
+<p><strong>Related Function</strong></p>
+<p>SOLVER.ADD   Adds a constraint to the current problem</p>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>workbook.move</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.move">WORKBOOK.MOVE macro</h1>
+<p>Equivalent to clicking the Move or Copy Sheet command on the Edit menu. Moves one or more sheets between workbooks or changes a sheet's position within a workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.MOVE</strong>(<strong>name_array</strong>, dest_book, position_num)</p>
+<p><strong>WORKBOOK.MOVE</strong>?(name_array, dest_book, position_num)</p>
+<p>Name_array    is the name of a sheet or an array of names of sheets in the active workbook that you want to move.</p>
+<p>Dest_book    is the name of the workbook to which you want to move name_array. If dest_book is omitted, WORKBOOK.MOVE moves the sheet out of the workbook and puts it in a new separate workbook. If dest_book is the same as the current book, then the sheet is moved within the workbook.</p>
+<p>Position_num    is a number that specifies the target position for the sheet within dest_book. The first position is 1.</p>
+<ul>
+<li><blockquote>
+<p>If position_num is specified, Microsoft Excel inserts the sheet at the specified position in the workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If position_num is omitted, Microsoft Excel moves the sheet to the last position in the workbook. If you move the last sheet out of a workbook, the workbook closes.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>WORKBOOK.COPY   Copies one or more documents from their current workbook into another workbook</p>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>for.cell</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="for.cell">FOR.CELL macro</h1>
+<p>Starts a FOR.CELL-NEXT loop. This function is similar to FOR, except that the instructions between FOR.CELL and NEXT are repeated over a range of cells, one cell at a time, and there is no loop counter.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FOR.CELL</strong>(<strong>ref_name</strong>, area_ref, skip_blanks)</p>
+<p>Ref_name    is the name in the form of text that Microsoft Excel gives to the one cell in the range that is currently being operated on; ref_name refers to a new cell during each loop.</p>
+<p>Area_ref    is the range of cells on which you want the FOR.CELL-NEXT loop to operate and can be a multiple selection. If area_ref is omitted, it is assumed to be the current selection.</p>
+<p>Skip_blanks    is a logical value specifying whether Microsoft Excel skips blank cells as it operates on the cells in area_ref.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Skip_blanks</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>TRUE</td>
+<td>Skips blank cells in area_ref</td>
+</tr>
+<tr class="odd">
+<td>FALSE or omitted</td>
+<td>Operates on all cells in area_ref</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<p>FOR.CELL operates on each cell in a row from left to right one area at a time before moving to the next row in the selection.</p>
+<p><strong>Example</strong></p>
+<p>The following macro starts a FOR.CELL-NEXT loop and uses the name CurrentCell to refer to the cell in the range that is currently being operated on:</p>
+<p>FOR.CELL("CurrentCell", SELECTION(), TRUE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="break.html">BREAK</a>   Interrupts a FOR-NEXT, FOR.CELL-NEXT, or WHILE-NEXT loop</p><p><a href="for.html">FOR</a>   Starts a FOR-NEXT loop</p><p><a href="next.html">NEXT</a>   Ends a FOR-NEXT, FOR.CELL-NEXT, or WHILE-NEXT loop</p><p><a href="while.html">WHILE</a>   Starts a WHILE-NEXT loop</p>
+</body>
+</html>

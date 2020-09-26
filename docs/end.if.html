@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>end.if</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="end.if">END.IF macro</h1>
+<p>Ends a block of functions associated with the preceding IF function. You must include one and only one END.IF function for each macro-sheets-only syntax form (syntax 2) of the IF function in a macro. Syntax 1 of the IF function, which can be used on both worksheets and macro sheets, does not require an END.IF function. Use END.IF with IF, ELSE, and ELSE.IF when you want to perform multiple actions based on a condition. This method is preferable to using GOTO because it makes your macros more structured.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>END.IF</strong>( )</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If you accidentally omit an END.IF function, your macro will end with an error at the cell containing the first IF function that does not have a corresponding END.IF function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>END.IF must be entered in a cell by itself.</p>
+</blockquote></li>
+<li><blockquote>
+<p>For more information about ELSE, ELSE.IF, END.IF, and IF, and for examples of these functions, see form 2 of the IF function.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="else.html">ELSE</a>   Specifies an action to take if an IF function returns FALSE</p><p><a href="else.if.html">ELSE.IF</a>   Specifies an action to take if an IF or another ELSE.IF function returns FALSE</p><p><a href="if.html">IF</a>   Specifies an action to take if a logical test is TRUE</p>
+</body>
+</html>

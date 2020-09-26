@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>column.width</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="column.width">COLUMN.WIDTH macro</h1>
+<p>Equivalent to choosing the Width command on the Column submenu of the Format menu. Changes the width of the columns in the specified reference.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>COLUMN.WIDTH</strong>(width_num, reference, standard, type_num, standard_num)</p>
+<p><strong>COLUMN.WIDTH</strong>?(width_num, reference, standard, type_num, standard_num)</p>
+<p>Width_num    specifies how wide you want the columns to be in units of one character of the font corresponding to the Normal cell style. Width_num is ignored if standard is TRUE or if type_num is provided.</p>
+<p>Reference    specifies the columns for which you want to change the width.</p>
+<ul>
+<li><blockquote>
+<p>If reference is specified, it must be either an external reference to the active worksheet, such as !$A:$C or !Database, or an R1C1-style reference in the form of text, such as "C1:C3", "C[-4]:C[-2]", or "Database".</p>
+</blockquote></li>
+<li><blockquote>
+<p>If reference is a relative R1C1-style reference in the form of text, it is assumed to be relative to the active cell.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If reference is omitted, it is assumed to be the current selection.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Standard_num    is a logical value corresponding to the Standard Width command from the Column submenu on the Format menu.</p>
+<ul>
+<li><blockquote>
+<p>If standard is TRUE, Microsoft Excel sets the column width to the currently defined standard (default) width and ignores width_num.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If standard is FALSE or omitted, Microsoft Excel sets the width according to width_num or type_num.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Type_num    is a number from 1 to 3 corresponding to the Hide, Unhide, or AutoFit Selection commands, respectively, on the Column submenu of the Format menu.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Action taken</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Hides the column selection by setting the column width to 0</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Unhides the column selection by setting the column width to the value set before the selection was hidden</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Sets the column selection to a best-fit width, which varies from column to column depending on the length of the longest data string in each column</td>
+</tr>
+</tbody>
+</table>
+<p>Standard_num    specifies how wide the standard width is, and is measured in points. If standard_num is omitted, the standard width setting remains unchanged.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Changing the value of standard_num changes the width of all columns except those that have been set to a custom value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If any of the argument settings conflict, such as when standard is TRUE and type_num is 3, Microsoft Excel uses the type_num argument and ignores any arguments that conflict with type_num.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you are recording a macro while using a mouse and you change column widths by dragging the column border, Microsoft Excel records the references of the columns using R1C1-style references in the form of text.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>ROW.HEIGHT   Changes the heights of rows</p>
+
+</body>
+</html>

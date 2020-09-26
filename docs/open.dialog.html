@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>open.dialog</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="open.dialog">OPEN.DIALOG macro</h1>
+<p>Displays the standard Microsoft Excel File Open dialog box with the specified file filters. When the user presses the button specified by button_text, the filename the user picks or types in will be returned.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OPEN.DIALOG</strong>(file_filter, button_text, title, filter_index)</p>
+<p>File_filter    is the file filtering criteria to use, as text. For Microsoft Excel for Windows, file_filter consists of two parts, a descriptive phrase denoting the file type followed by a comma and then the MS-DOS wildcard file filter specification, as in "Text Files (*.TXT), *.TXT, Add-in Files (*.XLA), *.XLA". Groups of filter specifications are also separated by commas. Each separate pair is listed in the file type drop-down list box. File_filter can include an asterisk (*) to represent any sequence of characters and a question mark (?) to represent any single character. For Microsoft Excel for the Macintosh, file_filter consists of file type codes separated by commas, as in "TEXT,XLA ,XLS4". Spaces are significant and should not be inserted before or after the comma separators unless they are part of the file type code.</p>
+<p>Button_text    is the text used for the Open button in the dialog. If omitted, "Open" will be used. Button_text is ignored on Microsoft Excel for Windows.</p>
+<p>Title    specifies the dialog window title. If omitted, "File Open" will be used as the default.</p>
+<p>Filter_index    specifies the index number of the default file filtering criteria from 1 to the number of filters specified in file_filter. If omitted or greater than the number of filters present, 1 will be used as the starting index number. The argument is ignored on Microsoft Excel for the Macintosh.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>To use multiple MS-DOS wildcard expressions within file_filter for a single file filter type, separate the wildcard expressions with semicolons, as in "VB Files (*.bas; *.txt), *.bas;*.txt"</p>
+</blockquote></li>
+<li><blockquote>
+<p>If file_filter is omitted, "ALL Files (*.*), *.*" will be used as the default in Microsoft Excel for Windows. The default for Microsoft Excel for the Macintosh is all file types.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the user cancels the dialog box, FALSE is returned.</p>
+</blockquote></li>
+</ul>
+<p><strong>Examples</strong></p>
+<p>OPEN.DIALOG("Text Files (*.TXT), *.TXT, Add-in Files (*.XLA), *.XLA,ALL FILES (*.*), *.*","FILE OPENER") opens a file open dialog box titled "FILE OPENER" with three file filter criteria in the drop-down list box.</p>
+<p><strong>Related Function</strong></p>
+<p>SAVE.DIALOG   Displays the standard Microsoft Excel File Save As dialog box and gets a file name from the user</p>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>routing.slip</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="routing.slip">ROUTING.SLIP macro</h1>
+<p>Equivalent to clicking the Add Routing Slip command on the File menu. Adds or Edits the routing slip attached to the current workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ROUTING.SLIP</strong>(recipients,subject, message, route_num, return_logical, status_logical)</p>
+<p><strong>ROUTING.SLIP</strong>?(recipients,subject, message, route_num, return_logical, status_logical)</p>
+<p>Recipients    is the name of the person to whom you want to send the mail. The name should be given as text.</p>
+<ul>
+<li><blockquote>
+<p>To specify more than one name, give the list of names as an array. For example, ROUTING.SLIP({"John", "Paul", "George", "Ringo"}) would send the active workbook to the four names in the array. You can also refer to a range on a sheet or macro sheet that contains a list of names to whom you want the mail to be sent.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Specifying recipients while a routing is in progress only modifies the non-grayed recipients (that is, those recipients who have not received the message yet). Recipients who have already received, reviewed and forwarded the routed workbook cannot be modified.</p>
+</blockquote></li>
+</ul>
+<p>Subject    is a text string containing the subject text used for the mail messages used to route the workbook. If omitted, the default subject line is "Routing: name", where name is the file name or title as displayed in the Summary Info dialog box, if available.</p>
+<p>Message    is a text string containing the body text used for the mail messages used to route the workbook.</p>
+<p>Route_num    is a number indicating the type of routing method.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Route_num</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Method</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1 or omitted</p>
+</blockquote></td>
+<td><blockquote>
+<p>One after another routing</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>All at once routing</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Return_logical    is a logical value which, if TRUE or omitted, indicates that the routing should be returned to the originator when the routing is complete. If FALSE, the routing will end with the last recipient in the To list box in the Routing Slip Dialog box.</p>
+<p>Status_logical    is a logical value corresponding to the Track Status check box in the Routing Slip dialog box. If TRUE or omitted, status tracking messages for the routing are sent. FALSE means that no status tracking is performed.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If this function is used on a workbook that is already being routed, the route_num, status_logical and return_logical arguments are ignored (they cannot be changed).</p>
+</blockquote></li>
+<li><blockquote>
+<p>When arguments are omitted and a routing slip already exists, the omitted arguments are replaced by the current values of the routing slip.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Functions</strong></p>
+<p><a href="route.document.html">ROUTE.DOCUMENT</a>   Routes the workbook using the defined routing slip information</p><p><a href="send.mail.html">SEND.MAIL</a>   Sends the active workbook using email</p>
+</body>
+</html>

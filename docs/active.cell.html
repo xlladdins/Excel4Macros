@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>active.cell</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="active.cell">ACTIVE.CELL macro</h1>
+<p>Returns the reference of the active cell in the selection as an external reference.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ACTIVE.CELL</strong>( )</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If an object is selected, ACTIVE.CELL returns the #N/A error value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If a chart sheet is active, ACTIVE.CELL returns a zero value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you use ACTIVE.CELL in a function or operation, you will usually get the value contained in the active cell instead of its reference, because the reference is automatically converted to the contents of the reference. See the third example following.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you use ACTIVE.CELL in a function that requires a reference argument, then Microsoft Excel does not convert the reference to a value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you want to work with the actual reference, use the REFTEXT XLM function to convert the active-cell reference to text, which you can then store or manipulate (or convert back to a reference with TEXTREF). See the second example following.</p>
+</blockquote></li>
+</ul>
+<p><strong>Tip   </strong>Use the following macro formula to verify that the current selection is a cell or range of cells:</p>
+<p>=ISREF(ACTIVE.CELL( ))</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula assigns the name Sales to the active cell:</p>
+<p>SET.NAME("Sales", ACTIVE.CELL())</p>
+<p>In this example, note that "Sales" refers to a cell on the active worksheet, but the name itself exists only in the macro sheet's list of names. In other words, the preceding formula does not define a name on the worksheet or in the workbook's global list of names.</p>
+<p>The following macro formula puts the reference of the active cell into the cell named Temp:</p>
+<p>FORMULA("="&amp;REFTEXT(ACTIVE.CELL()), Temp)</p>
+<p>The following macro formula checks the contents of the active cell. If the cell contains only the letter "c" or "s", the macro branches to an area named FinishRefresh:</p>
+<p>IF(OR(ACTIVE.CELL()="c", ACTIVE.CELL()="s"), GOTO(FinishRefresh))</p>
+<p>In Microsoft Excel for Windows, if the sheet in the active window is named SALES and A1 is the active cell, then:</p>
+<p>ACTIVE.CELL() equals SALES!$A$1</p>
+<p>In Microsoft Excel for the Macintosh, if the sheet in the active window is named SALES 1 and A1 is the active cell, then:</p>
+<p>ACTIVE.CELL() equals 'SALES 1'!$A$1</p>
+<p><strong>Related Function</strong></p>
+<p>SELECT   Selects a cell, worksheet object, or chart item</p>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>clear.routing.slip</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="clear.routing.slip">CLEAR.ROUTING.SLIP macro</h1>
+<p>Equivalent to the Clear button in the Routing Slip dialog box. Clears the routing slip.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CLEAR.ROUTING.SLIP</strong>(reset_only_logical)</p>
+<p>Reset_only_logical    is a logical value that specifies whether the routing slip should be cleared.</p>
+<ul>
+<li><blockquote>
+<p>This option is valid only after every recipient on the routing slip has received and forwarded the workbook. Setting reset_only_logical to TRUE in this case is equivalent to the Reset button in the routing slip dialog.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If some recipients have not received or routed the workbook, reset_only_logical is ignored.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If reset_only_logical is FALSE or omitted and the workbook has been routed to all recipients, then the routing slip is removed from the workbook. A new slip can be subsequently added using ROUTING.SLIP.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

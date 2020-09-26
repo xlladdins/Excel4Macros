@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>hline</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="hline">HLINE macro</h1>
+<p>Scrolls through the active window by a specific number of columns. Returns the #VALUE! error value if the active sheet is a chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HLINE</strong>(<strong>num_columns</strong>)</p>
+<p>Num_columns    is the number of columns in the active worksheet or macro sheet you want to scroll through horizontally.</p>
+<ul>
+<li><blockquote>
+<p>If num_columns is positive, HLINE scrolls to the right.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If num_columns is negative, HLINE scrolls to the left.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Num_columns must be between -256 and 256, inclusive.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>The following function scrolls the active window by one-half window to the right:</p>
+<p>HLINE(GET.WINDOW(15)/2)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="hpage.html">HPAGE</a>   Horizontally scrolls through the active window one window at a time</p><p><a href="hscroll.html">HSCROLL</a>   Horizontally scrolls through a sheet by percentage or by column number</p><p><a href="vline.html">VLINE</a>   Vertically scrolls through the active window by rows</p><p><a href="vpage.html">VPAGE</a>   Vertically scrolls through the active window one window at a time</p><p><a href="vscroll.html">VSCROLL</a>   Vertically scrolls through a sheet by percentage or by row number</p>
+</body>
+</html>

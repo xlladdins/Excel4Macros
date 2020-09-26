@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>dialog.box</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="dialog.box">DIALOG.BOX macro</h1>
+<p>Displays the dialog box described in a dialog box definition table.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DIALOG.BOX</strong>(<strong>dialog_ref</strong>)</p>
+<p>Dialog_ref    is a reference to a dialog box definition table on sheet, or an array containing the definition table.</p>
+<ul>
+<li><blockquote>
+<p>If an OK button in the dialog box is chosen, DIALOG.BOX enters values in fields as specified in the dialog_ref area and returns the position number of the button chosen. The position numbers start with 1 in the second row of the dialog box definition table.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the Cancel button in the dialog box is chosen, DIALOG.BOX returns FALSE.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>The dialog box definition table must be at least seven columns wide and two rows high. The definitions of each column in a dialog box definition table are listed in the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Column type</strong></td>
+<td><strong>Column number</strong></td>
+</tr>
+<tr class="even">
+<td>Item number</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Horizontal position</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Vertical position</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Item width</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Item height</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Text</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Initial value or result</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>The first row of dialog_ref defines the position, size, and name of the dialog box. It can also specify the default selected item and the reference for the Help button. The position is specified in columns 2 and 3, the size in columns 4 and 5, and the name in column 6. To specify a default item, place the item's position number in column 7. You can place the reference for the Help button in row 1, column 1 of the table, but the preferred location is column 7 in the row where the Help button is defined. Row 1, column 1 is usually left blank.</p>
+<p>The following table lists the numbers for the items you can display in a dialog box.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Dialog-box item</strong></td>
+<td><strong>Item number</strong></td>
+</tr>
+<tr class="even">
+<td>Default OK button</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Cancel button</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>OK button</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Default Cancel button</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Static text</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Text edit box</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Integer edit box</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Number edit box</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>Formula edit box</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>Reference edit box</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>Option button group</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>Option button</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Check box</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Group box</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>List box</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>Linked list box</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>Icons</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>Linked file list box (Windows only)</td>
+<td>18</td>
+</tr>
+<tr class="even">
+<td>Linked drive and directory box (Windows only)</td>
+<td>19</td>
+</tr>
+<tr class="odd">
+<td>Directory text box</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>Drop-down list box</td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td>Drop-down combination edit/list box</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td>Picture button</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td>Help button</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Add 100 to an item number in the above table to define the item as a trigger. A trigger is a dialog box item that, when chosen, returns to your macro (as clicking OK would) but continues to display the dialog box, allowing your macro to change the dialog box definition or display an alert message or another dialog box. The Help button, edit boxes, group boxes, static text, and icons cannot be triggers.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Add 200 to an item number to define it as dimmed. A dimmed (gray) item cannot be chosen or selected. For example, 203 is a dimmed OK button. You can use item 223 to include a picture in your dialog box that does not behave like a button.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If a trigger has been chosen and you still want to clear a dynamic dialog box from the screen, use DIALOG.BOX(FALSE). This is useful if you want to confirm that the dialog box has been filled out correctly before dismissing it.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The dialog box definition table can be an array. If dialog_ref is an array instead of a reference, DIALOG.BOX returns a modified copy of that array, along with the results of the dialog box in the seventh column. (The first item in the seventh column is the position number of the chosen button or of a triggered item.) This is useful if you want to preserve the original dialog box definition table since DIALOG.BOX does not modify the original array argument. If you cancel the dialog box, or if a dialog box error occurs, DIALOG.BOX returns FALSE instead of an array.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="alert.html">ALERT</a>   Displays a dialog box and a message</p><p><a href="input.html">INPUT</a>   Displays a dialog box for user input</p>
+</body>
+</html>

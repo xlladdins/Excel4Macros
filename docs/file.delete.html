@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>file.delete</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="file.delete">FILE.DELETE macro</h1>
+<p>Deletes a file from the disk. Although you will normally delete files manually, you can, for example, use FILE.DELETE in a macro to delete temporary files created by the macro.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILE.DELETE</strong>(<strong>file_text</strong>)</p>
+<p><strong>FILE.DELETE</strong>?(file_text)</p>
+<p>File_text    is the name of the file to delete.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If Microsoft Excel can't find file_text, it displays a message saying that it cannot delete the file. To avoid this, include the entire path in file_text. See the following second and fifth examples. You can also use FILES to generate an array of filenames and then check if the file you want to delete is in the array.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If a file is open when you delete it, the file is removed from the disk but remains open in Microsoft Excel.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In the dialog-box form, FILE.DELETE?, you can use an asterisk (*) to represent any series of characters and a question mark (?) to represent any single character. See the following third and sixth examples.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula deletes a file called CHART1.XLS from the current directory:</p>
+<p>FILE.DELETE("CHART1.XLS")</p>
+<p>The following macro formula deletes a file called 92INFO.XLS kept in the EXCEL\SALES subdirectory:</p>
+<p>FILE.DELETE("C:\EXCEL\SALES\92INFO.XLS")</p>
+<p>The following macro formula displays the Delete dialog box listing all documents whose extensions begin with the letters "XL":</p>
+<p>FILE.DELETE?("*.XL?")</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula deletes a file called CHART1 from the current folder:</p>
+<p>FILE.DELETE("CHART1")</p>
+<p>The following macro formula deletes a file called 1992 INFO kept in a series of nested folders:</p>
+<p>FILE.DELETE("HARD DISK:EXCEL 5:SALES WORKSHEETS:1992 INFO")</p>
+<p>The following macro formula displays the Delete dialog box listing all documents beginning with the word "Clients":</p>
+<p>FILE.DELETE?("Clients*")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="file.close.html">FILE.CLOSE</a>   Closes the active workbook</p><p><a href="files.html">FILES</a>   Returns the filenames in the specified directory or folder</p>
+</body>
+</html>

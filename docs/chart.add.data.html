@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>chart.add.data</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="chart.add.data">CHART.ADD.DATA macro</h1>
+<p>Equivalent to dragging data from a worksheet onto a chart. Adds data to an existing chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CHART.ADD.DATA</strong>(<strong>ref</strong>, rowcol, titles, categories, replace, series)</p>
+<p>Ref    is the cell reference for the data that is being dragged onto the chart</p>
+<p>Rowcol    is the number 1 or 2 and specifies whether the values corresponding to a particular data series are in rows or columns. Enter 1 for rows or 2 for columns.</p>
+<p>Titles    is a logical value corresponding to the Series Names In First Column check box (or First Row, depending on the value of rowcol) in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If titles is TRUE, Microsoft Excel selects the check box and uses the contents of the cell in the first column of each row (or first row of each column) as the name of the data series in that row (or column).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If titles is FALSE, Microsoft Excel clears the check box and uses the contents of the cell in the first column of each row (or first row of each column) as the first data point of the data series.</p>
+</blockquote></li>
+</ul>
+<p>Categories    is a logical value corresponding to the Categories (X Labels) In First Row (or First Column, depending on the value of rowcol) check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If categories is TRUE, Microsoft Excel selects the check box and uses the contents of the first row (or column) of the selection as the categories for the chart.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If categories is FALSE, Microsoft Excel clears the check box and uses the contents of the first row (or column) as the first data series in the chart.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Replace    is a logical value corresponding to the Replace Existing Categories check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If replace is TRUE, Microsoft Excel selects the check box and applies categories while replacing existing categories with information from the copied cell range.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If replace is FALSE, Microsoft Excel clears the check box and applies new categories without replacing any old ones.</p>
+</blockquote></li>
+</ul>
+<p>Series    is a number specifying how cells are added to a chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Series</strong></td>
+<td><strong>Added as</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>New series</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>New point(s)</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

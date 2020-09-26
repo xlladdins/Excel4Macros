@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>alignment</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="alignment">ALIGNMENT macro</h1>
+<p>Equivalent to clicking the Alignment tab in the Format Cells dialog box, which is displayed when you click the Cells command on the Format menu. Aligns the contents of the selected cells.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ALIGNMENT</strong>(horiz_align, wrap, vert_align, orientation, add_indent, shrink_to_fit, merge_cells)</p>
+<p><strong>ALIGNMENT</strong>?(horiz_align, wrap, vert_align, orientation, add_indent, shrink_to_fit, merge_cells)</p>
+<p>Horiz_align    is a number from 1 to 7 specifying the type of horizontal alignment, as shown in the following table. If horiz_align is omitted, horizontal alignment does not change.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Horiz_align</strong></td>
+<td><strong>Horizontal alignment</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>General</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Left</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Center</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Right</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Fill</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Justify</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Center across selection</td>
+</tr>
+</tbody>
+</table>
+<p>Wrap    is a logical value corresponding to the Wrap Text check box in the Alignment tab. If wrap is TRUE, Microsoft Excel selects the check box and wraps text in cells; if FALSE, Microsoft Excel clears the check box and does not wrap text. If wrap is omitted, wrapping does not change.</p>
+<p>Vert_align    is a number from 1 to 4 specifying the vertical alignment of the text. If vert_align is omitted, vertical alignment does not change.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Vert_align</strong></td>
+<td><strong>Vertical alignment</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Top</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Center</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Bottom</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Justify</td>
+</tr>
+</tbody>
+</table>
+<p>Orientation    is a number from 0 to 4 specifying the orientation of the text. If orientation is omitted, text orientation does not change.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Orientation</strong></td>
+<td><strong>Text orientation</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Horizontal</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Vertical</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Upward</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Downward</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Automatic (applies to only chart tick labels)</td>
+</tr>
+</tbody>
+</table>
+<p>Add_indent     This argument is for only Far East versions of Microsoft Excel.</p>
+<p>Shrink_to_fit    is a logical value corresponding to the Shrink To Fit check box in the Alignment tab.</p>
+<p>Merge_cells    is a logical value corresponding to the Merge Cells check box in the Alignment tab. If merge_cells is TRUE, Microsoft Excel selects the check box and merges the selected cells; the merged cell contains the value of the left-most cell that was merged. If FALSE, Microsoft Excel clears the check box and unmerges the selected cells; the left-most cell takes the formula or value of the cell that was unmerged. If merge_cells is omitted, cell mergers do not change.</p>
+<p><strong>Related Function</strong></p>
+<p>FORMAT.TEXT   Formats a worksheet text box or a chart text item</p>
+
+</body>
+</html>

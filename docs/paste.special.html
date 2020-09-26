@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>paste.special</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="paste.special">PASTE.SPECIAL macro</h1>
+<p>Equivalent to clicking the Paste Special command on the Edit menu. Pastes the specified components from the copy area into the current selection. The PASTE.SPECIAL function has four syntax forms.</p>
+<p>Syntax 1   Pasting into a sheet or macro sheet</p>
+<p>Syntax 2   Copying from a sheet and pasting into a chart.</p>
+<p>Syntax 3   Copying and pasting between charts</p>
+<p>Syntax 4   Pasting information from another application.</p>
+<h1 id="paste.special-syntax-1">PASTE.SPECIAL Syntax 1</h1>
+<p>Equivalent to clicking the Paste Special command on the Edit menu. Pastes the specified components from the copy area into the current selection. The PASTE.SPECIAL function has four syntax forms. Use syntax 1 if you are pasting into a sheet or macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PASTE.SPECIAL</strong>(paste_num, operation_num, skip_blanks, transpose)</p>
+<p><strong>PASTE.SPECIAL</strong>?(paste_num, operation_num, skip_blanks, transpose)</p>
+<p>Paste_num    is a number from 1 to 6 specifying what to paste. Paste_num can also be quoted text of the object you want to paste.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Paste_num</strong></td>
+<td><strong>Pastes</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>All</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Formulas</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Values</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Formats</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Comments</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>All except borders</td>
+</tr>
+</tbody>
+</table>
+<p>Operation_num    is a number from 1 to 5 specifying which operation to perform when pasting.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Operation_num</strong></td>
+<td><strong>Action</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Add</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Subtract</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Multiply</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Divide</td>
+</tr>
+</tbody>
+</table>
+<p>Skip_blanks    is a logical value corresponding to the Skip Blanks check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If skip_blanks is TRUE, Microsoft Excel skips blanks in the copy area when pasting.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If skip_blanks is FALSE, Microsoft Excel pastes normally.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Transpose    is a logical value corresponding to the Transpose check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If transpose is TRUE, Microsoft Excel transposes rows and columns when pasting.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If transpose is FALSE, Microsoft Excel pastes normally.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="formula.html">FORMULA</a>   Enters values into a cell or range or onto a chart</p><p><a href="paste.html">PASTE</a>   Pastes cut or copied data</p><p><a href="paste.link.html">PASTE.LINK</a>   Pastes copied data and establishes a link to its source</p><p>Syntax 2   Copying from a sheet and pasting into a chart.</p>
+<p>Syntax 3   Copying and pasting between charts</p>
+<p>Syntax 4   Pasting information from another application.</p>
+<h1 id="paste.special-syntax-2">PASTE.SPECIAL Syntax 2</h1>
+<p>Equivalent to clicking the Paste Special command on the Edit menu on the Chart menu bar. Pastes the specified components from the copy area into a chart. The PASTE.SPECIAL function has four syntax forms. Use syntax 2 if you have copied from a sheet and are pasting into a chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PASTE.SPECIAL</strong>(rowcol, titles, categories, replace, series)</p>
+<p><strong>PASTE.SPECIAL</strong>?(rowcol, titles, categories, replace, series)</p>
+<p>Rowcol    is the number 1 or 2 and specifies whether the values corresponding to a particular data series are in rows or columns. Enter 1 for rows or 2 for columns.</p>
+<p>Titles    is a logical value corresponding to the Series Names In First Column check box (or First Row, depending on the value of rowcol) in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If series is TRUE, Microsoft Excel selects the check box and uses the contents of the cell in the first column of each row (or first row of each column) as the name of the data series in that row (or column).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If series is FALSE, Microsoft Excel clears the check box and uses the contents of the cell in the first column of each row (or first row of each column) as the first data point of the data series.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Categories    is a logical value corresponding to the Categories (X Labels) In First Row (or First Column, depending on the value of rowcol) check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If categories is TRUE, Microsoft Excel selects the check box and uses the contents of the first row (or column) of the selection as the categories for the chart.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If categories is FALSE, Microsoft Excel clears the check box and uses the contents of the first row (or column) as the first data series in the chart.</p>
+</blockquote></li>
+</ul>
+<p>Replace    is a logical value corresponding to the Replace Existing Categories check box in the Paste Special dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If replace is TRUE, Microsoft Excel selects the check box and applies categories while replacing existing categories with information from the copied cell range.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If replace is FALSE, Microsoft Excel clears the check box and applies new categories without replacing any old ones.</p>
+</blockquote></li>
+</ul>
+<p>Series    is a number specifying how cells are added to a chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Series</strong></td>
+<td><strong>Added as</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>New series</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>New point(s)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p>Syntax 1   Pasting into a sheet or macro sheet</p>
+<p>Syntax 3   Copying and pasting between charts</p>
+<p>Syntax 4   Pasting information from another application</p>
+<h1 id="paste.special-syntax-3">PASTE.SPECIAL Syntax 3</h1>
+<p>Equivalent to clicking the Paste Special command on the Edit menu on the Chart menu bar. Pastes the specified components from the copy area into a chart. The PASTE.SPECIAL function has four syntax forms. Use syntax 3 if you have copied from a chart and are pasting into a chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PASTE.SPECIAL</strong>(paste_num)</p>
+<p><strong>PASTE.SPECIAL</strong>?(paste_num)</p>
+<p>Paste_num    is a number from 1 to 3 specifying what to paste.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Paste_num</strong></td>
+<td><strong>Pastes</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>All (formats and data series)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Formats only</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Formulas (data series) only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p>Syntax 1   Pasting into a sheet or macro sheet</p>
+<p>Syntax 2   Copying from a sheet and pasting into a chart</p>
+<p>Syntax 4   Pasting information from another application</p>
+<h1 id="paste.special-syntax-4">PASTE.SPECIAL Syntax 4</h1>
+<p>Equivalent to clicking the Paste Special command on the Edit menu when pasting data from another application into Microsoft Excel. Use syntax 4 when pasting information from another application.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PASTE.SPECIAL</strong>(format_text, pastelink_logical, display_icon_logical, icon_file, icon_number, icon_label)</p>
+<p><strong>PASTE.SPECIAL</strong>?(format_text, pastelink_logical, display_icon_logical, icon_file, icon_number, icon_label)</p>
+<p>Format_text    is text specifying the type of data you want to paste from the Clipboard.</p>
+<ul>
+<li><blockquote>
+<p>The valid data types vary depending on the application from which the data was copied. For example, if you're copying data from Microsoft Word, some of the data types are "Microsoft Document Object", "Picture", and "Text".</p>
+</blockquote></li>
+<li><blockquote>
+<p>For more information about object classes, see your Microsoft Windows or Apple system software documentation.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Pastelink_logical    is a logical value specifying whether to link the pasted data to its source application.</p>
+<ul>
+<li><blockquote>
+<p>If pastelink_logical is TRUE, Microsoft Excel updates the pasted information whenever it changes in the source application.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If pastelink_logical is FALSE or omitted, the information is pasted without a link.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If Microsoft Excel or the source application does not support linking for the specified format_text, then pastelink_logical is ignored.</p>
+</blockquote></li>
+</ul>
+<p>Display_icon_logical    is a logical value that specifies whether you want an application's icon to be displayed on the worksheet instead of the linked data. Equivalent to the Display as Icon check box on the Paste Special dialog box. If TRUE, the application's icon will be displayed. If FALSE or omitted, the application's icon will not be displayed.</p>
+<p>Icon_file    is the name of the file (with an .EXE or .DLL extension) that contains the icon. If display_icon_logical is FALSE, this argument is ignored.</p>
+<p>Icon_number    is the number associated with the icon and corresponds to the icon's relative position within the Icon Drop Down list box on the Change Icon Dialog box, which appears when you click the Change Icon button in the Paste Special dialog box. If display_icon_logical is FALSE, this argument is ignored.</p>
+<p>Icon_label    is the caption that you want to appear below the icon, and is equivalent to the Caption text box on the Change Icon dialog box, which appears when you click the Change Icon button in the Paste Special dialog box. If display_icon_logical is FALSE, this argument is ignored.</p>
+<p><strong>Related Functions</strong></p>
+<p>Syntax 1   Pasting into a sheet or macro sheet</p>
+<p>Syntax 2   Copying from a sheet and pasting into a chart</p>
+<p>Syntax 3   Copying and pasting between charts</p>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>fpos</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fpos">FPOS macro</h1>
+<p>Sets the position of a file. The position of a file is where a character is read from or written to by an FREAD, FREADLN, FWRITE, or FWRITELN function. Use FPOS when you want to write characters to or read characters from specific locations. For example, to append text to the end of a file, you must set the position to the end of the file; otherwise, you might accidentally overwrite existing characters in the file.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FPOS</strong>(<strong>file_num</strong>, position_num)</p>
+<p>File_num    is the unique ID number of the file for which you want to set the position. File_num is returned by a previously executed FOPEN function. If file_num is not valid, FPOS returns the #VALUE! error value.</p>
+<p>Position_num    is the location in the file that a character will be read from or written to.</p>
+<ul>
+<li><blockquote>
+<p>The first position in a file is 1, the location of the first byte.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The last position in the file is the same as the value returned by FSIZE. For example, the last position in a file with 280 bytes is 280.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If position_num is omitted, FPOS returns the current position of the file—that is, the number corresponding to where the next character will be read from or written to.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Whenever you read a character from or write a character to a file, the file's position is automatically incremented.</p>
+<p><strong>Examples</strong></p>
+<p>The following statement starts a loop that executes until the position in the open file identified as FileNumber reaches the end of the file:</p>
+<p>=WHILE(FPOS(FileNumber)&lt;=FSIZE(FileNumber))</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fclose.html">FCLOSE</a>   Closes a text file</p><p><a href="fopen.html">FOPEN</a>   Opens a file with the type of permission specified</p><p><a href="fread.html">FREAD</a>   Reads characters from a text file</p><p><a href="freadln.html">FREADLN</a>   Reads a line from a text file</p><p><a href="fwrite.html">FWRITE</a>   Writes characters to a text file</p><p><a href="fwriteln.html">FWRITELN</a>   Writes a line to a text file</p>
+</body>
+</html>

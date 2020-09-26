@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>change.link</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="change.link">CHANGE.LINK macro</h1>
+<p>Equivalent to clicking the Change Source button in the Links dialog box, which appears when you click the Links command on the Edit menu. Changes a link from one supporting workbook to another.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CHANGE.LINK</strong>(<strong>old_text, new_text</strong>, type_of_link)</p>
+<p><strong>CHANGE.LINK</strong>?(old_text, new_text, type_of_link)</p>
+<p>Old_text    is the path of the link from the active dependent workbook you want to change.</p>
+<p>New_text    is the path of the link you want to change to.</p>
+<p>Type_of_link    is the number 1 or 2 specifying what type of link you want to change.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_of_link</strong></td>
+<td><strong>Link document type</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Microsoft Excel link</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>DDE/OLE link</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<p>The workbook whose links you want to change must be active when this function is calculated.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p><p><a href="links.html">LINKS</a>   Returns the name of all linked workbooks</p><p><a href="open.links.html">OPEN.LINKS</a>   Opens specified supporting workbooks</p><p><a href="set.update.status.html">SET.UPDATE.STATUS</a>   Controls the update status of a link</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another workbook</p>
+</body>
+</html>

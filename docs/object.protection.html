@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>object.protection</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="object.protection">OBJECT.PROTECTION macro</h1>
+<p>Changes the protection status of the selected object.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OBJECT.PROTECTION</strong>(locked, lock_text)</p>
+<p><strong>OBJECT.PROTECTION</strong>?(locked, lock_text)</p>
+<p>Locked    is a logical value that determines whether the selected object is locked or unlocked. If locked is TRUE, Microsoft Excel locks the object; if FALSE, Microsoft Excel unlocks the object.</p>
+<p>Lock_text    is a logical value that determines whether text in a text box or button can be changed. Lock_text applies only if the object is a text box, button, or worksheet control. If lock_text is TRUE or omitted, text cannot be changed; if FALSE, text can be changed.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>You cannot lock or unlock an individual object with OBJECT.PROTECTION when protection is selected for objects in the Protect Sheet dialog box.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If an object is not selected, the function returns the #VALUE! error value and halts the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In order for an object to be protected, you must use the PROTECT.DOCUMENT(, , , TRUE) function after changing the object's status with OBJECT.PROTECTION.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="protect.document.html">PROTECT.DOCUMENT</a>   Controls protection for the active worksheet</p><p><a href="workbook.protect.html">WORKBOOK.PROTECT</a>   Controls protection for the active workbook</p>
+</body>
+</html>

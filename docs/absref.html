@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>absref</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="absref">ABSREF macro</h1>
+<p>Returns the absolute reference of the cells that are offset from a reference by a specified amount. You should generally use OFFSET instead of ABSREF. This function is provided for users who prefer to supply an absolute reference in text form.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ABSREF</strong>(<strong>ref_text</strong>, <strong>reference</strong>)</p>
+<p>Ref_text    specifies a position relative to reference. Think of ref_text as "directions" from one range of cells to another.</p>
+<ul>
+<li><blockquote>
+<p>Ref_text must be an R1C1-style relative reference in the form of text, such as "R[1]C[1]".</p>
+</blockquote></li>
+<li><blockquote>
+<p>Ref_text is considered relative to the cell in the upper-left corner of reference.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Reference    is a cell or range of cells specifying a starting point that ref_text uses to locate another range of cells. Reference can be an external reference.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If you use ABSREF in a function or operation, you will usually get the values contained in the reference instead of the reference itself because the reference is automatically converted to the contents of the reference.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you use ABSREF in a function that requires a reference argument, then Microsoft Excel does not convert the reference to a value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you want to work with the actual reference, use the REFTEXT function to convert the active-cell reference to text, which you can then store or manipulate (or convert back to a reference with TEXTREF). See the third example following.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>ABSREF("R[-2]C[-2]", C3) equals $A$1</p>
+<p>ABSREF(RELREF(A1, C3), D4) equals $B$2</p>
+<p>REFTEXT(ABSREF("R[-2]C[-2]:R[2]C[2]", C3:G7), TRUE) is equivalent to</p>
+<p>REFTEXT(ABSREF("R[-2]C[-2]:R[2]C[2]", C3), TRUE), which equals "$A$1:$E$5"</p>
+<p>In Microsoft Excel for Windows ABSREF("R[-2]C[-2]", [FINANCE.XLS]Sheet1!C3) equals [FINANCE.XLS]Sheet1!$A$1.</p>
+<p>In Microsoft Excel for the Macintosh ABSREF("R[-2]C[-2]", [FINANCE]Sheet1!C3) equals [FINANCE]Sheet1!$A$1</p>
+<p><strong>Related Function</strong></p>
+<p>RELREF   Returns a relative reference</p>
+
+</body>
+</html>

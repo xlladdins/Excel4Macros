@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>open</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="open">OPEN macro</h1>
+<p>Equivalent to clicking the Open command on the File menu. Opens an existing workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OPEN</strong>(file_text, update_links, read_only, format, prot_pwd, write_res_pwd, ignore_rorec, file_origin, custom_delimit, add_logical, editable, file_access, notify_logical, converter)</p>
+<p><strong>OPEN</strong>?(file_text, update_links, read_only, format, prot_pwd, write_res_pwd, ignore_rorec, file_origin, custom_delimit, add_logical, editable, file_access, notify_logical, converter)</p>
+<p>File_text    is the name, as text, of the workbook you want to open. File_text can include a drive and path, and can be a network pathname. In the dialog-box form in Microsoft Excel for Windows, file_text can include an asterisk (*) to represent any sequence of characters and a question mark (?) to represent any single character.</p>
+<p>Update_links    specifies whether and how to update external and remote references. If update_links is omitted, Microsoft Excel displays a message asking if you want to update links.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If update_links is</strong></td>
+<td><strong>Then Microsoft Excel</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Updates neither external nor remote references</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Updates external references only</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Updates remote references only</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Updates external and remote references</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note   </strong>When you are opening a file in WKS, WK1, or WK3 format, the update_links argument specifies whether Microsoft Excel generates charts from any graphs attached to the WKS, WK1, or WK3 file.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If update_links is</strong></td>
+<td><strong>Charts are</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Not created</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Created</td>
+</tr>
+</tbody>
+</table>
+<p>Read_only    corresponds to the Read Only check box in the Open dialog box. If read_only is TRUE, the workbook can be modified but changes cannot be saved; if FALSE or omitted, changes to the workbook can be saved.</p>
+<p>Format    specifies what character to use as a delimiter when opening text files. If format is omitted, Microsoft Excel uses the current delimiter setting.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If format is</strong></td>
+<td><strong>Values are separated by</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Tabs</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Commas</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Spaces</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Semicolons</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Nothing</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Custom characters</td>
+</tr>
+</tbody>
+</table>
+<p>Prot_pwd    is the password, as text, required to unprotect a protected file. If prot_pwd is omitted and file_text requires a password, the Password dialog box is displayed. Passwords are case-sensitive. Passwords are not recorded when you open a workbook and supply the password with the macro recorder on.</p>
+<p>Write_res_pwd    is the password, as text, required to open a read-only file with full write privileges. If write_res_pwd is omitted and file_text requires a password, the Password dialog box is displayed.</p>
+<p>Ignore_rorec    is a logical value that controls whether the read-only recommended message is displayed. If ignore_rorec is TRUE, Microsoft Excel prevents display of the message; if FALSE or omitted, and if read_only is also FALSE or omitted, Microsoft Excel displays the alert when opening a read-only recommended workbook.</p>
+<p>File_origin    is a number specifying whether a text file originated on the Macintosh or in Windows.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>File_origin</strong></td>
+<td><strong>Original operating environment</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Macintosh</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Windows (ANSI)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>MS-DOS (PC-8)</td>
+</tr>
+</tbody>
+</table>
+<p>OmittedCurrent operating environment</p>
+<p>Custom_delimit    is the character you want to use as a custom delimiter when opening text files.</p>
+<ul>
+<li><blockquote>
+<p>Custom_delimit is text or a reference or formula that returns text, such as CHAR(124).</p>
+</blockquote></li>
+<li><blockquote>
+<p>Custom_delimit is required if format is 6; it is ignored if format is not 6.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Only the first character in custom_delimit is used.</p>
+</blockquote></li>
+</ul>
+<p>Add_logical    is a logical value that specifies whether or not to add file_text to the open workbook. If add_logical is TRUE, the document is added; if FALSE or omitted, it is not added. This argument is for compatibility with workbooks from Microsoft Excel version 4.0.</p>
+<p>Editable    is a logical value that corresponds to opening a file (such as a template) while holding down SHIFT key. If TRUE, editable is the equivalent to holding down the SHIFT key while clicking the OK button in the Open dialog box. If FALSE or omitted, this argument is ignored.</p>
+<p>File_access     is a number specifying how the file is to be accessed. If the file is being opened for the first time, this argument is ignored. If the file is already opened, this argument determines how to change the user's access permissions for the file.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>File Access</strong></td>
+<td><strong>How Accessed</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Revert to saved copy</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Change to read/write access</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Change to read only access</td>
+</tr>
+</tbody>
+</table>
+<p>Notify_logical    is a logical value that specifies whether the user should be notified when the shared workbook is available to be opened across a network. If TRUE, the user will be notified when the workbook is available to be opened. If FALSE or omitted, the user will not be notified when the file available to be opened.</p>
+<p>Converter     is a number corresponding to the file converter to use to open the file. Normally, Microsoft Excel automatically determines which file converter to use; therefore, this argument can usually be excluded. If you want to be certain, however, that a specific manually installed converter be used, then include this argument. Use GET.WORKSPACE(62) to determine which numbers corresponds to all of the installed converters.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="close.html">CLOSE</a>   Closes the active window</p><p><a href="fclose.html">FCLOSE</a>   Closes a text file</p><p><a href="fopen.html">FOPEN</a>   Opens a file with the type of permission specified</p><p><a href="open.links.html">OPEN.LINKS</a>   Opens specified supporting workbooks</p>
+</body>
+</html>

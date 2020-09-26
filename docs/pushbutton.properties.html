@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>pushbutton.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pushbutton.properties">PUSHBUTTON.PROPERTIES macro</h1>
+<p>Sets the properties of the push button control on a worksheet or dialog sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PUSHBUTTON.PROPERTIES</strong>(default_logical, cancel_logical, dismiss_logical, help_logical, accel_text, accel_text2)</p>
+<p><strong>PUSHBUTTON.PROPERTIES</strong>?(default_logical, cancel_logical, dismiss_logical, help_logical, accel_text, accel_text2)</p>
+<p>Default_logical    is a logical value that determines whether the button is the default button for the dialog. If TRUE, the button is the default button. If FALSE, the button is not the default button for the control.</p>
+<p>Cancel_logical    is a logical value that determines whether the button is activated when the dialog is cancelled with the Close button or the ESC key. If TRUE, the button is activated when the dialog box is cancelled, and edit boxes are not checked to see if they contain valid data types. If FALSE, the button is not activated when the dialog box is cancelled.</p>
+<p>Dismiss_logical    is a logical value that determines whether the button dismisses the dialog when pressed, as when the user presses the box's OK button. If TRUE, the button dismisses the dialog box. If FALSE, the button does not dismiss the dialog box.</p>
+<p>Help_logical    is a logical value that determines whether the button is activated when the user presses the F1 key. If TRUE, the button is activated when the user presses the F1 key. If FALSE, the button is not activated when the user presses the F1 key.</p>
+<p>Accel_text    is a text string containing the character to use as the dialog button's accelerator key. The character is matched against the text of the control, and the first matching character is underlined. When the user presses ALT+accel_text in Microsoft Excel for Windows or COMMAND+accel_text in Microsoft Excel for the Macintosh, the control is clicked. This argument is ignored for push button controls on worksheets.</p>
+<p>Accel_text2    is a text string containing the second accelerator key on a dialog sheet. This argument is for only Far East versions of Microsoft Excel.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="checkbox.properties.html">CHECKBOX.PROPERTIES</a>   Sets various properties of check box and option box controls</p><p><a href="scrollbar.properties.html">SCROLLBAR.PROPERTIES</a>   Sets the properties of the scroll bar and spinner controls</p><p><a href="editbox.properties.html">EDITBOX.PROPERTIES</a>   Sets the properties of an edit box on a worksheet or dialog sheet</p>
+</body>
+</html>

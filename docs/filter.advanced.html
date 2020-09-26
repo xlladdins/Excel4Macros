@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>filter.advanced</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="filter.advanced">FILTER.ADVANCED macro</h1>
+<p>Equivalent to choosing the Advanced Filter command from the Filter submenu on the Data menu. Lets you set options for filtering a list.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILTER.ADVANCED</strong>(<strong>operation</strong>, <strong>list_ref</strong>, criteria_ref, copy_ref, unique)</p>
+<p><strong>FILTER.ADVANCED</strong>?(operation, list_ref, criteria_ref, copy_ref, unique)</p>
+<p>Operation    is a number specifying whether to copy the filter list to a new location. To filter a list without copying, use 1; to copy the filter list to a new location, use 2.</p>
+<p>List_ref    specifies the location of the list to be filtered. If operation is 1, then list_ref must be on the active sheet.</p>
+<p>Criteria_ref    is a reference to a range containing criteria for filtering the list. If omitted, uses "All" as the criteria.</p>
+<p>Copy_ref    is a reference on the active sheet where you want the filtered list copied. Ignored if operation is 1.</p>
+<p>Unique    is a logical value that specifies whether only unique records are displayed. To display only unique records, use TRUE. To display all records that match the criteria, use FALSE or omit this argument.</p>
+<p><strong>Related Function</strong></p>
+<p>FILTER   Filters lists of data one column at a time</p>
+
+</body>
+</html>

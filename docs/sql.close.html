@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>sql.close</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="sql.close">SQL.CLOSE macro</h1>
+<p>Terminates a connection to an external data source. If this function is not available, you must install the Microsoft ODBC add-in (XLODBC.XLA).</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SQL.CLOSE</strong>(<strong>connection_num</strong>)</p>
+<p>Connection_num    is the unique connection ID of the data source from which you wish to disconnect.</p>
+<ul>
+<li><blockquote>
+<p>Connection_num is returned by a previously executed SQL.OPEN function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If connection_num is not valid, SQL.CLOSE returns the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the connection is successfully terminated SQL.CLOSE will return zero and the connection ID number is then no longer valid.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If SQL.CLOSE is unable to disconnect with the data source then it will return the error value the #N/A error value. In such a case SQL.CLOSE will place error information in memory for the SQL.ERROR function, if such information is available.</p>
+</blockquote></li>
+<li><blockquote>
+<p>SQL.CLOSE works with data sources in much the same manner as FCLOSE works with files. If the call is successful then SQL.CLOSE will terminate the specified data source connection.</p>
+</blockquote></li>
+</ul>
+<p><strong>Example</strong></p>
+<p>SQL.CLOSE(conn1) will close the connection with connection_num conn1</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="sql.open.html">SQL.OPEN</a>   Establishes a connection with a data source</p><p><a href="sql.exec.query.html">SQL.EXEC.QUERY</a>   Sends a query to a data source</p><p><a href="sql.bind.html">SQL.BIND</a>   Specifies storage for a result column</p><p><a href="sql.retrieve.to.file.html">SQL.RETRIEVE.TO.FILE</a>   Retrieves query results and places them in a file</p><p><a href="sql.retrieve.html">SQL.RETRIEVE</a>   Retrieves query results</p><p><a href="sql.get.schema.html">SQL.GET.SCHEMA</a>   Gets information about a connected data source.</p><p><a href="sql.error.html">SQL.ERROR</a>   Returns detailed error information</p>
+</body>
+</html>

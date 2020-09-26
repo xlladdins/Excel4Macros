@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>vscroll</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="vscroll">VSCROLL macro</h1>
+<p>Vertically scrolls through the active sheet by percentage or by row number.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>VSCROLL</strong>(<strong>position</strong>, row_logical)</p>
+<p>Position    specifies the row you want to scroll to. Position can be an integer representing the row number or a fraction or percentage representing the vertical position of the row in the sheet. If position is 0, VSCROLL scrolls through your sheet to its top edge, which is row 1. If position is 1, VSCROLL scrolls through your sheet to its bottom edge, which is row 16, 384 in Microsoft Excel 95 or earlier, or row 65,536 in Microsoft Excel 97 or later. For charts that do not size with the window, use a fraction or percentage.</p>
+<p>Row_logical    is a logical value specifying how the function scrolls.</p>
+<ul>
+<li><blockquote>
+<p>If row_logical is TRUE, VSCROLL scrolls through the sheet to row position.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If row_logical is FALSE or omitted, VSCROLL scrolls through the sheet to the vertical position represented by the fraction position.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>To scroll to a specific row n, either use VSCROLL(n, TRUE) or VSCROLL(n/16384) in Microsoft Excel 95 or earlier; in Microsoft Excel 97 or later, you should use VSCROLL(n/65536). To scroll to row 138, for example, enter VSCROLL(138, TRUE) (in any version) or VSCROLL(138/16384) in earlier versions of Microsoft Excel or VSCROLL(138/65536) in Microsoft Excel 97 or later</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you are recording a macro and move the scroll box several times in a row, the recorder only records the final location of the scroll box, omitting any intermediate steps. Remember that scrolling does not change the active cell or the selection.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="formula.goto.html">FORMULA.GOTO</a>   Selects a named area or reference on any open workbook</p><p><a href="hline.html">HLINE</a>   Horizontally scrolls through the active window by columns</p><p><a href="hpage.html">HPAGE</a>   Horizontally scrolls through the active window one window at a time</p><p><a href="hscroll.html">HSCROLL</a>   Horizontally scrolls through a sheet by percentage or by column number</p><p><a href="select.html">SELECT</a>   Selects a cell, object, or chart item</p><p><a href="vline.html">VLINE</a>   Vertically scrolls through the active window by rows</p><p><a href="vpage.html">VPAGE</a>   Vertically scrolls through the active window one window at a time</p>
+</body>
+</html>

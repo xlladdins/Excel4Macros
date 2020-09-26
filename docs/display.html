@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>display</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="display">DISPLAY macro</h1>
+<p>Controls whether the screen displays formulas, gridlines, row and column headings, and other screen attributes. There are two syntax forms of this function. Use syntax 1 to control screen display. Use syntax 2 to control the display of the Info Window.</p>
+<p>Syntax 1   Controls screen display</p>
+<p>Syntax 2   Controls display of Info Window</p>
+<h1 id="display-syntax-1">DISPLAY Syntax 1</h1>
+<p>Controls whether the screen displays formulas, gridlines, row and column headings, and other screen attributes. There are two syntax forms of this function. Use syntax 1 to control screen display. This function is provided for compatibility with Microsoft Excel version 4.0. To control screen display in Microsoft Excel version 5.0 or later, see OPTIONS.VIEW.</p>
+<p>Arguments for this syntax form correspond to options and check boxes in the Display Options dialog box in Microsoft Excel version 4.0. Arguments that correspond to check boxes are logical values. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box. If an argument is omitted, no action is taken.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DISPLAY</strong>(formulas, gridlines, headings, zeros, color_num, reserved, outline, page_breaks, object_num)</p>
+<p><strong>DISPLAY</strong>?(formulas, gridlines, headings, zeros, color_num, reserved, outline, page_breaks, object_num)</p>
+<p>Formulas    corresponds to the Formulas check box. The default is FALSE on worksheets and TRUE on macro sheets.</p>
+<p>Gridlines    corresponds to the Gridlines check box. The default is TRUE.</p>
+<p>Headings    corresponds to the Row &amp; Column Headings check box. The default is TRUE.</p>
+<p>Zeros    corresponds to the Zero Values check box. The default is TRUE.</p>
+<p>Color_num    is a number from 0 to 56 corresponding to the gridline and heading colors in the Display Options dialog box; 0 corresponds to automatic color and is the default value.</p>
+<p>Reserved    is reserved for certain international versions of Microsoft Excel.</p>
+<p>Outline    corresponds to the Outline Symbols check box. The default is TRUE.</p>
+<p>Page_breaks    corresponds to the Automatic Page Breaks check box. The default is FALSE.</p>
+<p>Object_num    is a number from 1 to 3 corresponding to the display options in the Object box.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Object_num</strong></td>
+<td><strong>Corresponds to</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Show All</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Show Placeholders</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Hide</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="options.view.html">OPTIONS.VIEW</a>   Controls display</p><p><a href="workspace.html">WORKSPACE</a>   Changes workspace settings</p><p><a href="zoom.html">ZOOM</a>   Enlarges or reduces a sheet in the active window</p><p>Syntax 2   Controls display of Info Window</p>
+<h1 id="display-syntax-2">DISPLAY Syntax 2</h1>
+<p>Equivalent to clicking the commands on the Info menu when the Info Window is active. Controls which commands on the Info Window are in effect. There are two syntax forms of this function. Use syntax 2 to control the display of the Info Window. The Info Window must be active to use this form of DISPLAY. This function is included for compatibility with Microsoft Excel 95 or earlier; the Info Window is not available in Microsoft Excel 97 or later.</p>
+<p>Arguments in this syntax form correspond to commands on the Info menu with the same names.</p>
+<p>For these arguments:</p>
+<ul>
+<li><blockquote>
+<p>If the argument is TRUE, Microsoft Excel displays the corresponding Info item.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the argument is FALSE, Microsoft Excel does not display the corresponding Info item.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the argument is omitted, the status of the item is unchanged.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<p>For controlling Info Window display</p>
+<p><strong>DISPLAY</strong>(cell, formula, value, format, protection, names, precedents, dependents, note)</p>
+<p>Cell    is a logical value that corresponds to the Cell command and controls the display of cell information in the Info Window. If TRUE, cell information will be displayed; if FALSE, cell information will not be displayed.</p>
+<p>Formula    is a logical value that corresponds to the Formula command and controls the display of formula information in the Info Window. If TRUE, formula information will be displayed; if FALSE, formula information will not be displayed.</p>
+<p>Value    is a logical value that corresponds to the Value command and controls the display of value information in the Info Window. If TRUE, value information will be displayed; if FALSE, value information will not be displayed.</p>
+<p>Format    is a logical value that corresponds to the Format command and controls the display of format information in the Info Window. If TRUE, format information will be displayed; if FALSE, format information will not be displayed.</p>
+<p>Protection    is a logical value that corresponds to the Protection command and controls the display of protection information in the Info Window. If TRUE, protection information will be displayed; if FALSE, protection information will not be displayed.</p>
+<p>Names    is a logical value that corresponds to the Names command and controls the display of name information in the Info Window. If TRUE, name information will be displayed; if FALSE, name information will not be displayed.</p>
+<p>Precedents    is a number from 1 to 3 that specifies which precedents to list, according to the following table.</p>
+<p>Dependents    is a number from 1 to 3 that specifies which dependents to list, according to the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Precedents or dependents</strong></td>
+<td><strong>List</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Direct only</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>All levels</td>
+</tr>
+</tbody>
+</table>
+<p>Note    is a logical value that corresponds to the Note command and controls the display of note information in the Info Window. If TRUE, note information will be displayed; if FALSE, note information will not be displayed.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="show.info.html">SHOW.INFO</a>   Controls the display of the Info Window</p><p><a href="zoom.html">ZOOM</a>   Enlarges or reduces a sheet in the active window</p><p>Syntax 1   Controls screen display</p>
+
+</body>
+</html>

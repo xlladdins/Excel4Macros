@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>break</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="break">BREAK macro</h1>
+<p>Interrupts a FOR-NEXT, a FOR.CELL-NEXT, or a WHILE-NEXT loop. If BREAK is encountered within a loop, that loop is terminated and the macro proceeds to the statement following the NEXT statement at the end of the current loop.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>BREAK</strong>( )</p>
+<p><strong>Example</strong></p>
+<p>Use BREAK to test for conditions not anticipated by the FOR or WHILE statement. For example, use the BREAK nested in an IF statement to exit a WHILE-NEXT loop when a certain value is encountered:</p>
+<p>=IF(Counter=8, BREAK())</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="for.html">FOR</a>   Starts a FOR-NEXT loop</p><p><a href="for.cell.html">FOR.CELL</a>   Starts a FOR.CELL-NEXT loop</p><p><a href="next.html">NEXT</a>   Ends a FOR-NEXT, FOR.CELL-NEXT, or WHILE-NEXT loop</p><p><a href="while.html">WHILE</a>   Starts a WHILE-NEXT loop</p>
+</body>
+</html>

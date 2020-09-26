@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>help</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="help">HELP macro</h1>
+<p>Starts or switches to Help and displays the specified custom Help topic. Use HELP with custom Help files to create your own Help system, which can be used just like the built-in Microsoft Excel Help.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HELP</strong>(help_ref)</p>
+<p>Help_ref    is a reference to a topic in a Help file, in the form "filename!topic_number".</p>
+<ul>
+<li><blockquote>
+<p>Help_ref must be given as text.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Microsoft Excel for Windows does not support the use of Help files in the text file format for custom Help.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In Microsoft Excel for the Macintosh, custom Help files are plain text files or text files with line breaks.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Tips</strong></p>
+<ul>
+<li><blockquote>
+<p>In Microsoft Excel for Windows, the following macro formula switches back to Microsoft Excel when Help is active:</p>
+</blockquote></li>
+</ul>
+<p>APP.ACTIVATE()</p>
+<ul>
+<li><blockquote>
+<p>The following macro formula closes Help when Help is active:</p>
+</blockquote></li>
+</ul>
+<p>SEND.KEYS("%{F4}")</p>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula displays the Help topic numbered 101 in the file CUSTHELP.DOC. The Help window remains open if the user switches to another window or application.</p>
+<p>HELP("CUSTHELP.DOC!101")</p>
+<p>If the custom Help file is not in the current directory, specify the full path along with the name of the file. For example:</p>
+<p>HELP("C:\EXCEL\CUSTHELP.DOC!101")</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula displays the Help topic numbered 101 in the file CUSTOM HELP:</p>
+<p>HELP("CUSTOM HELP!101")</p>
+<p>If the custom Help file is not in the current folder, specify the full path along with the name of the file. For example:</p>
+<p>HELP("HARD DISK:EXCEL:HELP:CUSTOM HELP!101")</p>
+
+</body>
+</html>

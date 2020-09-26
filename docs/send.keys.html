@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>send.keys</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="send.keys">SEND.KEYS macro</h1>
+<p>Sends keystrokes to the active application just as if they were typed at the keyboard. Use SEND.KEYS to send keystrokes that perform actions and execute commands to applications you are running with Microsoft Excel's other dynamic data exchange (DDE) functions.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SEND.KEYS</strong>(<strong>key_text</strong>, wait_logical)</p>
+<p><strong>Note   </strong>This function is available only in Microsoft Excel for Windows.</p>
+<p>Key_text    is the key or key combination you want to send to another application. The format for key_text is described in the ON.KEY function.</p>
+<p>Wait_logical    is a logical value that determines whether the macro continues before the actions caused by key_text are carried out.</p>
+<ul>
+<li><blockquote>
+<p>If wait_logical is TRUE, Microsoft Excel waits for the keys to be processed before returning control to the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If wait_logical is FALSE or omitted, the macro continues running without waiting for the keys to be processed.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>If Microsoft Excel is the active application, wait_logical is assumed to be FALSE, even if you enter wait_logical as TRUE. This is because if wait_logical is TRUE, Microsoft Excel waits for the keys to be processed in the other application before returning control to the macro. Microsoft Excel doesn't process keys while a macro is running.</p>
+<p><strong>Example</strong></p>
+<p>The following macro uses the Calculator application in Microsoft Excel for Windows to multiply some numbers, and then cuts the result and pastes it into Microsoft Excel.</p>
+<p>=EXEC("CALC.EXE", 1)</p>
+<p>=SEND.KEYS("10*30", TRUE)</p>
+<p>=SEND.KEYS("~", TRUE)</p>
+<p>=SEND.KEYS("%ec", TRUE)</p>
+<p>=APP.ACTIVATE(, FALSE)</p>
+<p>=SELECT(!B1)</p>
+<p>=PASTE()</p>
+<p>=RETURN()</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="app.activate.html">APP.ACTIVATE</a>   Switches to an application</p><p><a href="execute.html">EXECUTE</a>   Carries out a command in another application</p><p><a href="on.key.html">ON.KEY</a>   Runs a macro when a specified key is pressed</p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>copy.picture</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="copy.picture">COPY.PICTURE macro</h1>
+<p>Equivalent to choosing the Copy Picture command from the Edit menu. The Copy Picture command appears if you hold down SHIFT while choosing the Edit menu. It copies a chart or range of cells to the Clipboard as a graphic. Use COPY.PICTURE to create an image of the current selection or chart for use in another program.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>COPY.PICTURE</strong>(appearance_num, size_num, type_num)</p>
+<p><strong>COPY.PICTURE</strong>?(appearance_num, size_num, type_num)</p>
+<p><strong>Remarks</strong></p>
+<p>Graphics are created differently on screen and on a printer. Thus, the printed picture may look different from the one on screen.</p>
+<p>Appearance_num    is a number describing how to copy the picture.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Appearance_num</strong></td>
+<td><strong>Action</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Copies a picture as closely as possible to the picture displayed on your screen</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Copies what you would see if you printed the selection</td>
+</tr>
+</tbody>
+</table>
+<p>Size_num    is a number describing how to copy the picture and is only available if the current selection is a chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Size_num</strong></td>
+<td><strong>Action</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Copies the chart in the same size as the window on which it is displayed</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Copies what you would see if you printed the chart</td>
+</tr>
+</tbody>
+</table>
+<p>Type_num    is a number specifying the format of the picture. This argument is available only in Microsoft Excel for Windows.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Format of the picture</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Picture</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bitmap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="copy.html">COPY</a>   Copies and pastes data or objects</p><p><a href="cut.html">CUT</a>   Cuts or moves data or objects</p><p><a href="paste.html">PASTE</a>   Pastes cut or copied data</p><p><a href="paste.picture.link.html">PASTE.PICTURE.LINK</a>   Pastes a linked picture of the currently copied area</p><p><a href="paste.special.html">PASTE.SPECIAL</a>   Pastes specific components of copied data</p>
+</body>
+</html>

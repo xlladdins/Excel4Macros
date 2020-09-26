@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>pivot.field.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.field.properties">PIVOT.FIELD.PROPERTIES macro</h1>
+<p>Changes the properties of a field inside a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.FIELD.PROPERTIES</strong>(name, pivot_field_name, new_name, orientation, function, formats)</p>
+<p><strong>PIVOT.FIELD.PROPERTIES</strong>?(name, pivot_field_name, new_name, orientation, function, formats)</p>
+<p>Name    is the name of the PivotTable report containing the field which the user wants to edit. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Pivot_field_name    is the name of a field in the PivotTable report which the user would like to edit, as text. If it is omitted, Microsoft Excel uses the field containing the active cell.</p>
+<p>New_name    is the name which you would like to rename the current field. If it is omitted, the name of the current field will not change.</p>
+<p>Orientation    is a number between 0 and 4 specifying which area will show the field containing the active cell. If zero, then the field is deleted and all other arguments to this function are ignored. If this argument is omitted, the orientation of the field will not change.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Orientation</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Delete</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Display as row</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Display as column</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Display as page</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Display as data</td>
+</tr>
+</tbody>
+</table>
+<p>Function    is a number between 0 and 4094 specifying which calculation or subtotals to apply to the field. If you will be showing the field in the header (orientation 1, 2, or 3), add up the values from the table corresponding to the subtotals you would like to show. If you will be showing the field as a data field (orientation 4), use one value from the table. If an entry in this column is left blank, Microsoft Excel will not change the calculation or subtotal which are currently attached to the field.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Function</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>NO SUBTOTALS</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>AUTOMATIC</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>SUM</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>COUNTA</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>COUNT</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>AVERAGE</td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td>MAX</td>
+</tr>
+<tr class="odd">
+<td>64</td>
+<td>MIN</td>
+</tr>
+<tr class="even">
+<td>128</td>
+<td>PRODUCT</td>
+</tr>
+<tr class="odd">
+<td>256</td>
+<td>STDEV</td>
+</tr>
+<tr class="even">
+<td>512</td>
+<td>STDEVP</td>
+</tr>
+<tr class="odd">
+<td>1024</td>
+<td>VAR</td>
+</tr>
+<tr class="even">
+<td>2048</td>
+<td>VARP</td>
+</tr>
+</tbody>
+</table>
+<p>Formats    is either a one- or a two- dimensional array, depending on whether the field is a header field or a data field.</p>
+<ul>
+<li><blockquote>
+<p>If the active field is a header field (orientation argument is 1, 2 or 3) then this is a two-dimensional array. Each row of the array should consist of two entries. The first is a text string corresponding to the item whose property is being changed. The second element specifies whether the item will be hidden. If this argument is TRUE, the item will be hidden and therefore will not be displayed in the PivotTable report. If the argument is FALSE, then the item will be displayed in the PivotTable report.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the active field is a data field, then the array is a one-dimensional array with four elements. The first element is a number between 1 and 9 specifying which calculation you wish to apply to the current data field. This corresponds to the Show Data As drop-down box on the PivotTable Field dialog box.</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Format</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Normal</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Difference From</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>%Of Item</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>%Difference From</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Running Total In</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>%Of Row</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>%Of Column</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>%Of Subtotal</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Index</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>The second element contains a text string representing the field to which your data field is related. This argument is not necessary for the Normal calculation. If omitted, Microsoft Excel will use the first field that would appear in the Base Field list box.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The third element must contain a text string representing an item in the base field on which to base your calculation. Note that this argument is not necessary for calculations like Running Total In which relies only on a Base Field. If omitted, Microsoft Excel will use the first item that would appear in the Base Item list box.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The fourth element is a text string representing the number format you wish to apply to the data field.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If pivot_field_name is not a valid field name for the PivotTable report then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If name is not a valid PivotTable name, then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the orientation and function arguments do not contain numbers or if these arguments contain numbers which are out of range then the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

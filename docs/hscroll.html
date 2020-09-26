@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>hscroll</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="hscroll">HSCROLL macro</h1>
+<p>Horizontally scrolls through the active sheet by percentage or by column number.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HSCROLL</strong>(<strong>position</strong>, col_logical)</p>
+<p>Position    specifies the column you want to scroll to. Position can be an integer representing the column number or a fraction or percentage representing the horizontal position of the column in the sheet. If position is 0, HSCROLL scrolls through your sheet to its leftmost edge. If position is 1, HSCROLL scrolls through your sheet to its rightmost edge. For charts that do not size with the window, use a fraction or percentage.</p>
+<p>Col_logical    is a logical value specifying how the function scrolls.</p>
+<ul>
+<li><blockquote>
+<p>If col_logical is TRUE, HSCROLL scrolls through the sheet to column position.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If col_logical is FALSE or omitted, then HSCROLL scrolls through the sheet to the horizontal position represented by the fraction position.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>To scroll to a specific column n, either use HSCROLL(n, TRUE) or use HSCROLL(n/256). To scroll to column 38, for example, use HSCROLL(38, TRUE) or HSCROLL(38/256).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you are recording a macro and move the scroll box several times in a row, the recorder only records the final location of the scroll box, omitting any intermediate steps. Remember that scrolling does not change the active cell or the selection.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="hline.html">HLINE</a>   Horizontally scrolls through the active window by columns</p><p><a href="hpage.html">HPAGE</a>   Horizontally scrolls through the active window one window at a time</p><p><a href="vline.html">VLINE</a>   Vertically scrolls through the active window by rows</p><p><a href="vpage.html">VPAGE</a>   Vertically scrolls through the active window one window at a time</p><p><a href="vscroll.html">VSCROLL</a>   Vertically scrolls through a sheet by percentage or row number</p>
+</body>
+</html>

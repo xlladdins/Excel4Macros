@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>workbook.copy</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.copy">WORKBOOK.COPY macro</h1>
+<p>Equivalent to clicking the Move or Copy Sheet command on the Edit menu. Copies one or more sheets from their current positions to the specified position in the same workbook or to another workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.COPY</strong>(<strong>name_array</strong>, dest_book, position_num)</p>
+<p><strong>WORKBOOK.COPY</strong>?(name_array, dest_book, position_num)</p>
+<p>Name_array    is the name of a sheet, or an array of names of sheets, that you want to copy in the currently active workbook.</p>
+<p>Dest_book    is the name of the workbook to which you want to copy name_array. If dest_book is the current workbook, name_array is copied within the workbook. If dest_book is omitted, the copy of name_array becomes a separate workbook.</p>
+<p>Position_num    is a number that specifies the target position for the sheet within the new workbook. The first position is 1.</p>
+<ul>
+<li><blockquote>
+<p>If position_num is specified, Microsoft Excel inserts the copy of the sheet at the specified position in the workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If position_num is omitted, Microsoft Excel places the sheet at the last position in the workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If dest_book is omitted, position_num is ignored.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the structure of the workbook is protected, you cannot copy sheets within the workbook or to another workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You cannot copy a hidden sheet.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Function</strong></p>
+<p>WORKBOOK.MOVE   Moves one or more documents from one workbook to another workbook or to another position in the same workbook</p>
+
+</body>
+</html>

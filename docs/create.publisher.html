@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>create.publisher</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="create.publisher">CREATE.PUBLISHER macro</h1>
+<p>Equivalent to clicking the Create Publisher command on the Publishing submenu of the Edit menu. Publishes the selected range or chart to an edition file for use by other Macintosh applications.</p>
+<p><strong>Important</strong>   This function is only available if you are using Microsoft Excel for the Macintosh with system software version 7.0 or later.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CREATE.PUBLISHER</strong>(file_text, appearance, size, formats)</p>
+<p><strong>CREATE.PUBLISHER</strong>?(file_text, appearance, size, formats)</p>
+<p>File_text    is a text string to be used as the name of the new file that will contain the selected data. If file_text is omitted, Microsoft Excel uses the format "&lt;WorkbookName&gt; Edition #n", where WorkbookName is the name of the workbook from which the publisher is being created, Edition indicates that the file is an edition file, and n is a unique integer.</p>
+<p>For example, if you omit file_text and are publishing a selection from a workbook named Seasonal, and it is your third publisher from that workbook in the current work session, the default name of the publisher would be "Seasonal Edition #3".</p>
+<p>Appearance    specifies whether the selection is to be published as shown on screen or as shown when printed. The default value for appearance is 1 if the selection is a sheet and 2 if the selection is a chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Appearance</strong></td>
+<td><strong>Selection is published</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>As shown on screen</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>As shown when printed</td>
+</tr>
+</tbody>
+</table>
+<p>Size    specifies the size at which to publish a chart. Size is only available if a chart is to be published.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Size</strong></td>
+<td><strong>Chart is published</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>As shown on screen</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>As shown when printed</td>
+</tr>
+</tbody>
+</table>
+<p>Formats    is number specifying what file format or formats CREATE.PUBLISHER should use when it creates the Edition file.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Formats</strong></td>
+<td><strong>File format</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>PICT</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>BIFF</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>RTF</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>VALU</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>You can also use the sum of the allowable file formats for formats. For example, a value of 6 specifies BIFF and RTF.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If formats is omitted and the document is a sheet, formats is assumed to be 15 (all formats); if the document is a chart, formats is assumed to be 1 (PICT).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="edition.options.html">EDITION.OPTIONS</a>   Sets publisher and subscriber options</p><p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p><p><a href="subscribe.to.html">SUBSCRIBE.TO</a>   Inserts contents of an edition into the active workbook</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another workbook</p>
+</body>
+</html>

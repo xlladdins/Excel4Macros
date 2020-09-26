@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>edit.object</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="edit.object">EDIT.OBJECT macro</h1>
+<p>Equivalent to clicking the Edit command on the (selected object) Object submenu of the Edit menu. Starts the application associated with the selected object and makes the object available for editing or other actions.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>EDIT.OBJECT</strong>(verb_num)</p>
+<p>Verb_num    is a number specifying which verb to use while working with the object, that is, what you want to do with the object.</p>
+<ul>
+<li><blockquote>
+<p>The available verbs are determined by the object's source application. 1 often specifies "edit, " and 2 often specifies "play" (for sound, animation, and so on). For more information, consult the documentation for the object's application to see how it supports object linking and embedding (OLE).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the object does not support multiple verbs, verb_num is ignored.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If verb_num is omitted, it is assumed to be 1.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>Your macro pauses while you're editing the object and resumes when you return to Microsoft Excel.</p>
+<p><strong>Related Function</strong></p>
+<p>INSERT.OBJECT   Creates an object of a specified type</p>
+
+</body>
+</html>

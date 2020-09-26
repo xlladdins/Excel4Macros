@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>pttestv</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pttestv">PTTESTV macro</h1>
+<p>Performs a two-sample Student's t-Test, assuming unequal variances.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PTTESTV</strong>(<strong>inprng1, inprng2</strong>, outrng, labels, alpha)</p>
+<p><strong>PTTESTV</strong>?(inprng1, inprng2, outrng, labels, alpha)</p>
+<p>Inprng1    is the input range for the first data set.</p>
+<p>Inprng2    is the input range for the second data set.</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output table or the name, as text, of a new sheet to contain the output table. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Labels    is a logical value.</p>
+<ul>
+<li><blockquote>
+<p>If labels is TRUE, then labels are in the first row or column of the input ranges.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If labels is FALSE or omitted, all cells in inprng1 and inprng2 are considered data. The output table will include default row or column headings.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Alpha    is the confidence level for the test. If omitted, alpha is 0.05.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="pttestm.html">PTTESTM</a>   Performs a paired two-sample Student's t-Test for means</p><p><a href="ttestm.html">TTESTM</a>   Performs a two-sample Student's t-Test for means, assuming equal variances</p>
+</body>
+</html>

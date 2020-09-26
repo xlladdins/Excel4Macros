@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>formula.convert</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="formula.convert">FORMULA.CONVERT macro</h1>
+<p>Changes the style and type of references in a formula between A1 and R1C1 and between relative and absolute. Use FORMULA.CONVERT to convert references of one style or type to another style or type.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMULA.CONVERT</strong>(<strong>formula_text, from_a1</strong>, to_a1, to_ref_type, rel_to_ref)</p>
+<p>Formula_text    is the formula, given as text, containing the references you want to change. Formula_text must be a valid formula, and an equal sign must be included.</p>
+<p>From_a1    is a logical value specifying whether the references in formula_text are in A1 or R1C1 style. If from_a1 is TRUE, references are in A1 style; if FALSE, references are in R1C1 style.</p>
+<p>To_a1    is a logical value specifying the form for the references FORMULA.CONVERT returns. If to_a1 is TRUE, references are returned in A1 style; if FALSE, references are returned in R1C1 style. If to_a1 is omitted, the reference style is not changed.</p>
+<p>To_ref_type    is a number from 1 to 4 specifying the reference type of the returned formula. If to_ref_type is omitted, the reference type is not changed.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>To_ref_type</strong></td>
+<td><strong>Reference type returned</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Absolute</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Absolute row, relative column</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Relative row, absolute column</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Relative</td>
+</tr>
+</tbody>
+</table>
+<p>Rel_to_ref    is an absolute reference that specifies what cell the relative references are or should be relative to.</p>
+<p><strong>Examples</strong></p>
+<p>Use FORMULA.CONVERT to convert relative references entered by the user in an INPUT function or custom dialog box into absolute references. The following macro formula converts the given formula to an absolute, R1C1-style reference:</p>
+<p>FORMULA.CONVERT("=A1:A10", TRUE, FALSE, 1) equals "=R1C1:R10C1"</p>
+<p>The following macro formula converts the references in the given formula to relative, A1-style references:</p>
+<p>FORMULA.CONVERT("=SUM(R10C2:R15C2)", FALSE, TRUE, 4) equals "=SUM(B10:B15)"</p>
+<p><strong>Tip</strong>   To put the converted formula into a cell or range of cells, use the FORMULA.CONVERT function as the formula_text argument to the FORMULA function.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="absref.html">ABSREF</a>   Returns the absolute reference of a range of cells to another range</p><p><a href="formula.html">FORMULA</a>   Enters values into a cell or range or onto a chart</p><p><a href="relref.html">RELREF</a>   Returns a relative reference</p>
+</body>
+</html>

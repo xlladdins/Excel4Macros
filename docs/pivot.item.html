@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>pivot.item</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.item">PIVOT.ITEM macro</h1>
+<p>Moves an item within a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.ITEM</strong>(name, pivot_field_name, pivot_item_name,position)</p>
+<p>Name    is the name of the PivotTable report within which an item will be repositioned. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Pivot_field_name    is the name of the field within which an item will be repositioned, given as a text string. If pivot_field_name is omitted, Microsoft Excel will use the field containing the active cell. If the active cell is not within a field, then this argument is required.</p>
+<p>Pivot_item_name    is the name of the item to be repositioned in its field (given as a text constant). If it is omitted, Microsoft Excel uses the item containing the active cell. If the active cell is not contained within an item, then this argument is required.</p>
+<p>Position    is a number representing where in the field the items will be moved. Position 1 is the topmost position within the row field and the leftmost position within the column field and the highest position within the page field. If the position argument is omitted, it will default to the last position in the field.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If an item is set to be visible, but its display is suppressed because there is no data, this item still occupies a valid position.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If name is not a valid PivotTable name then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If pivot_field_name is not a text string, or if pivot_field_name is not a text string within a valid field name, then #VALUE! is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If pivot_item_name is an item which is not currently showing in the PivotTable report because it does not exist in the field pivot_field_name, the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

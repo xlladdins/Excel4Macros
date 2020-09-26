@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>print</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="print">PRINT macro</h1>
+<p>Equivalent to clicking the Print command on the File menu. Prints the active workbook.</p>
+<p>Arguments correspond to options, check boxes, and edit boxes in the Print dialog box. Arguments corresponding to check boxes are logical values. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PRINT</strong>(range_num, from, to, copies, draft, preview, print_what, color, feed, quality, y_resolution, selection)</p>
+<p><strong>PRINT</strong>?(range_num, from, to, copies, draft, preview, print_what, color, feed, quality, y_resolution, selection)</p>
+<p>Range_num    is a number specifying which pages to print.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Range_num</strong></td>
+<td><strong>Prints the following pages</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>All the pages</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Prints a specified range. If range_num is 2, then from and to are required arguments.</td>
+</tr>
+</tbody>
+</table>
+<p>From    specifies the first page to print. This argument is ignored unless range_num equals 2.</p>
+<p>To    specifies the last page to print. This argument is ignored unless range_num equals 2.</p>
+<p>Copies    specifies the number of copies to print. If omitted, the default is 1.</p>
+<p>Draft    This argument overrides the draft argument from the PAGE.SETUP function. If omitted, the Draft Setting from the Page.Setup function is used.</p>
+<p>Preview    is a logical value corresponding to the Print Preview button in the Print dialog box. If TRUE, the print preview window will be displayed. If FALSE, the window will not be displayed</p>
+<p>Print_what    is a number from 1 to 3 that specifies what parts of the sheet or macro sheet to print. If a chart is active, print_what is ignored. This argument will override the setting in the Page Setup dialog box. If omitted, the note argument in the Page.Setup function is used to determine whether to print notes or not.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Print_what</strong></td>
+<td><strong>Prints</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Sheet only</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Notes only</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Sheet and then notes</td>
+</tr>
+</tbody>
+</table>
+<p>Color    corresponds to the Print Using Color check box. Color is available only in Microsoft Excel for the Macintosh. If omitted, the setting is not changed.</p>
+<p>Feed    is a number specifying the type of paper feed. Feed is available only in Microsoft Excel for the Macintosh.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Feed</strong></td>
+<td><strong>Type of paper feed</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Continuous (paper cassette)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Cut sheet or manual (manual feed)</td>
+</tr>
+</tbody>
+</table>
+<p>Quality    Specifies the DPI output quality you want. If omitted, the corresponding settings in the Page Setup dialog box will be used. If included, this argument overrides the quality argument in the PAGE SETUP dialog box.</p>
+<p>Y_resolution    corresponds to the Print Quality box in the Page Setup dialog box if you have specified a printer where the horizontal and vertical resolution are not equal, such as a dot-matrix printer. If omitted, the corresponding settings in the Page Setup dialog box will be used. If included, this argument overrides the print quality setting in the Page Setup dialog box.</p>
+<p>Selection    specifies what portion of the sheet to print.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Selection</strong></td>
+<td><strong>Portion printed</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Prints the current selection from all selected sheets. For example, if A1:F40 is selected on the active sheet, A1:F40 will be printed from each of the selected sheets.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Prints the print area or entire sheet from all selected sheets.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Prints print area or entire sheet from all sheets in the workbook.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="page.setup.html">PAGE.SETUP</a>   Sets page printing specifications</p><p><a href="print.preview.html">PRINT.PREVIEW</a>   Previews pages and page breaks before printing</p><p><a href="printer.setup.html">PRINTER.SETUP</a>   Identifies the printer</p><p><a href="set.print.area.html">SET.PRINT.AREA</a>   Defines the print area</p><p><a href="set.print.titles.html">SET.PRINT.TITLES</a>   Defines text to print as titles</p><p><a href="define.name.html">DEFINE.NAME</a>   Equivalent to clicking the Define command on the Name submenu of the Insert menu</p>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>sql.get.schema</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="sql.get.schema">SQL.GET.SCHEMA macro</h1>
+<p>Returns information about the structure of the data source on a particular connection. The return value from a successful call to SQL.GET.SCHEMA depends on the type of information that was requested. A list of the accepted requests and their respective return values is listed in the syntax section below.</p>
+<p>If this function is not available, you must install the Microsoft ODBC add-in (XLODBC.XLA).</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SQL.GET.SCHEMA</strong>(<strong>connection_num</strong>, <strong>type_num</strong>, qualifier_text)</p>
+<p>Connection_num    is the unique connection ID of the data source you want information about.</p>
+<ul>
+<li><blockquote>
+<p>Connection_num is returned by a previously executed SQL.OPEN function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If connection_num is not valid, SQL.GET.SCHEMA returns the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Type_num specifies the type of information you want returned. The following is a list of valid type_num values.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Type_num</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Returns</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>A list of available data sources, as a vertical array.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>A list of databases on the current connection, as a vertical array .</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>A list of owners in a database on the current connection, as a vertical array.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>4</p>
+</blockquote></td>
+<td><blockquote>
+<p>A list of tables for a given owner and database on the current connection, as a vertical array.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td><blockquote>
+<p>A list of columns in a particular table and their data types, as a two-dimensional array. The returned array will have two fields and will have a row for each column in the table. The first field will be the name of the column. The second field is the data type of the column. The data type will be a number that corresponds to the ODBC C header file data types. These #define numbers are found in Microsoft Excel ODBC Developer Guide.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>6</p>
+</blockquote></td>
+<td><blockquote>
+<p>User ID of the current user</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>7</p>
+</blockquote></td>
+<td><blockquote>
+<p>Name of the current database.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>8</p>
+</blockquote></td>
+<td><blockquote>
+<p>The name of the data source as given in the ODBC.INI file.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>9</p>
+</blockquote></td>
+<td><blockquote>
+<p>The name of the data source DBMS (i.e. Oracle, SQL Server, etc.).</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>10</p>
+</blockquote></td>
+<td><blockquote>
+<p>The server name for the data source.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>11</p>
+</blockquote></td>
+<td><blockquote>
+<p>The terminology used by the data source to refer to owners ( i.e. "owner", "Authorization ID", "Schema", etc.).</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>12</p>
+</blockquote></td>
+<td><blockquote>
+<p>The terminology used by the data source to refer to tables ( i.e. "table", "file", etc.).</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>13</p>
+</blockquote></td>
+<td><blockquote>
+<p>The terminology used by the data source to refer to qualifiers (i.e. "database" or "directory").</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>14</p>
+</blockquote></td>
+<td><blockquote>
+<p>The terminology used by the data source to refer to procedures (i.e. "database procedure", "stored procedure", or "procedure").</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Qualifier_text    is only included for type_num values of 3, 4 and 5. It is a text string used to qualify the search for the requested information and should be enclosed by quotation marks.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Type_num</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Qualifier_text</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>The value of qualifier_text should be the name of a database in the current data source. SQL.GET.SCHEMA will then only return the names of table owners in that database.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>4</p>
+</blockquote></td>
+<td><blockquote>
+<p>The value of qualifier_text should be both a database name and an owner name. The syntax of qualifier_text is "DatabaseName.OwnerName". A period is used to separate the two names. SQL.GET.SCHEMA will then return an array of table names that are located in the given database and owned by the given owner.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td><blockquote>
+<p>The value of qualifier_text should be the name of a table. Information about the columns in that table will be returned.</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If SQL.GET.SCHEMA is unable to find the requested information then it will return the error value #N/A. In such a case SQL.GET.SCHEMA will place error information in memory for the SQL.ERROR function, if such information is available.</p>
+</blockquote></li>
+<li><blockquote>
+<p>SQL.GET.SCHEMA works with the ODBC functions SQLGetInfo and SQLTables to find the requested information. Refer to the Microsoft Excel ODBC Programmer Guide for more information on these two functions.</p>
+</blockquote></li>
+</ul>
+<p><strong>Example</strong></p>
+<p>SQL.GET.SCHEMA(conn1,7) returns the name of the current database.</p>
+<p>SQL.GET.SCHEMA(conn1,9) returns the name of the DBMS used by the data source.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="sql.open.html">SQL.OPEN</a>   Establishes a connection with a data source</p><p><a href="sql.exec.query.html">SQL.EXEC.QUERY</a>   Sends a query to a data source</p><p><a href="sql.bind.html">SQL.BIND</a>   Specifies storage for a result column</p><p><a href="sql.retrieve.to.file.html">SQL.RETRIEVE.TO.FILE</a>   Retrieves query results and places them in a file</p><p><a href="sql.retrieve.html">SQL.RETRIEVE</a>   Retrieves query results</p><p><a href="sql.close.html">SQL.CLOSE</a>   Closes a data source connection</p><p><a href="sql.error.html">SQL.ERROR</a>   Returns detailed error information</p>
+</body>
+</html>

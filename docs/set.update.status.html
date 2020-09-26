@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>set.update.status</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="set.update.status">SET.UPDATE.STATUS macro</h1>
+<p>Sets the update status of a link to automatic or manual. Use SET.UPDATE.STATUS to change the way a link is updated.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SET.UPDATE.STATUS</strong>(<strong>link_text, status</strong>, type_of_link)</p>
+<p>Link_text    is the path of the linked file for which you want to change the update status.</p>
+<p>Status    is the number 1 or 2 and describes how you want the link to be updated.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Status</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Update method</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>Automatic</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>Manual</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Type_of_link    is a number from 1 to 4 that specifies what type of link you want to get information about.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Type_of_link</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Link document type</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>Not available</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>DDE/OLE link</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>Not available</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>4</p>
+</blockquote></td>
+<td><blockquote>
+<p>Not available</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula sets the update status of the DDE link to Microsoft Word for Windows to manual:</p>
+<p>SET.UPDATE.STATUS("WordDocument|'C:\MEMO.DOC'!DDE.LINK1", 2, 2)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another document</p>
+</body>
+</html>

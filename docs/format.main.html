@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>format.main</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="format.main">FORMAT.MAIN macro</h1>
+<p>Equivalent to clicking the Main Chart command on the Format menu in Microsoft Excel version 4.0. Formats a chart according to the arguments you specify. This function is included for compatibility with Microsoft Excel version 4.0. In Microsoft Excel version 5.0 or later, this is equivalent to clicking the Chart Type command on the Format menu. You can also use the FORMAT.CHART function.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.MAIN</strong>(<strong>type_num</strong>, view, overlap, gap_width, vary, drop, hilo, angle, gap_depth, chart_depth, up_down, series_line, labels, doughnut_size)</p>
+<p><strong>FORMAT.MAIN</strong>?(type_num, view, overlap, gap_width, vary, drop, hilo, angle, gap_depth, chart_depth, up_down, series_line, labels, doughnut_size)</p>
+<p>Type_num    is a number specifying the type of chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Chart</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Area</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Bar</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Column</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Line</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Pie</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>XY (Scatter)</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>3-D Area</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>3-D Column</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>3-D Line</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>3-D Pie</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Radar</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>3-D Bar</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>3-D Surface</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Doughnut</td>
+</tr>
+</tbody>
+</table>
+<p>View    is a number specifying one of the views in the Data View box in the Main Chart dialog box. The view varies depending on the type of chart.</p>
+<p>Overlap    is a number from -100 to 100 specifying how you want bars or columns to be positioned. It corresponds to the Overlap box in the Main Chart dialog box. Overlap is ignored if type_num is not 2 or 3 (bar or column chart).</p>
+<ul>
+<li><blockquote>
+<p>If overlap is positive, it specifies the percentage of overlap you want for bars or columns. For example, 50 would cause one-half of a bar or column to be covered by an adjacent bar or column. A value of zero prevents bars or columns from overlapping.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If overlap is negative, then bars or columns are separated by the specified percentage of the maximum available distance between any two bars or columns.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If overlap is omitted, it is assumed to be 0 (bars or columns do not overlap), or it is unchanged if a value was previously set.</p>
+</blockquote></li>
+</ul>
+<p>Gap_width    is a number from 0 to 500 specifying the space between bar or column clusters as a percentage of the width of a bar or column. It corresponds to the Gap Width box in the Main Chart dialog box.</p>
+<ul>
+<li><blockquote>
+<p>Gap_width is ignored if type_num is not 2, 3, 8, or 12 (bar or column chart).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If gap_width is omitted, it is assumed to be 50, or it is unchanged if a value was previously set.</p>
+</blockquote></li>
+</ul>
+<p>Several of the following arguments are logical values corresponding to check boxes in the Main Chart dialog box. If an argument is TRUE, Microsoft Excel selects the corresponding check box; if FALSE, Microsoft Excel clears the check box. If an argument is omitted, the setting is unchanged.</p>
+<p>Vary    corresponds to the Vary By Categories check box. Vary applies only to charts with one data series and is not available for area charts.</p>
+<p>Drop    corresponds to the Drop Lines check box. Drop is available only for area and line charts.</p>
+<p>Hilo    corresponds to the Hi-Lo Lines check box. Hilo is available only for line charts.</p>
+<p>Angle    is a number from 0 to 360 specifying the angle of the first pie slice (in degrees) if the chart is a pie chart. If angle is omitted, it is assumed to be 0, or it is unchanged if a value was previously set.</p>
+<p>The next two arguments are for 3-D charts only.</p>
+<p>Gap_depth    is a number from 0 to 500 specifying the depth of the gap in front of and behind a bar, column, area, or line as a percentage of the depth of the bar, column, area, or line.</p>
+<ul>
+<li><blockquote>
+<p>Gap_depth is ignored if the chart is a pie chart or if it is not a 3-D chart.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If gap_depth is omitted and the chart is a 3-D chart, gap_depth is assumed to be 50, or it is unchanged if a value was previously set. If gap_depth is omitted and the view is side-by-side, stacked, or stacked 100%, gap_depth is assumed to be 0, or it is unchanged if a value was previously set.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Chart_depth    is a number from 20 to 2000 specifying the visual depth of the chart as a percentage of the width of the chart. Chart_depth corresponds to the Chart Depth box in the Main Chart dialog box.</p>
+<ul>
+<li><blockquote>
+<p>Chart_depth is ignored if the chart is not a 3-D chart.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If chart_depth is omitted, it is assumed to be 100, or it is unchanged if a value was previously set.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>The next three arguments are logical values corresponding to check boxes in the Main Chart dialog box. If an argument is TRUE, Microsoft Excel selects the corresponding check box; if FALSE, Microsoft Excel clears the check box. If an argument is omitted, the setting is unchanged. The final argument is for compatibility with Microsoft Excel version 4.0.</p>
+<p>Up_down    corresponds to the Up/Down Bars check box. Up_down is available only for line charts.</p>
+<p>Series_line    corresponds to the Series Lines check box. Series_line is available only for stacked bar and column charts.</p>
+<p>Labels    corresponds to the Radar Axis Labels check box. Labels is available only for radar charts.</p>
+<p>Doughnut_size    specifies the size of the hole in a doughnut chart. Can be a value from 10% - 90%. Default is 50%</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="format.chart.html">FORMAT.CHART</a>   Formats a chart</p><p><a href="format.overlay.html">FORMAT.OVERLAY</a>   Formats an overlay chart</p>
+</body>
+</html>

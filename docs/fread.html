@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>fread</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fread">FREAD macro</h1>
+<p>Reads characters from a file, starting at the current position in the file. (For more information about a file's position, see FPOS.) If FREAD is successful, it returns the text to the cell containing FREAD and set's the file's position to the start of the following line. If the end of the file is reached or if FREAD can't read the file, it returns the #N/A error value. Use FREAD instead of FREADLN when you need to read a specific number of characters from a text file.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FREAD</strong>(<strong>file_num, num_chars</strong>)</p>
+<p>File_num    is the unique ID number of the file you want to read data from. File_num is returned by a previously executed FOPEN function. If file_num is not valid, FREAD returns the #VALUE! error value.</p>
+<p>Num_chars    specifies how many bytes to read from the file. FREAD can read up to 255 bytes at a time.</p>
+<p><strong>Example</strong></p>
+<p>The following function reads the next 200 bytes from the open file identified as FileNumber:</p>
+<p>FREAD(FileNumber, 200)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fopen.html">FOPEN</a>   Opens a file with the type of permission specified</p><p><a href="fpos.html">FPOS</a>   Sets the position in a text file</p><p><a href="freadln.html">FREADLN</a>   Reads a line from a text file</p><p><a href="fwrite.html">FWRITE</a>   Writes characters to a text file</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>files</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="files">FILES macro</h1>
+<p>Returns a horizontal text array of the names of all files in the specified directory or folder. Use FILES to build a list of filenames upon which you want your macro to operate.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILES</strong>(directory_text)</p>
+<p>Directory_text    specifies which directories or folders to return filenames from.</p>
+<ul>
+<li><blockquote>
+<p>Directory_text accepts an asterisk (*) to represent a series of characters and a question mark (?) to represent a single character in filenames.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If directory_text is not specified, FILES returns filenames from the current directory.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>If you enter FILES in a single cell, only one filename is returned. You will normally use FILES with SET.NAME to assign the returned array to a name. See the last example below.</p>
+<p><strong>Tips</strong>   You can use COLUMNS to count the number of entries in the returned array. You can use TRANSPOSE to change a horizontal array to a vertical one.</p>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula returns the names of all files starting with the letter F in the current directory or folder:</p>
+<p>FILES("F*.*")</p>
+<p>When entered as an array formula in several cells, the following macro formula returns the filenames in the current directory to those cells. If the directory contains fewer files than can fit in the selected cells, the #N/A error value appears in the extra cells.</p>
+<p>FILES()</p>
+<p>In Microsoft Excel for Windows, the following macro formula returns all files starting with "SALE" and ending with the .XLS extension in the \EXCEL\CHARTS subdirectory:</p>
+<p>FILES("C:\EXCEL\CHARTS\SALE*.XLS")</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula returns all files starting with "SALE" in the nested CHART folder:</p>
+<p>FILES("DISK:EXCEL:CHART:SALE*")</p>
+<p>The following macro stores the names of the files in the current directory in the named array FileArray</p>
+<p>SET.NAME("FileArray",FILES())</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="documents.html">DOCUMENTS</a>   Returns the names of the specified open workbooks</p><p><a href="file.delete.html">FILE.DELETE</a>   Deletes a file</p><p><a href="open.html">OPEN</a>   Opens a workbook</p><p><a href="set.name.html">SET.NAME</a>   Defines a name as a value</p>
+</body>
+</html>

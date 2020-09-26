@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>hide.dialog</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="hide.dialog">HIDE.DIALOG macro</h1>
+<p>Closes the dialog box that has the current focus.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HIDE.DIALOG</strong>(cancel_logical)</p>
+<p>Cancel_logical    is a logical value that specifies whether to close the dialog box and validate any edit boxes. If FALSE, the dialog box is closed and edit boxes are validated, or checked to determine if they contain a valid data type. If TRUE, the dialog box is closed and the edit boxes are not validated.</p>
+<p><strong>Remarks</strong></p>
+<p>If the edit box does not contain a valid data type when the dialog box is closed, the dialog will remain open. For example, if the edit box is supposed to contain integer values, and a text value is entered, the dialog box will not close. This applies to only those dialog boxes that must be closed before any further user action can happen.</p>
+<p><strong>Examples</strong></p>
+<p>HIDE.DIALOG(FALSE) closes the dialog box and checks to see if the edit box contains a valid data type (validated)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="editbox.properties.html">EDITBOX.PROPERTIES</a>   Sets the properties of an edit box on a worksheet or dialog sheet</p><p><a href="show.dialog.html">SHOW.DIALOG</a>   Runs a dialog on a dialog sheet</p>
+</body>
+</html>

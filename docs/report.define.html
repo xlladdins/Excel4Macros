@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>report.define</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="report.define">REPORT.DEFINE macro</h1>
+<p>Equivalent to clicking the Report Manager command on the View menu and then clicking the Add option in the Report Manager dialog box. Creates or replaces a report definition. If this function is not available, you must install the Report Manager add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>REPORT.DEFINE</strong>(<strong>report_name, sections_array</strong>, pages_logical)</p>
+<p>Report_name    specifies the name of the report. If the workbook already contains a report with report_name, the new report replaces the existing one.</p>
+<p>Sections_array    is an array that contains one or more rows of view, scenario, and sheet name that define the report. The sheet name is the sheet on which the view and scenario are defined. If the sheet name is not specified, the current sheet is used when REPORT.DEFINE is run.</p>
+<p>Pages_logical    is a logical value that, if TRUE or omitted, specifies continuous page numbers for multiple sections or, if FALSE, resets page numbers to 1 for each new section.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>REPORT.DEFINE returns the #VALUE error value if report_name is invalid or if the workbook is protected.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If there are no reports defined, this function will bring up the Add Report dialog box.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Functions</strong></p>
+<p><a href="report.delete.html">REPORT.DELETE</a>   Removes a report from the active workbook</p><p><a href="report.print.html">REPORT.PRINT</a>   Prints a report</p><p><a href="report.get.html">REPORT.GET</a>   Returns information about reports defined for the active workbook</p>
+</body>
+</html>

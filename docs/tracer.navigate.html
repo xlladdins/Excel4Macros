@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>tracer.navigate</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="tracer.navigate">TRACER.NAVIGATE macro</h1>
+<p>Equivalent to double-clicking on a displayed tracer arrow. Moves the selection from one end of a tracer arrow to the other. If it is an error tracer arrow, then the selection goes to the end of the branch.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>TRACER.NAVIGATE</strong>(direction, arrow_num, ref_num)</p>
+<p>Direction    is a logical value which, if TRUE, moves the selection to the arrow endpoint in the precedents direction. If FALSE, moves the selection to the arrow endpoint in the dependents direction.</p>
+<p>Arrow_num    is a number specifying which reference a tracer arrow will follow. For example, a 1 indicates that the arrow will follow the first reference in the formula. 1 is the default.</p>
+<p>Ref_num    If the arrow is an external reference arrow with multiple links, this argument tells which of the links to follow. Refer to the Links dialog, which is displayed with the Links command from the Edit menu. If ref_num is 1, the link in the first reference in the Links dialog box will be followed. The default is 1.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Returns TRUE if successful. Returns FALSE if arrow_num exceeds the number of tracer arrows or if there are no tracer arrows.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Returns FALSE if ref_num exceeds the number of links.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Returns the #VALUE! error value if not available; for example, if the selection is something other than a worksheet, or the active cell does not contain an arrow.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Function</strong></p>
+<p>TRACER.DISPLAY   Allows tracer arrow to be displayed showing which cells formulas in other cells depend on</p>
+
+</body>
+</html>

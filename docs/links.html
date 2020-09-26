@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>links</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="links">LINKS macro</h1>
+<p>Returns, as a horizontal array of text values, the names of all workbooks referred to by external references in the workbook specified. Use LINKS with OPEN.LINKS to open supporting workbooks.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>LINKS</strong>(document_text, type_num)</p>
+<p>Document_text    is the name of a workbook, including its path. If document_text is omitted, LINKS operates on the active workbook. If the workbook specified by document_text is not open, LINKS returns the #N/A error value.</p>
+<p>Type_num    is a number from 1 to 6 specifying the type of linked workbooks to return.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Microsoft Excel link</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>DDE/OLE link (Microsoft Excel for Windows)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Reserved</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Not applicable</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Publisher (Microsoft Excel for the Macintosh)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Subscriber (Microsoft Excel for the Macintosh)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the active workbook contains no external references, LINKS returns the #N/A error value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>With the INDEX function, you can select individual workbook names from the array for use in other functions that take workbook names as arguments.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The names of the workbook are always returned in alphabetic order. If supporting workbooks are open, LINKS returns the names of the workbooks; if supporting workbooks are closed, LINKS includes the full path of each workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If type_num is 5 or 6, LINKS returns a two-row array in which the first row contains the edition name and the second row contains the reference.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>If a chart named Chart1 is open and contains links to workbook Data1 and Data2, and the LINKS function shown below is entered as an array into a two-cell horizontal range:</p>
+<p>LINKS("Chart1") equals "Data1" in the first cell of the range and "Data2" in the second cell.</p>
+<p>In Microsoft Excel for Windows, if the chart named VARIANCE.XLS is open and contains data series that refer to workbook named BUDGET.XLS and ACTUAL.XLS, then:</p>
+<p>OPEN.LINKS(LINKS("VARIANCE.XLS")) opens BUDGET.XLS and ACTUAL.XLS.</p>
+<p>In Microsoft Excel for the Macintosh, if the workbook named SALES 1991 is open and contains references to the workbook WEST SALES, SOUTH SALES, and EAST SALES, then:</p>
+<p>OPEN.LINKS(LINKS("SALES 1991")) opens WEST SALES, SOUTH SALES, and EAST SALES.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="change.link.html">CHANGE.LINK</a>   Changes supporting workbook links</p><p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p><p><a href="open.links.html">OPEN.LINKS</a>   Opens specified supporting workbook</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another workbook</p>
+</body>
+</html>

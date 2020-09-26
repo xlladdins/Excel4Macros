@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>fopen</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fopen">FOPEN macro</h1>
+<p>Opens a file with the type of permission specified. Unlike OPEN, FOPEN does not load the file into memory and display it; instead, FOPEN establishes a channel with the file so that you can exchange information with it. If the file is opened successfully, FOPEN returns a file ID number. If it can't open the file, FOPEN returns the #N/A error value. Use the file ID number with other file functions (such as FREAD, FWRITE, and FSIZE) when you want to get information from or send information to the file.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FOPEN</strong>(<strong>file_text</strong>, access_num)</p>
+<p>File_text    is the name of the file you want to open.</p>
+<p>Access_num    is a number from 1 to 3 specifying what type of permission to allow to the file:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Access_num</strong></td>
+<td><strong>Type of permission</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Can read and write to the file (read/write permission)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Can read the file, but can't write to the file (read-only permission)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Creates a new file with read/write permission</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>If the file doesn't exist and access_num is 3, FOPEN creates a new file.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the file does exist and access_num is 3, FOPEN replaces the contents of the file with any information you supply using the FWRITE or FWRITELN functions.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the file doesn't exist and access_num is 1 or 2, FOPEN returns the #N/A error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>Use FCLOSE to close a file after you finish using it.</p>
+<p><strong>Example</strong></p>
+<p>The following function opens a file identified as FileName using read-only permission:</p>
+<p>FOPEN(FileName, 2)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fclose.html">FCLOSE</a>   Closes a text file</p><p><a href="fread.html">FREAD</a>   Reads characters from a text file</p><p><a href="fwrite.html">FWRITE</a>   Writes characters to a text file</p><p><a href="open.html">OPEN</a>   Opens a workbook</p>
+</body>
+</html>

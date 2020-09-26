@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>workspace</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workspace">WORKSPACE macro</h1>
+<p>Changes the workspace settings for a workbook. This function is provide for compatibility with Microsoft Excel version 4.0 only. In Microsoft Excel version 5.0 and later versions, you can change workbook settings with OPTIONS.GENERAL function.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKSPACE</strong>(fixed, decimals, r1c1, scroll, status, formula, menu_key, remote, entermove, underlines, tools, notes, nav_keys, menu_key_action, drag_drop, show_info)</p>
+<p><strong>WORKSPACE</strong>?(fixed, decimals, r1c1, scroll, status, formula, menu_key, remote, entermove, underlines, tools, notes, nav_keys, menu_key_action, drag_drop, show_info)</p>
+<p>Arguments correspond to check boxes and text boxes in the Workspace dialog box. Arguments corresponding to check boxes are logical values. If an argument is TRUE, the check box is selected; if FALSE, the check box is cleared; if omitted, the current setting is not changed.</p>
+<p>Fixed    corresponds to the Fixed Decimal check box.</p>
+<p>Decimals    specifies the number of decimal places. Decimals is ignored if fixed is FALSE or omitted.</p>
+<p>R1c1    corresponds to the R1C1 check box.</p>
+<p>Scroll    corresponds to the Scroll Bars check box.</p>
+<p>Status    corresponds to the Status Bar check box.</p>
+<p>Formula    corresponds to the Formula Bar check box.</p>
+<p>Menu_key    is a text value indicating an alternate menu key, and corresponds to the Alternate Menu Or Help Key box.</p>
+<p>Remote    corresponds to the Ignore Remote Requests check box.</p>
+<p><strong>Important   </strong>Microsoft Excel for the Macintosh requires system software version 7.0 or later for this argument.</p>
+<p>Entermove    corresponds to the Move Selection After Enter/Return check box.</p>
+<p>Underlines    is a number corresponding to the Command Underline options as shown in the following table.</p>
+<p><strong>Note   </strong>This argument is only available in Microsoft Excel for the Macintosh.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If underlines is</strong></td>
+<td><strong>Command underlines are</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>On</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Off</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Automatic</td>
+</tr>
+</tbody>
+</table>
+<p>Tools    is a logical value. If TRUE, the Standard toolbar is displayed; if FALSE, all visible toolbars are hidden. If omitted, the current toolbar display is not changed.</p>
+<p>Notes    corresponds to the Note Indicator check box.</p>
+<p>Nav_keys    corresponds to the Alternate Navigation Keys check box. In Microsoft Excel for the Macintosh, nav_keys is ignored.</p>
+<p>Menu_key_action    is the number 1 or 2 specifying options for the alternate menu or Help key. In Microsoft Excel for the Macintosh, menu_key_action is ignored.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Menu_key_action</strong></td>
+<td><strong>Alternate menu or Help key activates</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Microsoft Excel menus</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Lotus 1-2-3 Help</td>
+</tr>
+</tbody>
+</table>
+<p>Drag_drop    corresponds to the Cell Drag And Drop check box.</p>
+<p>Show_info    corresponds to the Info Window check box.</p>
+<p><strong>Related Function</strong></p>
+<p>GET.WORKSPACE   Returns information about the workspace</p>
+
+</body>
+</html>

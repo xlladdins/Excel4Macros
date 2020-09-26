@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>fwrite</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fwrite">FWRITE macro</h1>
+<p>Writes text to a file, starting at the current position in that file. (For more information about a file's position, see FPOS.) If FWRITE can't write to the file, it returns the #N/A error value.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FWRITE</strong>(<strong>file_num, text</strong>)</p>
+<p>File_num    is the unique ID number of the file you want to write data to. File_num is returned by a previously executed FOPEN function. If file_num is not valid, FWRITE returns the #VALUE! error value.</p>
+<p>Text    is the text you want to write to the file.</p>
+<p><strong>Example</strong></p>
+<p>The following function writes the current month to the open file identified as FileNumber:</p>
+<p>FWRITE(FileNumber, TEXT(MONTH(NOW()),"mmmm"))</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fopen.html">FOPEN</a>   Opens a file with the type of permission specified</p><p><a href="fpos.html">FPOS</a>   Sets the position in a text file</p><p><a href="fread.html">FREAD</a>   Reads characters from a text file</p><p><a href="fwriteln.html">FWRITELN</a>   Writes a line to a text file</p>
+</body>
+</html>

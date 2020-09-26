@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>fsize</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fsize">FSIZE macro</h1>
+<p>Returns the number of bytes in a file. Use FSIZE to determine the size of the file, which is the same as the position of the last byte in the file.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FSIZE</strong>(<strong>file_num</strong>)</p>
+<p>File_num    is the unique ID number of the file whose size you want to know. File_num is returned by a previously executed FOPEN function. If file_num is not valid, FSIZE returns the #VALUE! error value.</p>
+<p><strong>Example</strong></p>
+<p>The following function returns the size in bytes of the open file identified as FileNumber:</p>
+<p>FSIZE(FileNumber)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fopen.html">FOPEN</a>   Opens a file with the type of permission specified</p><p><a href="fpos.html">FPOS</a>   Sets the position in a text file</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>ztestm</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="ztestm">ZTESTM macro</h1>
+<p>Performs a two-sample z-test for means, assuming the two samples have known variances.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ZTESTM</strong>(<strong>inprng1, inprng2</strong>, outrng, labels, alpha, difference, <strong>var1, var2</strong>)</p>
+<p><strong>ZTESTM</strong>?(inprng1, inprng2, outrng, labels, alpha, difference, var1, var2)</p>
+<p>Inprng1    is the input range for the first data set.</p>
+<p>Inprng2    is the input range for the second data set.</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output table or the name, as text, of a new sheet to contain the output table. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Labels    is a logical value.</p>
+<ul>
+<li><blockquote>
+<p>If labels is TRUE, then the first row or column of the input ranges contains labels.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If labels is FALSE or omitted, all cells in inprng1 and inprng2 are considered data. Microsoft Excel will then generate the appropriate data labels for the output table.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Alpha    is the confidence level for the test. If omitted, alpha is 0.05.</p>
+<p>Difference    is the hypothesized difference in means. If omitted, difference is 0.</p>
+<p>Var1    is the variance of the first data set.</p>
+<p>Var2    is the variance of the second data set.</p>
+
+</body>
+</html>

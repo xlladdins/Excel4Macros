@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>on.entry</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="on.entry">ON.ENTRY macro</h1>
+<p>Runs a macro when you enter data into any cell on the specified sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ON.ENTRY</strong>(sheet_text, macro_text)</p>
+<p>Sheet_text    is a text value specifying the name of a sheet in a workbook. If sheet_text is omitted, the macro is run whenever you enter data into any sheet or macro sheet.</p>
+<p>Macro_text    is the name of, or an R1C1-style reference to, a macro you want to run when you enter data into the sheet specified by sheet_text. The name or reference must be in text form. If macro_text is omitted, entering data reverts to its normal behavior, and any macros assigned by previous ON.ENTRY functions are turned off.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The macro is run only when you enter data in a cell, not when you use edit commands or macro functions.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To determine what cell had data entered into it, use a CALLER function in the macro specified by macro_text.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="enter.data.html">ENTER.DATA</a>   Turns Data Entry mode on or off</p><p><a href="on.recalc.html">ON.RECALC</a>   Runs a macro when a workbook is recalculated</p>
+</body>
+</html>

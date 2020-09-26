@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>poke</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="poke">POKE macro</h1>
+<p>Sends data to another application. Use POKE to send data to documents in other applications you are communicating with through dynamic data exchange (DDE).</p>
+<p><strong>Syntax</strong></p>
+<p><strong>POKE</strong>(<strong>channel_num, item_text</strong>, <strong>data_ref</strong>)</p>
+<p><strong>Important</strong>   Microsoft Excel for the Macintosh requires system software version 7.0 or later for this function.</p>
+<p>Channel_num    is the channel number returned by a previously run INITIATE function.</p>
+<p>Item_text    is text that identifies the item you want to send data to in the application you are accessing through channel_num. The form of item_text depends on the application connected to channel_num.</p>
+<p>Data_ref    is a reference to the workbook containing the data to send.</p>
+<p>If POKE is not successful, it returns the following values.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value returned</strong></td>
+<td><strong>Meaning</strong></td>
+</tr>
+<tr class="even">
+<td>#VALUE!</td>
+<td>Channel_num is not a valid channel number.</td>
+</tr>
+<tr class="odd">
+<td>#DIV/0!</td>
+<td>The application you are accessing does not respond after a certain length of time, and you press ESC to cancel.</td>
+</tr>
+<tr class="even">
+<td>#REF!</td>
+<td>POKE is refused.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro inserts the text from cell C3 into the Microsoft Word for Windows document SALES.DOC at the start of the document.</p>
+<p>=POKE(SendChanl, "StartOfDoc", C3)</p>
+<p>In Microsoft Excel for the Macintosh, the following macro inserts the text from cell C3 into the Microsoft Word document named Report.</p>
+<p>=POKE(SendChanl, "TopicName", C3)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="initiate.html">INITIATE</a>   Opens a channel to another application</p><p><a href="request.html">REQUEST</a>   Returns data from another application</p><p><a href="terminate.html">TERMINATE</a>   Closes a channel to another application</p>
+</body>
+</html>

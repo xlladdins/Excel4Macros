@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>get.bar</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.bar">GET.BAR macro</h1>
+<p>Returns the number of the active menu bar. There are two syntax forms of GET.BAR. Use syntax 1 to return information that you can use with other functions that manipulate menu bars. Use syntax 2 to return information that you can use with functions that add, delete, or alter menu commands.</p>
+<p>Syntax 1   Returns the number of the active menu bar</p>
+<p>Syntax 2   Returns the name or position number of a specified command on a menu or of a specified menu on a menu bar</p>
+<h1 id="get.bar-syntax-1">GET.BAR Syntax 1</h1>
+<p>Returns the number of the active menu bar. There are two syntax forms of GET.BAR. Use syntax 1 to return information that you can use with other functions that manipulate menu bars. For a list of the ID numbers for Microsoft Excel's built-in menu bars, see ADD.COMMAND.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.BAR</strong>( )</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula assigns the name OldBar to the number of the active menu bar. This is useful if you will need to restore the current menu bar after displaying another custom menu bar.</p>
+<p>SET.NAME("OldBar", GET.BAR())</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.bar.html">ADD.BAR</a>   Adds a menu bar</p><p><a href="show.bar.html">SHOW.BAR</a>   Displays a menu bar</p><p><a href="get.bar.html">GET.BAR</a> Syntax 2   Returns the name or position number of a specified command on a menu or of a specified menu on a menu bar</p><h1 id="get.bar-syntax-2">GET.BAR Syntax 2</h1>
+<p>Returns the name or position number of a specified command on a menu or of a specified menu on a menu bar. There are two syntax forms of GET.BAR. Use syntax 2 to return information that you can use with functions that add, delete, or alter menu commands.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.BAR</strong>(<strong>bar_num, menu, command</strong>, subcommand)</p>
+<p>Bar_num    is the number of a menu bar containing the menu or command about which you want information. Bar_num can be the number of a built-in menu bar or the number returned by a previously run ADD.BAR function. For a list of the ID numbers for Microsoft Excel's built-in menu bars, see ADD.COMMAND.</p>
+<p>Menu    is the menu on which the command resides or the menu whose name or position you want. Menu can be the name of the menu as text or the number of the menu. Menus are numbered starting with 1 from the left of the menu bar.</p>
+<p>Command    is the command or submenu whose name or number you want returned. Command can be the name of the command from the menu as text, in which case the number is returned, or the number of the command from the menu, in which case the name is returned. Commands are numbered starting with 1 from the top of the menu. If command is 0, the name or position number of the menu is returned. If an ellipsis (...) follows a command name, such as the Open... command on the File menu, then you must include the ellipsis when referring to that command. See the following examples.</p>
+<p>Subcommand    returns the name (if number is used for subcommand) or position (if name is used for subcommand) of a command on a submenu. If the command argument refers to an empty submenu, or is a command instead of a submenu, then using subcommand returns #N/A.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If an ampersand is used to indicate the access key in the name of a custom command, the ampersand is included in the name returned by GET.BAR. All built-in commands have an ampersand before the letter used as the access key.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the command name or position specified does not exist, GET.BAR returns the #N/A error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>In the default worksheet and macro sheet menu bar:</p>
+<p>GET.BAR(10, "File", "Print...") equals 14</p>
+<p>GET.BAR(10, "File", 14) equals "&amp;Print...^tCTRL+P" (where ^t is a tab character)</p>
+<p>GET.BAR(10, 1, "Open") equals #N/A</p>
+<p>GET.BAR(10, 1, "Open...") equals 2</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="delete.command.html">DELETE.COMMAND</a>   Deletes a command from a menu</p><p><a href="get.toolbar.html">GET.TOOLBAR</a>   Retrieves information about a toolbar</p><p><a href="rename.command.html">RENAME.COMMAND</a>   Changes the name of a command or menu</p><p><a href="get.bar.html">GETBAR</a> Syntax 1   Returns the number of the active menu bar</p>
+</body>
+</html>

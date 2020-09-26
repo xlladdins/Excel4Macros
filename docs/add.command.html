@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>add.command</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="add.command">ADD.COMMAND macro</h1>
+<p>Adds a command to a menu. ADD.COMMAND returns the position number on the menu of the added command. Use ADD.COMMAND to add one or more custom menu commands to a menu on a built-in or custom menu bar. You can also use ADD.COMMAND to restore a deleted built-in command to its original menu.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ADD.COMMAND</strong>(<strong>bar_num, menu, command_ref</strong>, position1, position2)</p>
+<p>Bar_num    is the number corresponding to a menu bar or a type of shortcut menu to which you want to add a command.</p>
+<ul>
+<li><blockquote>
+<p>Bar_num can be the ID number of a built-in or custom menu bar. The ID number of a custom menu bar is the number returned by the ADD.BAR function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Bar_num can also refer to a type of shortcut menu; use menu to identify the specific shortcut menu.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>The ID numbers of the built-in menu bars and the types of shortcut menus are listed in the following tables. Short menus are abbreviated versions of the normal Microsoft Excel menus. To turn on short menus, use the SHORT.MENUS function.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Bar_num</strong></td>
+<td><strong>Built-in menu bar</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Worksheet and macro sheet (Microsoft Excel 4.0 or later)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Chart (Microsoft Excel 4.0 or later)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Null (the menu displayed when no workbooks are open)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Info</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Worksheet and macro sheet (short menus, Microsoft Excel 3.0 and earlier)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Chart (short menus, Microsoft Excel 3.0 and earlier)</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Cell, toolbar, and workbook (shortcut menus)</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Object (shortcut menus)</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Chart (Microsoft Excel 4.0 or later shortcut menus)</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Worksheet and macro sheet</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Chart</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Visual Basic</td>
+</tr>
+</tbody>
+</table>
+<p>Menu    is the menu to which you want the new command added.</p>
+<ul>
+<li><blockquote>
+<p>Menu can be either the name of a menu as text or the number of a menu.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If bar_num is 1 through 6, menus are numbered starting with 1 from the left of the menu bar.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If bar_num is 7, 8, or 9, menu refers to a built-in shortcut menu. The combination of bar_num and menu determines which shortcut menu to modify, as shown in the following table.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Bar_num</strong></td>
+<td><strong>Menu</strong></td>
+<td><strong>Shortcut menu</strong></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>1</td>
+<td>Toolbars</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>2</td>
+<td>Toolbar buttons</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>3</td>
+<td>Workbook paging icons in Microsoft Excel 4.0</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>4</td>
+<td>Cells (worksheet)</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>5</td>
+<td>Column selections</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>6</td>
+<td>Row selections</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>7</td>
+<td>Workbook tabs</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>8</td>
+<td>Cells (macro sheet)</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>9</td>
+<td>Workbook title bar</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>10</td>
+<td>Desktop (Microsoft Excel for Windows only)</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>11</td>
+<td>Module</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>12</td>
+<td>Watch pane</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>13</td>
+<td>Immediate pane</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>14</td>
+<td>Debug code pane</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>1</td>
+<td>Drawn or imported objects on worksheets, dialog sheets, and charts</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>2</td>
+<td>Buttons on sheets</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>3</td>
+<td>Text boxes</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>4</td>
+<td>Dialog sheet</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>1</td>
+<td>Chart series</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>2</td>
+<td>Chart and axis titles</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>3</td>
+<td>Chart plot area and walls</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>4</td>
+<td>Entire chart</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>5</td>
+<td>Chart axes</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>6</td>
+<td>Chart gridlines</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>7</td>
+<td>Chart floor and arrows</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>8</td>
+<td>Chart legend</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>   Any commands that you add to the toolbar buttons, watch pane, immediate pane or debug code pane shortcut menus will be dimmed.</p>
+<p>Command_ref    is an array or a reference to an area on the macro sheet that describes the new command or commands.</p>
+<ul>
+<li><blockquote>
+<p>Command_ref must be at least two columns wide. The first column specifies command names; the second specifies macro names. Optional columns can be specified for shortcut keys (in Microsoft Excel for the Macintosh), status bar messages, and custom Help topics, in that order.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Command_ref is similar to menu_ref in ADD.MENU. For more information about command_ref, see the description of menu_ref in ADD.MENU.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Command_ref can be the name, as text, of a previously deleted built-in command that you want to restore. You can also use the value returned by the DELETE.COMMAND formula that deleted the command.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Position1    specifies the placement of the new command.</p>
+<ul>
+<li><blockquote>
+<p>Use a hyphen (-) to represent a line separating commands on a menu. If you want to place a command before the second separator on a menu, use two hyphens (--), three hyphens for the third separator, and so on.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Position1 can be a number indicating the position of the command on the menu. Commands are numbered from the top of the menu starting with 1.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Position1 can be the name of an existing command, as text, above which you want to add the new command.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If position1 is omitted, the command is added to the bottom of the menu.</p>
+</blockquote></li>
+<li><blockquote>
+<p>For the toolbar shortcut menu (bar_num 7, menu 1) and the shortcut menu for workbook paging icons in Microsoft Excel version 4.0 (bar_num 7, menu 3), you cannot add commands to the middle of the toolbar name list or the middle of the workbook contents list.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Position2    specifies the placement of the new command on a submenu.</p>
+<ul>
+<li><blockquote>
+<p>Position2 can be a number indicating the position of the command on the submenu. Commands are numbered from the top of the menu starting with 1.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Position2 can be the name of an existing command, as text, above which you want to add the new command.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If position2 is omitted, the command is added to the main menu, not the submenu.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To add a command to the bottom of a submenu, use 0 for position2.</p>
+</blockquote></li>
+</ul>
+<p><strong>Tip</strong>   In general, use menu and command names rather than numbers for arguments. The numbers assigned to menus and commands change as you add and delete menus and commands. Using names ensures that your menu and command macro functions always refer to the correct items.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula adds the command described in cells G16:J16 to the bottom of the worksheet cells shortcut menu:</p>
+<p>ADD.COMMAND(7, 4, G16:J16)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.bar.html">ADD.BAR</a>   Adds a menu bar</p><p><a href="add.menu.html">ADD.MENU</a>   Adds a menu to a menu bar</p><p><a href="add.tool.html">ADD.TOOL</a>   Adds one or more buttons to a toolbar</p><p><a href="add.toolbar.html">ADD.TOOLBAR</a>   Creates a toolbar with the specified tools</p><p><a href="delete.command.html">DELETE.COMMAND</a>   Deletes a command from a menu</p><p><a href="enable.command.html">ENABLE.COMMAND</a>   Enables or disables a menu or custom command</p><p><a href="get.toolbar.html">GET.TOOLBAR</a>   Retrieves information about a toolbar</p><p><a href="rename.command.html">RENAME.COMMAND</a>   Changes the name of a command or menu</p>
+</body>
+</html>

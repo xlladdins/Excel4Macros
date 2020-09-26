@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>open.links</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="open.links">OPEN.LINKS macro</h1>
+<p>Equivalent to clicking the Links command on the Edit menu. Use OPEN.LINKS with the LINKS function to open workbooks linked to a particular sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OPEN.LINKS</strong>(<strong>document_text1</strong>, document_text2, ..., read_only, type_of_link)</p>
+<p><strong>OPEN.LINKS</strong>?(document_text1, document_text2, ..., read_only, type_of_link)</p>
+<p>Document_text1, document_text2,    are 1 to 12 arguments that are the names of supporting documents in the form of text, or arrays or references that contain text.</p>
+<p>Read_only    is a logical value corresponding to the read/write status of the linked worksheet. If read_only is TRUE, the sheet can be modified but changes cannot be saved; if FALSE or omitted, changes to the sheet can be saved. Read_only applies only to Microsoft Excel, WKS, and SYLK documents.</p>
+<p>Type_of_link    is a number from 1 to 6 that specifies what type of link you want to get information about.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_of_link</strong></td>
+<td><strong>Link document type</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Microsoft Excel link</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>DDE link</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Reserved</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Not applicable</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Subscriber</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Publisher</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<p>You can generate an array of the names of linked workbooks with the LINKS function.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="change.link.html">CHANGE.LINK</a>   Changes supporting workbook links</p><p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p><p><a href="links.html">LINKS</a>   Returns the name of all linked workbooks</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another document</p>
+</body>
+</html>

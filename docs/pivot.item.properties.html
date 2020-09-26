@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>pivot.item.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.item.properties">PIVOT.ITEM.PROPERTIES macro</h1>
+<p>Changes the properties of an item within a header field.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.ITEM.PROPERTIES</strong>(name, pivot_field_name, pivot_item_name, new_name, position, show, active_page)</p>
+<p>Name    is the name of the PivotTable report containing the item which the user wants to edit.</p>
+<p>Pivot_field_name    is the name of a field in the PivotTable report containing the item which the user would like to edit. If it is omitted, Microsoft Excel uses the field containing the active cell.</p>
+<p>Pivot_item_name    is the name of the item which the user would like to edit. If it is omitted, Microsoft Excel uses the item containing the active cell.</p>
+<p>New_name    is the name which you would like to rename the current item. If it is omitted, then the name of the current item will not change.</p>
+<p>Position    is a number representing where in the field the item will appear. Position 1 is the topmost position within the row field, the leftmost position within the column field, and the highest position within the page field. If the position argument is omitted, it will default to the last position in the field.</p>
+<p>Show    is a logical value which if TRUE causes the item to appear in the PivotTable report. If FALSE, the item will be hidden.</p>
+<p>Active_page    is a logical value specifying whether item_name will become the active item in the page field. If TRUE then item_name will become the active item in the page field. If FALSE or omitted, the active item in the page field does not change. Applies to only page fields.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If pivot_field_name is not a header field, then this function will return the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

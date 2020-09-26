@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>sound.play</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="sound.play">SOUND.PLAY macro</h1>
+<p>This function should not be used in Microsoft Excel 97 or later because sound notes are available only in Microsoft Excel 95 or earlier versions.</p>
+<p>Plays the sound from a cell note or a file. Equivalent to clicking the Note command on the Insert menu and clicking the Play button, or clicking the Note command on the Insert menu, clicking the Import button, and then opening a file, selecting a sound, and clicking the Play button. To play sounds in Microsoft Excel for Windows, you must have a sound board installed in your computer.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SOUND.PLAY</strong>(cell_ref, file_text, resource)</p>
+<p>Cell_ref    is a reference to the cell note containing sound that you want to play. If cell_ref is omitted, Microsoft Excel plays the sound from the active cell, or from a file if you specify one.</p>
+<p>File_text    is the name of a file containing sounds. If cell_ref is specified, file_text is ignored.</p>
+<p>Resource    is a number or name given as text specifying a sound resource in file_text that you want to play.</p>
+<ul>
+<li><blockquote>
+<p>This argument applies only to Microsoft Excel for the Macintosh.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If cell_ref is specified, resource is ignored.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If resource is omitted, Microsoft Excel uses the first sound resource in the file.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the file does not contain a sound resource with the specified name or number, Microsoft Excel halts the macro and displays an error message.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>SOUND.NOTE   Records or imports sound into or erases sound from cell notes</p>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>fill.auto</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="fill.auto">FILL.AUTO macro</h1>
+<p>Equivalent to copying cells or automatically filling a selection by dragging the fill selection handle with the mouse (the AutoFill feature).</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILL.AUTO</strong>(destination_ref, copy_only)</p>
+<p>Destination_ref    is the range of cells into which you want to fill data. The top, bottom, left, or right end of destination_ref must include all of the cells in the source reference (the current selection).</p>
+<p>Copy_only    is a number specifying whether to copy cells or perform an AutoFill operation.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>0 or omitted</td>
+<td>Normal AutoFill</td>
+</tr>
+<tr class="odd">
+<td>1 or TRUE</td>
+<td>Copy cells</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Copy formats</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Fill values</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Increment</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Increment by day</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Increment by weekday</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Increment by month</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Increment by year</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Linear trend</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Growth trend</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="copy.html">COPY</a>   Copies and pastes data or objects</p><p><a href="data.series.html">DATA.SERIES</a>   Fills a range of cells with a series of numbers or dates</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>enable.object</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="enable.object">ENABLE.OBJECT macro</h1>
+<p>Enables or disables a drawing object or the selected drawing object. A disabled object will not run any macro events assigned to it, and the controls will be grayed out.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ENABLE.OBJECT</strong>(object_id_text, <strong>enable_logical</strong>)</p>
+<p>Object_id_text    is the name of the object(s) as text. If omitted, the selected object(s) are assumed.</p>
+<p>Enable_logical    is a logical value that specifies whether the object is to be enabled. If TRUE, the object is enabled. If FALSE, the object is disabled.</p>
+<p><strong>Examples</strong></p>
+<p>ENABLE.OBJECT("Button 2",FALSE) disables the button with object name Button 2 on the dialog box.</p>
+<p><strong>Related Function</strong></p>
+<p>SET.CONTROL.VALUE   Changes the value of the active control</p>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>parse</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="parse">PARSE macro</h1>
+<p>Distributes the contents of the current selection to fill several adjacent columns; the selection can be no more than one column wide. Use PARSE to reorganize data, especially data that you've read from files created by another application, such as a database.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PARSE</strong>(parse_text, destination_ref)</p>
+<p><strong>PARSE</strong>?(parse_text, destination_ref)</p>
+<p>Parse_text    is the parse line in the form of text. It is a copy of the first nonblank cell in the selected column, with square brackets indicating where to distribute (or parse) text. If parse_text is omitted, Microsoft Excel guesses where to place the brackets based on the spacing and formatting of data.</p>
+<p>Destination_ref    is a reference to the upper-left corner of the range of cells where you want to place the parsed data. If destination_ref is omitted, it is assumed to be the current selection, so the parsed data will replace the original data.</p>
+<p><strong>Remarks</strong></p>
+<p>When you use the PARSE function, Microsoft Excel splits the first column into as many columns as you specify with parse_text and replaces any information in those columns.</p>
+
+</body>
+</html>

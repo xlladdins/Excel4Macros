@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>delete.command</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="delete.command">DELETE.COMMAND macro</h1>
+<p>Deletes a command from a custom or built-in menu. Use DELETE.COMMAND to remove commands you don't want the user to have access to or to remove custom commands that you have added.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DELETE.COMMAND</strong>(<strong>bar_num, menu, command</strong>, subcommand)</p>
+<p>Bar_num    is the menu bar from which you want to delete the command. Bar_num can be the ID number of a built-in or custom menu bar. See ADD.COMMAND for a list of ID numbers for built-in menu bars and shortcut menus.</p>
+<p>Menu    is the menu from which you want to delete the command. Menu can be the name of a menu as text or the number of a menu. Menus are numbered starting with 1 from the left of the screen.</p>
+<p>Command    is the command you want to delete, or the name of a submenu. Command can be the name of the command as text or the number of the command; the first command on a menu is in position 1.</p>
+<p>Subcommand    is the command you want to delete from a submenu. If you use subcommand, you must use command as the name of the submenu.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the specified command does not exist, DELETE.COMMAND returns the #VALUE! error value and interrupts the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>After a command is deleted, the command number for all commands below that command is decreased by one.</p>
+</blockquote></li>
+<li><blockquote>
+<p>When you delete a built-in command, DELETE.COMMAND returns a unique ID number for that command. You can use this ID number with ADD.COMMAND to restore the built-in command to the original menu.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>The following macro formula removes the Compile Reports command from the Reports menu on a custom menu bar created by the ADD.BAR function in a cell named Financials.</p>
+<p>DELETE.COMMAND(Financials, "Reports", "Compile Reports...")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="check.command.html">CHECK.COMMAND</a>   Adds or deletes a check mark to or from a command</p><p><a href="enable.command.html">ENABLE.COMMAND</a>   Enables or disables a menu or custom command</p><p><a href="rename.command.html">RENAME.COMMAND</a>   Changes the name of a command or menu</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>documents</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="documents">DOCUMENTS macro</h1>
+<p>Returns, as a horizontal array in text form, the names of the specified open workbooks. Use DOCUMENTS to retrieve the names of open workbooks to use in other functions that manipulate open workbooks.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DOCUMENTS</strong>(type_num, match_text)</p>
+<p>Type_num    is a number specifying whether to include add-in workbooks in the array of workbooks, according to the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Names of all open workbooks except add-in workbooks</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Names of add-in workbooks only</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Names of all open workbooks</td>
+</tr>
+</tbody>
+</table>
+<p>Match_text    specifies the workbooks whose names you want returned and can include wildcard characters. If match_text is omitted, DOCUMENTS returns the names of all open workbooks.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Use the INDEX function to select individual workbook names from the array to use in other functions that take workbook names as arguments.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Use COLUMNS to count the number of entries in the horizontal array.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Use TRANSPOSE to change a horizontal array to a vertical one.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Since the DOCUMENTS function only returns actual workbook names, it ignores any changes made by the WINDOW.TITLE function.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, if your workspace contains windows named BUDGET.XLS, CHART1, ACTUAL.XLS:1, ACTUAL.XLS:2, and BOOK.XLS, then:</p>
+<p>DOCUMENTS (1) equals the four-cell array {"ACTUAL.XLS", "BOOK.XLS",<br />
+"BUDGET.XLS", "CHART1"}</p>
+<p>SET.NAME("Document_array", DOCUMENTS()) defines the name, Document_array, as {"ACTUAL.XLS", "BOOK.XLS", "BUDGET.XLS", "CHART1"}</p>
+<p>In Microsoft Excel for the Macintosh, if your workspace contains windows named BUDGET CHART1, ACTUALS, ACTUALS:2, and BOOK then:</p>
+<p>DOCUMENTS(1) equals the four-cell array {"ACTUALS", "BOOK", "BUDGET", "CHART1"}</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="files.html">FILES</a>   Returns the filenames in the specified directory or folder</p><p><a href="get.document.html">GET.DOCUMENT</a>   Returns information about a workbook</p><p><a href="get.window.html">GET.WINDOW</a>   Returns information about a window</p><p><a href="windows.html">WINDOWS</a>   Returns the names of all open windows</p>
+</body>
+</html>

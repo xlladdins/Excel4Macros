@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>precision</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="precision">PRECISION macro</h1>
+<p>Equivalent to selecting or clearing the Precision As Displayed check box in the Calculation tab of the Options dialog box, which appears when you click the Options command on the Tools menu. Controls how values are stored in cells. Use PRECISION when the results of formulas do not seem to match the values used to calculate the formulas.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PRECISION</strong>(logical)</p>
+<p>Logical    is a logical value corresponding to the Precision As Displayed check box in the Calculation tab.</p>
+<ul>
+<li><blockquote>
+<p>If logical is TRUE, Microsoft Excel stores future entries at full precision (15 digits).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If logical is FALSE or omitted, Microsoft Excel stores values exactly as they are displayed.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Caution   </strong>The PRECISION function may permanently alter your data. PRECISION(FALSE) causes Microsoft Excel to change values on your worksheet or macro sheet to match displayed values. PRECISION(TRUE) causes Microsoft Excel to store future values at full precision, but it does not restore previously entered numbers to their original values.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Precision As Displayed does not affect numbers in General format. Numbers in General format are always calculated to full precision.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Microsoft Excel calculates slightly faster when using full precision because with Precision As Displayed selected, Microsoft Excel has to round off numbers as it calculates.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="format.number.html">FORMAT.NUMBER</a>   Applies a number format to the selection</p><p><a href="workspace.html">WORKSPACE</a>   Changes workspace settings</p>
+</body>
+</html>

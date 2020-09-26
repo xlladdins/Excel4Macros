@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>axes</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="axes">AXES macro</h1>
+<p>Controls whether the axes on a chart are visible. There are two syntax forms of this function. Syntax 1 is for 2-D charts; syntax 2 is for 3-D charts.</p>
+<p><strong>Syntax 1</strong></p>
+<p>For 2-D charts</p>
+<p><strong>AXES</strong>(x_primary, y_primary, x_secondary, y_secondary)</p>
+<p><strong>AXES</strong>?(x_primary, y_primary, x_secondary, y_secondary)</p>
+<p><strong>Syntax 2</strong></p>
+<p>For 3-D charts</p>
+<p><strong>AXES</strong>(x_primary, y_primary, z_primary)</p>
+<p><strong>AXES</strong>?(x_primary, y_primary, z_primary)</p>
+<p>Arguments are logical values corresponding to the check boxes in the Axes dialog box.</p>
+<ul>
+<li><blockquote>
+<p>If an argument is TRUE, Microsoft Excel selects the check box and displays the corresponding axis.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If an argument is FALSE, Microsoft Excel clears the check box and hides the corresponding axis.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If an argument is omitted, the display of that axis is unchanged.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>X_primary    corresponds to the primary category (x) axis.</p>
+<p>Y_primary    corresponds to the primary value (y) axis.</p>
+<p>Z_primary    corresponds to the value (z) axis on the primary 3-D chart.</p>
+<p>X_secondary    corresponds to the secondary category (x) axis on a 2-D chart only.</p>
+<p>Y_secondary    corresponds to the secondary value (y) axis on a 2-D chart only.</p>
+<p>If a 2-D chart has no secondary axis, only the first two arguments are used.</p>
+<p><strong>Related Function</strong></p>
+<p>GRIDLINES   Controls whether chart gridlines are visible</p>
+
+</body>
+</html>

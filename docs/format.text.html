@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>format.text</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="format.text">FORMAT.TEXT macro</h1>
+<p>Formats the selected worksheet text box or button or any text item on a chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.TEXT</strong>(x_align, y_align, orient_num, auto_text, auto_size, show_key, show_value, add_indent)</p>
+<p><strong>FORMAT.TEXT</strong>?(x_align, y_align, orient_num, auto_text, auto_size, show_key, show_value, add_indent)</p>
+<p>Arguments correspond to check boxes or options in the various tabs on Format Object dialog box. Arguments that correspond to check boxes are logical values. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box; if omitted, the current setting is used.</p>
+<p>X_align    is a number from 1 to 4 specifying the horizontal alignment of the text.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>X_align</strong></td>
+<td><strong>Horizontal alignment</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Left</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Center</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Right</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Justify</td>
+</tr>
+</tbody>
+</table>
+<p>Y_align    is a number from 1 to 4 specifying the vertical alignment of the text.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Y_align</strong></td>
+<td><strong>Vertical alignment</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Top</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Center</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Bottom</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Justify</td>
+</tr>
+</tbody>
+</table>
+<p>Orient_num    is a number from 0 to 3 specifying the orientation of the text.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Orient_num</strong></td>
+<td><strong>Text orientation</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Horizontal</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Vertical</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Upward</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Downward</td>
+</tr>
+</tbody>
+</table>
+<p>Auto_text    corresponds to the Automatic Text check box. If the selected text was created with the Data Labels command from the Insert menu and later edited, this option restores the original text. Auto_text is ignored for text boxes on worksheets and macro sheets.</p>
+<p>Auto_size    corresponds to the Automatic Size check box. If you have changed the size of the border around the selected text, this option restores the border to automatic size. Automatic size makes the border fit exactly around the text no matter how you change the text.</p>
+<p>Show_key    corresponds to the Show Legend Key Next to Label check box in the Data Labels dialog box. This argument applies only if the selected text is an attached data label on a chart.</p>
+<p>Show_value    corresponds to the Show Value option button in the Format Data Labels dialog box. This argument applies only if the selected text is an attached data label on a chart.</p>
+<p>The following list summarizes which arguments apply to each type of text item.</p>
+<p>Add_indent   This argument is for only Far East versions of Microsoft Excel.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Text item</strong></td>
+<td><strong>Arguments that apply</strong></td>
+</tr>
+<tr class="even">
+<td>Worksheet text box or button</td>
+<td>X_align, y_align, orient_num, auto_size</td>
+</tr>
+<tr class="odd">
+<td>Attached data label</td>
+<td>All arguments</td>
+</tr>
+<tr class="even">
+<td>Unattached text label</td>
+<td>X_align, y_align, orient_num, auto_size</td>
+</tr>
+<tr class="odd">
+<td>Tickmark label</td>
+<td>Orient_num</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="font.properties.html">FONT.PROPERTIES</a>   Applies a font to the selection</p><p><a href="formula.html">FORMULA</a>   Enters values into a cell or range or onto a chart</p>
+</body>
+</html>

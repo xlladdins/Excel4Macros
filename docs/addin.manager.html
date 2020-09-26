@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>addin.manager</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="addin.manager">ADDIN.MANAGER macro</h1>
+<p>Equivalent to clicking the Add-Ins command on the Tools menu. Adds or removes an installed add-in from the working set. The add-in file must already be installed.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ADDIN.MANAGER</strong>(operation_num, addinname_text, copy_logical)</p>
+<p><strong>ADDIN.MANAGER</strong>?(operation_num, addinname_text, copy_logical)</p>
+<p>Operation_num    determines the operation that the add-in manager will perform.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Operation_num</strong></td>
+<td><strong>Operation</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Adds an add-in to the working set, using the descriptive name in the Add-Ins dialog box.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Removes an add-in from the working set, using the descriptive name in the Add-Ins dialog box.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Adds a new add-in to the list of add-ins that Microsoft Excel knows about. Equivalent to clicking on the Browse button in the Add-Ins dialog box and clicking a file.</td>
+</tr>
+</tbody>
+</table>
+<p>Addinname_text    specifies the name of the add-in. If operation_num is 1 or 2, use the descriptive name of the add-in, such as "SOLVER". If operation_num is 3, this contains the filename of the add-in.</p>
+<p>Copy_logical    specifies whether the add-in should be copied to the library directory. This argument is only used if operation_num is 3. If omitted, and the file is on removable media, the user will be asked if they want to copy it to removable media.</p>
+
+</body>
+</html>

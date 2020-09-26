@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>workbook.insert</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.insert">WORKBOOK.INSERT macro</h1>
+<p>Equivalent to clicking the Worksheet, Chart, or Macro commands on the Insert menu. Inserts one or more new sheets into the current workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.INSERT</strong>(<strong>type_num</strong>)</p>
+<p><strong>WORKBOOK.INSERT</strong>?(<strong>type_num</strong>)</p>
+<p><strong>Type_num</strong>    specifies the type of sheet to insert.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Type of sheet</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Worksheet</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Chart</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Microsoft Excel 4.0 Macro Sheet</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Microsoft Excel 4.0 International Macro Sheet</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>(Reserved)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Microsoft Excel Visual Basic Module</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Dialog</td>
+</tr>
+<tr class="odd">
+<td>Quoted text</td>
+<td>Template</td>
+</tr>
+</tbody>
+</table>
+<p>If omitted, the type of the active sheet is used.</p>
+<p>If the current selection contains one sheet, then only one sheet is inserted. If the selection contains more than one sheet and the active sheet is a worksheet, then an equal number of sheets is inserted to the left of the selected group of sheets.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The new sheets are always inserted to the left of the current selection.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the workbook structure is protected, you cannot insert new sheets.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

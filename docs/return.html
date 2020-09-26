@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>return</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="return">RETURN macro</h1>
+<p>Ends the currently running macro. If the currently running macro is a subroutine macro that was called by another macro, control is returned to the calling macro. If the currently running macro is a custom function, control is returned to the formula that called the custom function. If the currently running macro is a command macro started by the user with the Run button in the Macro dialog box or a shortcut key or by clicking an object, control is returned to the user.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>RETURN</strong>(value)</p>
+<p>Value    specifies what to return.</p>
+<ul>
+<li><blockquote>
+<p>If the macro is a custom function or a subroutine, value specifies what value to return. However, not all subroutines return values; the last line in macros that do not return values is =RETURN().</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the macro is a command macro run by the user, value should be omitted.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>RETURN signals the end of a macro. Every macro must end with a RETURN or HALT function, but not every macro returns values.</p>
+<p><strong>Example</strong></p>
+<p>The following function returns the sum of the range B1:B10:</p>
+<p>RETURN(SUM(B1:B10))</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="break.html">BREAK</a>   Interrupts a FOR-NEXT, FOR.CELL-NEXT, or WHILE-NEXT loop</p><p><a href="halt.html">HALT</a>   Stops all macros from running</p><p><a href="result.html">RESULT</a>   Specifies the data type a custom function returns</p>
+</body>
+</html>

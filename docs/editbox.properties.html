@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>editbox.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="editbox.properties">EDITBOX.PROPERTIES macro</h1>
+<p>Sets the properties of an edit box on a dialog sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>EDITBOX.PROPERTIES</strong>(validation_num, multiline_logical, vscroll_logical, password_logical)</p>
+<p><strong>EDITBOX.PROPERTIES</strong>?(validation_num, multiline_logical, vscroll_logical, password_logical)</p>
+<p>Validation_num    is the validation applied to the edit box when the dialog is dismissed. If the edit box contains a value other than the type specified (or validation), an error is returned.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Validation_num</strong></td>
+<td><strong>Type</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Text</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Integer</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Number (allows floating point)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Reference</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Formula</td>
+</tr>
+</tbody>
+</table>
+<p>Multiline_logical    is a logical value specifying whether word wrapping is allowed in the edit box control. If TRUE, word wrapping is allowed. If FALSE, word wrapping is not allowed</p>
+<p>Vscroll_logical    is a logical value specifying whether edit box displays a vertical scrollbar. If TRUE, a scrollbar is displayed. If FALSE, a scrollbar is not displayed.</p>
+<p>Password_logical    is a logical value specifying whether edit box displays characters as the user types. If TRUE, asterisks (*) are displayed as the user types. If FALSE, no asterisks are displayed.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="checkbox.properties.html">CHECKBOX.PROPERTIES</a>   Sets various properties of check box and option box controls</p><p><a href="pushbutton.properties.html">PUSHBUTTON.PROPERTIES</a>   Sets the properties of the push button control</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>delete.toolbar</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="delete.toolbar">DELETE.TOOLBAR macro</h1>
+<p>Equivalent to clicking the Delete button in the Toolbars dialog box, which appears when you click the Customize command (View menu, Toolbars submenu). Deletes a custom toolbar.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DELETE.TOOLBAR</strong>(<strong>bar_name</strong>)</p>
+<p>Bar_name    specifies the name of the toolbar that you want to delete. For detailed information about bar_name, see ADD.TOOL.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>You cannot delete built-in toolbars.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If DELETE.TOOLBAR successfully deletes the toolbar, it returns TRUE. If you try to delete a built-in toolbar, DELETE.TOOLBAR returns the #VALUE! error value, interrupts the macro, and takes no other action.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds or more buttons to a toolbar</p><p><a href="add.toolbar.html">ADD.TOOLBAR</a>   Creates a new toolbar with the specified buttons</p><p><a href="reset.toolbar.html">RESET.TOOLBAR</a>   Resets a built-in toolbar to its initial default setting</p>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>format.auto</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="format.auto">FORMAT.AUTO macro</h1>
+<p>Equivalent to clicking the AutoFormat command on the Format menu when a worksheet is active or clicking the AutoFormat button. Formats the selected range of cells from a built-in gallery of formats.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.AUTO</strong>(format_num, number, font, alignment, border, pattern, width)</p>
+<p><strong>FORMAT.AUTO</strong>?(format_num, number, font, alignment, border, pattern, width)</p>
+<p>Format_num    is a number from 1 to 17 corresponding to the formats in the Table Format list box in the AutoFormat dialog box.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Format_num</strong></td>
+<td><strong>Table Format</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>1 or omitted</td>
+<td>Classic 1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Classic 2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Classic 3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Accounting 1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Accounting 2</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Accounting 3</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Colorful 1</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Colorful 2</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Colorful 3</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>List 1</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>List 2</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>List 3</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>3D Effects 1</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>3D Effects 2</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Japan 1 (Far East versions of Microsoft Excel only)</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Japan 2 (Far East versions of Microsoft Excel only)</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>Accounting 4</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>Simple</td>
+</tr>
+</tbody>
+</table>
+<p>The following arguments are logical values corresponding to the Formats To Apply check boxes in the AutoFormat dialog box. If an argument is TRUE or omitted, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box.</p>
+<p>Number    corresponds to the Number check box.</p>
+<p>Font    corresponds to the Font check box.</p>
+<p>Alignment    corresponds to the Alignment check box.</p>
+<p>Border    corresponds to the Border check box.</p>
+<p>Pattern    corresponds to the Pattern check box.</p>
+<p>Width    corresponds to the Column Width/Row Height check box.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="alignment.html">ALIGNMENT</a>   Aligns or wraps text in cells</p><p><a href="border.html">BORDER</a>   Adds a border to the selected cell or object</p><p><a href="font.properties.html">FONT.PROPERTIES</a>   Applies a font to the selection</p><p><a href="format.number.html">FORMAT.NUMBER</a>   Applies a number format to the selection</p><p><a href="patterns.html">PATTERNS</a>   Changes the appearance of the selected object</p>
+</body>
+</html>

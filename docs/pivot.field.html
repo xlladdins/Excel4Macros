@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>pivot.field</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.field">PIVOT.FIELD macro</h1>
+<p>Pivots a field within a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.FIELD</strong>(name, pivot_field_name, orientation, position)</p>
+<p>Name    is the name of the PivotTable report in which the user wants to pivot fields. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Pivot_field_name    is the name of the field which the user wishes to pivot to another part of the PivotTable report. This argument is given as a text constant or a reference to a text constant. If field_name is omitted, Microsoft Excel uses the field containing the active cell.</p>
+<p>Orientation    is an integer representing the destination of the field which is being pivoted. If this argument is omitted, then the orientation remains unchanged. The integers refer to orientations as follows:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Orientation</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Hidden</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Row</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Column</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Page</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Data</td>
+</tr>
+</tbody>
+</table>
+<p>Position    is an integer representing where in the orientation the fields will be positioned. Position 1 is the leftmost header position in the row header and the topmost position in the column header. This argument is ignored if orientation is set to 0. If the position argument is omitted, it will default to the last position in the field.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The function returns TRUE if successful.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If name is not a valid PivotTable name then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If pivot_field_name is not a text constant or contains text which is not a valid field name for the PivotTable report then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If destination is not an integer between 0 and 4, then the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

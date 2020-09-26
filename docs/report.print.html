@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>report.print</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="report.print">REPORT.PRINT macro</h1>
+<p>Equivalent to clicking the Print button in the Report Manager dialog box. Prints a report.</p>
+<p>If this function is not available, you must install the Report Manager add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>REPORT.PRINT</strong>(<strong>report_name</strong>, copies_num, show_print_dlg_logical)</p>
+<p><strong>REPORT.PRINT</strong>?(report_name, copies_num)</p>
+<p>Report_name    specifies the name of a report in the active workbook.</p>
+<p>Copies_num    is the number of copies you want to print. If omitted, the default is 1.</p>
+<p>Show_print_dlg_logical    is a logical value that, if TRUE, displays a dialog box asking how many copies to print, or, if FALSE or omitted, prints the report immediately using existing print settings.</p>
+<p><strong>Remarks</strong></p>
+<p>REPORT.PRINT returns the #VALUE! error value if report_name is invalid or if the workbook is protected.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="report.define.html">REPORT.DEFINE</a>   Creates a report</p><p><a href="report.delete.html">REPORT.DELETE</a>   Removes a report from the active workbook</p>
+</body>
+</html>

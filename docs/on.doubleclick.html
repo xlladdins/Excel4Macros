@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>on.doubleclick</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="on.doubleclick">ON.DOUBLECLICK macro</h1>
+<p>Runs a macro when you double-click any cell or object on the specified sheet or macro sheet or double-click any item on the specified chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ON.DOUBLECLICK</strong>(sheet_text, macro_text)</p>
+<p>Sheet_text    is a text value specifying the name of a sheet in a workbook. If sheet_text is omitted, the macro is run whenever you double-click any sheet not specified by a previous ON.DOUBLECLICK formula. Sheet_text must be in the form "[book1]sheet1".</p>
+<p>Macro_text    is the name of, or an R1C1-style reference to, a macro you want to run when you double-click the sheet specified by sheet_text. The name or reference must be in text form. If macro_text is omitted, double-clicking reverts to its normal behavior, and any macros assigned by previous ON.DOUBLECLICK functions are turned off.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>ON.DOUBLECLICK overrides Microsoft Excel's normal double-click behavior, such as displaying cell notes, displaying the Patterns dialog box, or allowing editing cell text directly in cells.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To determine what cell, object, or chart item has been double-clicked, use a CALLER function in the macro specified by macro_text.</p>
+</blockquote></li>
+<li><blockquote>
+<p>ON.DOUBLECLICK does not affect objects to which ASSIGN.TO.OBJECT macros have already been assigned. Use ON.DOUBLECLICK (TRUE) to make Microsoft Excel carry out the action that would normally occur if you double-click on the current selection.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="assign.to.object.html">ASSIGN.TO.OBJECT</a>   Assigns a macro to an object</p><p><a href="on.window.html">ON.WINDOW</a>   Runs a macro when you switch to a window</p>
+</body>
+</html>

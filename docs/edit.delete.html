@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>edit.delete</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="edit.delete">EDIT.DELETE macro</h1>
+<p>Equivalent to clicking the Delete command on the Edit menu. Removes the selected cells from the worksheet and shifts other cells to close up the space.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>EDIT.DELETE</strong>(shift_num)</p>
+<p><strong>EDIT.DELETE</strong>?(shift_num)</p>
+<p>Shift_num    is a number from 1 to 4 specifying whether to shift cells left or up after deleting the current selection or else to delete the entire row or column.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Shift_num</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Shifts cells left</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Shifts cells up</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Deletes entire row</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Deletes entire column</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>If shift_num is omitted and if one cell or a horizontal range is selected, EDIT.DELETE shifts cells up.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If shift_num is omitted and a vertical range is selected, EDIT.DELETE shifts cells left.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>CLEAR   Clears specified information from the selected cells or chart</p>
+
+</body>
+</html>

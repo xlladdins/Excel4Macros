@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>subscribe.to</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="subscribe.to">SUBSCRIBE.TO macro</h1>
+<p>Inserts the contents of the edition into the active sheet at the point of the current selection. Use SUBSCRIBE.TO to incorporate editions published from other workbooks into your Microsoft Excel worksheets and macro sheets. SUBSCRIBE.TO returns TRUE if successful.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SUBSCRIBE.TO</strong>(<strong>file_text, format_num</strong>)</p>
+<p><strong>Important   </strong>This function is only available if you are using Microsoft Excel for the Macintosh with system software version 7.0 or later.</p>
+<p>File_text    is the name, as a text string, of the edition you want to insert into the active sheet. Unless file_text is in the current folder, supply the full path of the workbook. If file_text cannot be found, SUBSCRIBE.TO returns the #VALUE! error value and interrupts the macro.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If a single cell is selected, the data from the edition file is placed into as large a range of cells as is required by the data. Data already present in those cells is replaced. If the data is a picture, it is inserted from the upper-left corner of the selected cell.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If a range of cells is selected, and the range is not big enough to contain the edition data, Microsoft Excel displays a dialog box asking if you want to clip the data to fit the range.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Format_num    is the number 1 or 2 and specifies the format type of the file you are subscribing to.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Format_num</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Format type</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1 or omitted</p>
+</blockquote></td>
+<td><blockquote>
+<p>Picture</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>Text (includes BIFF, VALU, TEXT, and CSV formats)</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.publisher.html">CREATE.PUBLISHER</a>   Creates a publisher from the selection</p><p><a href="edition.options.html">EDITION.OPTIONS</a>   Sets publisher and subscriber options</p><p><a href="get.link.info.html">GET.LINK.INFO</a>   Returns information about a link</p>
+</body>
+</html>

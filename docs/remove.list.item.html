@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>remove.list.item</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="remove.list.item">REMOVE.LIST.ITEM macro</h1>
+<p>Removes an item in a list box or drop-down box.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>REMOVE.LIST.ITEM</strong>(<strong>index_num</strong>, count_num)</p>
+<p>Index_num    specifies the index of the item to remove, from 1 to the number of items in the list. Specify zero to remove all items in the list.</p>
+<p>Count_num   Specifies the number of items to delete starting from index_num. If omitted, only one item is removed.</p>
+<p><strong>Remarks</strong></p>
+<p>If count_num + index_num is greater than the number of items in the list, all items starting with index_num to the end of the list are removed.</p>
+<p><strong>Examples</strong></p>
+<p>REMOVE.LIST.ITEM(3,2) removes two items starting with the third item</p>
+<p>REMOVE.LIST.ITEM(3) removes only the third item</p>
+<p><strong>Related Function</strong></p>
+<p>LISTBOX.PROPERTIES   Sets the properties of a list box and drop-down controls on worksheet and dialog sheets</p>
+
+</body>
+</html>

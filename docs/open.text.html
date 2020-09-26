@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>open.text</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="open.text">OPEN.TEXT macro</h1>
+<p>Equivalent to using the Text Import Wizard to open a text file in Microsoft Excel.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OPEN.TEXT</strong>(file_name, file_origin, start_row, file_type, text_qualifier, consecutive_delim, tab, semicolon, comma, space, other, other_char, {field_info1; field_info2;...})</p>
+<p>File_name    is the full pathname of the text file you want to open.</p>
+<p>File_origin    specifies the operating environment the text file was created in.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>File_origin</strong></td>
+<td><strong>Operating system</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Macintosh</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Windows (ANSI)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>MS DOS (PC-8)</td>
+</tr>
+<tr class="odd">
+<td>Omitted</td>
+<td>Current operating environment</td>
+</tr>
+</tbody>
+</table>
+<p>Start_row    is a number greater than or equal to one, specifying the row in the text file where you want to start importing into Microsoft Excel. This number should be less than the number of lines in the text file.</p>
+<p>File_type    specifies the type of delimited text file to import:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>File_type</strong></td>
+<td><strong>Type of file</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Delimited</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Fixed width</td>
+</tr>
+</tbody>
+</table>
+<p>Text_qualifier    indicates the character-enclosing text fields in the text file:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Text_qualifier value</strong></td>
+<td><strong>Qualifier</strong></td>
+</tr>
+<tr class="even">
+<td>1 or "</td>
+<td>" (double quotation mark)</td>
+</tr>
+<tr class="odd">
+<td>2 or '</td>
+<td>' (single quotation mark)</td>
+</tr>
+<tr class="even">
+<td>3 or {None}</td>
+<td>No text qualifier</td>
+</tr>
+</tbody>
+</table>
+<p>Consecutive_delim    is a logical value corresponding to the Treat Consecutive Delimiters as One check box which, if TRUE, allows consecutive delimiters (such as ",,,") to be treated as a single delimiter. If FALSE, all consecutive delimiters are considered separate column breaks.</p>
+<p>Tab, semicolon, comma, space    are logical values corresponding to the check boxes in the Column Delimiters group. If an argument is TRUE, the check box is selected. These arguments apply only when the file_type argument is 1 or omitted (delimited file type).</p>
+<p>Other    is a logical value indicating a custom delimiter to use in opening the text file.</p>
+<p>Other_char    specifies the custom delimiter to use or FALSE if no custom delimiter is used.</p>
+<p>Field_info    is an array which consists of the following elements: "column number, data_format", if file_type is 1; or "start_pos, data_format" if file_type is 2.</p>
+<p><strong>Related Function</strong></p>
+<p>TEXT.TO.COLUMNS   Parses text, as in a text file, into columns of data</p>
+
+</body>
+</html>

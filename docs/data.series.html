@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>data.series</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="data.series">DATA.SERIES macro</h1>
+<p>Equivalent to clicking the Series command on the Fill submenu of the Edit menu. Use DATA.SERIES to enter an interpolated or incrementally increasing or decreasing series of numbers or dates on a sheet or macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DATA.SERIES</strong>(rowcol, type_num, date_num, step_value, stop_value, trend)</p>
+<p><strong>DATA.SERIES</strong>?(rowcol, type_num, date_num, step_value, stop_value, trend)</p>
+<p>Rowcol    is a number that specifies where the series should be entered. If rowcol is omitted, the default value is based on the size and shape of the current selection.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Rowcol</strong></td>
+<td><strong>Enter series in</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Rows</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Columns</td>
+</tr>
+</tbody>
+</table>
+<p>Type_num    is a number from 1 to 4 that specifies the type of series.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Type of series</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Linear</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Growth</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Date</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>AutoFill</td>
+</tr>
+</tbody>
+</table>
+<p>Date_num    is a number from 1 to 4 that specifies the date unit of the series, as shown in the following table. To use the date_num argument, the type_num argument must be 3.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Date_num</strong></td>
+<td><strong>Date unit</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Day</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Weekday</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Month</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Year</td>
+</tr>
+</tbody>
+</table>
+<p>Step_value    is a number that specifies the step value for the series. If step_value is omitted, it is assumed to be 1.</p>
+<p>Stop_value    is a number that specifies the stop value for the series. If stop_value is omitted, DATA.SERIES continues filling the series until the end of the selected range.</p>
+<p>Trend    is a logical value corresponding to the Trend check box. If trend is TRUE, Microsoft Excel generates a linear or exponential trend; if FALSE or omitted, Microsoft Excel generates a standard data series.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If you specify a positive value for stop_value that is lower than the value in the active cell of the selection, DATA.SERIES takes no action.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If type_num is 4 (AutoFill), Microsoft Excel performs an AutoFill operation just as if you had filled the selection by dragging the fill selection handle or had used the FILL.AUTO macro function.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>FILL.AUTO   Copies cells or automatically fills a selection</p>
+
+</body>
+</html>

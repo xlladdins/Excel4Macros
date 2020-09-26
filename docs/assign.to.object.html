@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>assign.to.object</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="assign.to.object">ASSIGN.TO.OBJECT macro</h1>
+<p>Assigns a macro to the currently select object.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ASSIGN.TO.OBJECT</strong>(<strong>macro_ref</strong>)</p>
+<p><strong>ASSIGN.TO.OBJECT</strong>?(macro_ref)</p>
+<p>Macro_ref    is the name of, or a reference to, the macro you want to run when the object is clicked. If macro_ref is omitted, Microsoft Excel no longer runs the previously specified macro (ASSIGN.TO.OBJECT is turned off).</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If an object is not selected, ASSIGN.TO.OBJECT returns the #VALUE! error value and interrupts the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To change the macro assigned to an object, select the object and use ASSIGN.TO.OBJECT again, using the reference to the new macro as macro_ref. The previous macro is replaced with the new macro.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="run.html">RUN</a>   Runs a macro</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>halt</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="halt">HALT macro</h1>
+<p>Stops all macros from running. Use HALT instead of RETURN to prevent a macro from returning to the macro that called it.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HALT</strong>(cancel_close)</p>
+<p>Cancel_close    is a logical value that specifies whether a macro sheet, when encountering the HALT function in an Auto_Close macro, is closed.</p>
+<ul>
+<li><blockquote>
+<p>If cancel_close is TRUE, Microsoft Excel halts the macro and prevents the workbook from being closed.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If cancel_close is FALSE or omitted, Microsoft Excel halts the macro and allows the workbook to be closed.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If cancel_close is specified in a macro that is not an Auto_Close macro, it is ignored and the HALT function simply stops the current macro.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>You can prevent an Auto_Close or Auto_Open macro from running by holding down the SHIFT key while opening or closing the workbook.</p>
+<p><strong>Examples</strong></p>
+<p>If A1 contains the #N/A error value, then when the following macro formula is calculated, the macro halts:</p>
+<p>IF(ISERROR(A1), HALT(), GOTO(D4))</p>
+<p>The following macro formula at the end of an Auto_Close macro ends the macro and prevents the workbook from being closed:</p>
+<p>HALT(TRUE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="break.html">BREAK</a>   Interrupts a FOR-NEXT, FOR.CELL-NEXT, or WHILE-NEXT loop</p><p><a href="return.html">RETURN</a>   Ends the currently running macro</p>
+</body>
+</html>

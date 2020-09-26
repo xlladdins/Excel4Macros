@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>text.box</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="text.box">TEXT.BOX macro</h1>
+<p>Replaces characters in a text box or button with the text you specify.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>TEXT.BOX</strong>(<strong>add_text</strong>, object_id_text, start_num, num_chars)</p>
+<p>Add_text    is the text you want to add to the text box or button.</p>
+<p>Object_id_text    is the name of the text box or button to which you want to add text (for example, "Text 1" or "Button 2"). If object_id_text is omitted, it is assumed to be the selected item.</p>
+<p>Start_num    is a number specifying the position of the first character you want to replace (or the position at which you want to insert characters if you do not want to replace any). If start_num is omitted, it is assumed to be 1.</p>
+<p>Num_chars    is the number of characters you want to replace. If num_chars is 0, then no characters are replaced, and add_text is inserted starting at the position start_num. If num_chars is omitted, all the characters are replaced.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula replaces the first five characters in a text box named "Text 5" with the text "Net Income":</p>
+<p>TEXT.BOX("Net Income", "Text 5", 1, 5)</p>
+<p>The following macro formula inserts the words "Account Summary for 1991" at the beginning of a text box named "Text 6":</p>
+<p>TEXT.BOX("Account Summary for 1991", "Text 6", 1, 0)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="font.properties.html">FONT.PROPERTIES</a>   Applies a font to the selection</p><p><a href="get.object.html">GET.OBJECT</a>   Returns information about an object</p>
+</body>
+</html>

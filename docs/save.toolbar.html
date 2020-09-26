@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>save.toolbar</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="save.toolbar">SAVE.TOOLBAR macro</h1>
+<p>Saves one or more toolbar definitions to a specified file.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SAVE.TOOLBAR</strong>(bar_id, filename)</p>
+<p>Bar_id    is either the name or number of a toolbar whose definition you want to save or an array of toolbar names or numbers whose definitions you want to save. Use an array to save several toolbar definitions at the same time. For detailed information about bar_id, see ADD.TOOL. If bar_id is omitted, all toolbar definitions are saved.</p>
+<p>Filename    is text specifying the name of the destination file. If filename does not exist, Microsoft Excel creates a new file. If filename exists, Microsoft Excel overwrites the file. If filename is omitted, Microsoft Excel saves the toolbar or toolbars in Username8.xlb, where "username" is your Windows or network logon name. With Microsoft Windows, Username8.xlb is stored in the directory where Windows is installed; with Apple Macintosh, EXCEL TOOLBARS is stored in the System:Preferences folder</p>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula saves Toolbar6 as \EXCDT\TOOLFILE.XLB.</p>
+<p>SAVE.TOOLBAR("Toolbar6", "\EXCDT\TOOLFILE.XLB")</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula saves Toolbar6 as TOOLFILE.</p>
+<p>SAVE.TOOLBAR("Toolbar6", "TOOLFILE")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds one or more tools to a toolbar</p><p><a href="add.toolbar.html">ADD.TOOLBAR</a>   Creates a new toolbar with the specified tools</p><p><a href="open.html">OPEN</a>   Opens a workbook</p>
+</body>
+</html>

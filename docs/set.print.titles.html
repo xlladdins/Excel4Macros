@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>set.print.titles</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="set.print.titles">SET.PRINT.TITLES macro</h1>
+<p>Defines the print titles for the sheet. Use SET.PRINT.TITLES if you want Microsoft Excel to print the titles whenever it prints any cells in a row or column that intersect the print titles area; a cell need only share the row or column with a print title for the title to be printed above or to the left of that cell.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SET.PRINT.TITLES</strong>(titles_for_cols_ref, titles_for_rows_ref)</p>
+<p><strong>SET.PRINT.TITLES</strong>?(titles_for_cols_ref, titles_for_rows_ref)</p>
+<p>Titles_for_cols_ref    is a reference to the row to be used as a title for columns.</p>
+<ul>
+<li><blockquote>
+<p>If you specify part of a row, Microsoft Excel expands the title to a full row.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you omit titles_for_cols_ref, Microsoft Excel uses the existing row of column titles, if any.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you specify empty text (""), Microsoft Excel removes the row from the print titles definition.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Titles_for_rows_ref    is a reference to the column to be used as a title for rows.</p>
+<ul>
+<li><blockquote>
+<p>If you specify part of a column, Microsoft Excel expands the title to a full column.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you omit titles_for_rows_ref, Microsoft Excel uses the existing column of row titles, if any.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you specify empty text (""), Microsoft Excel removes the column from the print titles definition.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>SET.PRINT.TITLES operates on the current sheet. If you specify a range that is invalid for the current sheet, Microsoft Excel returns the #VALUE error value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The print titles selection can be a multiple selection. Microsoft Excel names this selection Print_Titles when SET.PRINT.TITLES is run.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="define.name.html">DEFINE.NAME</a>   Defines a name on the active worksheet or macro sheet</p><p><a href="print.html">PRINT</a>   Prints the active sheet</p><p><a href="set.print.area.html">SET.PRINT.AREA</a>   Defines the print area</p>
+</body>
+</html>

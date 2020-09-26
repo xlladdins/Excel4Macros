@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>options.view</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="options.view">OPTIONS.VIEW macro</h1>
+<p>Equivalent to clicking the Options command on the Tools menu and then clicking the View tab in the Options dialog box. Sets various view settings.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OPTIONS.VIEW</strong>(formula, status, notes, show_info, object_num, page_breaks, formulas, gridlines, color_num, headers, outline, zeros, hor_scroll, vert_scroll, sheet_tabs)</p>
+<p><strong>OPTIONS.VIEW</strong>?(formula, status, notes, show_info, object_num, page_breaks, formulas, gridlines, color_num, headers, outline, zeros, hor_scroll, vert_scroll, sheet_tabs)</p>
+<p>Arguments correspond to check boxes and text boxes in the View tab on the Options dialog box. Arguments corresponding to check boxes are logical values. If an argument is TRUE, the check box is selected; if FALSE, the check box is cleared; if omitted, the current setting is not changed.</p>
+<p>Formula    is a logical value corresponding to the Formula Bar check box. If TRUE, displays the formula bar. If FALSE, the formula bar is not displayed.</p>
+<p>Status    is a logical value corresponding to the Status Bar check box. If TRUE, the status bar is displayed. If FALSE, the status bar is not displayed.</p>
+<p>Notes    is a logical value corresponding to the Comment &amp; Indicator check box. If TRUE, comments and comment indicators will be displayed. If FALSE, comments and indicators will not be displayed.</p>
+<p>Show_info    is a logical value corresponding to the Info Window check box (only in Microsoft Excel 95 and earlier versions). If TRUE, displays the Info Window. The Info Window is not available in Microsoft Excel 97 or later.</p>
+<p>Object_num    is a number from 1 to 3 corresponding to the display options in the Objects box.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Object_num</strong></td>
+<td><strong>Corresponds to</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Show All</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Show Placeholders</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Hide</td>
+</tr>
+</tbody>
+</table>
+<p>Page_breaks    is a logical value corresponding to the Page Breaks check box. If TRUE, page breaks will appear. If FALSE, page breaks will not appear.</p>
+<p>Formulas    is a logical value corresponding to the Formulas check box. If TRUE, formulas will appear in the cells. If FALSE, formulas will not appear in the cells. The default is FALSE on worksheets and TRUE on macro sheets.</p>
+<p>Gridlines    is a logical value corresponding to the Gridlines check box. If TRUE, gridlines will be displayed. If FALSE, gridlines will not appear. The default is TRUE.</p>
+<p>Color_num    is a number from 0 to 56 corresponding to gridline color. Zero corresponds to automatic color and is the default value.</p>
+<p>Headings    is a logical value corresponding to the Row &amp; Column Headers check box. If TRUE, row and column headers will be displayed. If FALSE, they will not be displayed. The default is TRUE.</p>
+<p>Outline    is a logical value corresponding to the Outline Symbols check box. If TRUE, outline symbols will appear. If FALSE, they will not appear. The default is TRUE.</p>
+<p>Zeros    is a logical value corresponding to the Zero Values check box. If TRUE, zero values will appear, If FALSE, zero values will not appear. The default is TRUE.</p>
+<p>Hor_scroll    is a logical value corresponding to the Horizontal Scroll Bar checkbox. If TRUE, the horizontal scroll bar will be displayed. If FALSE, it will not be displayed. The default is TRUE.</p>
+<p>Vert_scroll    is a logical value corresponding to the Vertical Scroll Bar checkbox. If TRUE, the vertical scroll bar will be displayed. If FALSE, it will not be displayed. The default is TRUE.</p>
+<p>Sheet_tabs    is a logical value corresponding to the Sheet Tabs check box. If TRUE, sheet tabs will be displayed. If FALSE, sheet tabs will not be displayed. The default is TRUE.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="options.lists.get.html">OPTIONS.LISTS.GET</a>   Returns contents of custom AutoFill lists</p><p><a href="options.lists.delete.html">OPTIONS.LISTS.DELETE</a>   Deletes a custom list</p>
+</body>
+</html>

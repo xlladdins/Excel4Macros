@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>get.formula</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.formula">GET.FORMULA macro</h1>
+<p>Returns the contents of a cell as they would appear in the formula bar. The contents are given as text, for example, "=2*PI()/360". If the formula contains references, they are returned as R1C1-style references, such as "=RC[1]*(1+R1C1)". Use GET.FORMULA to get a formula from a cell in order to edit its arguments. Use GET.CELL(6) to get a formula in either A1 or R1C1 format, depending on the workspace setting.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.FORMULA</strong>(<strong>reference</strong>)</p>
+<p>Reference    is a cell or range of cells on a sheet or macro sheet.</p>
+<ul>
+<li><blockquote>
+<p>If a range of cells is selected, GET.FORMULA returns the contents of the upper-left cell in reference.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Reference can be an external reference.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Reference can be the object identifier of a picture created by the camera tool.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Reference can also be a reference to a chart series in the form "Sn" where n is the number of the series. When a chart series is specified, GET.FORMULA returns the series formula using R1C1-style references.</p>
+</blockquote></li>
+</ul>
+<p><strong>Tip</strong>   If you want to get the formula in the active cell, use the ACTIVE.CELL function as the reference argument.</p>
+<p><strong>Examples</strong></p>
+<p>If cell A3 on the active sheet contains the number 523, then:</p>
+<p>GET.FORMULA(!$A$3) equals "523"</p>
+<p>If cell C2 on the active sheet contains the formula =B2*(1+$A$1), then:</p>
+<p>GET.FORMULA(!$C$2) equals "=RC[-1]*(1+R1C1)"</p>
+<p>The following macro formula returns the contents of the active cell on the active sheet:</p>
+<p>GET.FORMULA(ACTIVE.CELL())</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.cell.html">GET.CELL</a>   Returns information about the specified cell</p><p><a href="get.def.html">GET.DEF</a>   Returns a name matching a definition</p><p><a href="get.name.html">GET.NAME</a>   Returns the definition of a name</p><p><a href="get.note.html">GET.NOTE</a>   Returns characters from a comment</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>object.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="object.properties">OBJECT.PROPERTIES macro</h1>
+<p>Determines how the selected object or objects are attached to the cells beneath them and whether they are printed. The way an object is attached to the cells beneath it affects how the object is moved or sized whenever you move or size the cells.</p>
+<p><strong>OBJECT.PROPERTIES</strong>(placement_type, print_object)</p>
+<p><strong>OBJECT.PROPERTIES</strong>?(placement_type, print_object)</p>
+<p>Placement_type    is a number from 1 to 3 specifying how to attach the selected object or objects. If placement_type is omitted, the current status is unchanged.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If placement_type is</strong></td>
+<td><strong>The selected object is</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Moved and sized with cells.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Moved but not sized with cells.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Free-floating—it is not affected by moving and sizing cells.</td>
+</tr>
+</tbody>
+</table>
+<p>Print_object    is a logical value specifying whether to print the selected object or objects. If TRUE or omitted, the objects are printed; if FALSE, they are not printed.</p>
+<p><strong>Remarks</strong></p>
+<p>If an object is not selected, OBJECT.PROPERTIES interrupts the macro and returns the #VALUE! error value.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="format.move.html">FORMAT.MOVE</a>   Moves the selected object</p><p><a href="format.size.html">FORMAT.SIZE</a>   Changes the size of the selected object</p>
+</body>
+</html>

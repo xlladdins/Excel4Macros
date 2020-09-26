@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>outline</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="outline">OUTLINE macro</h1>
+<p>Creates an outline and defines settings for automatically creating outlines.</p>
+<p>The first three arguments are logical values corresponding to check boxes in the Outline dialog box, which appears when you choose the Settings command from the Group and Outline submenu on the Data menu. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box. If an argument is omitted, the check box is left in its current state.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>OUTLINE</strong>(auto_styles, row_dir, col_dir, create_apply)</p>
+<p><strong>OUTLINE</strong>?(auto_styles, row_dir, col_dir, create_apply)</p>
+<p>Auto_styles    corresponds to the Automatic Styles check box.</p>
+<p>Row_dir    corresponds to the Summary Rows Below Detail check box.</p>
+<p>Col_dir    corresponds to the Summary Columns To Right Of Detail check box.</p>
+<p>Create_apply    is the number 1 or 2 and corresponds to the Create button and the Apply Styles button.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Create_apply</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Creates an outline with the current settings</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Applies outlining styles to the selection based on outline levels</td>
+</tr>
+<tr class="even">
+<td>Omitted</td>
+<td>Corresponds to choosing the OK button to set the other outline settings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="demote.html">DEMOTE</a>   Demotes the selection in an outline</p><p><a href="promote.html">PROMOTE</a>   Promotes the selection in an outline</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>edit.color</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="edit.color">EDIT.COLOR macro</h1>
+<p>Equivalent to clicking the Modify button on the Color tab, which appears when you click the Options command on the Tools menu. Defines the color for one of the 56 color palette boxes.</p>
+<p>Use EDIT.COLOR if you want to use a color that is not currently on the palette and if your system hardware has more than 56 colors available. After you set the color for the color box, any items previously formatted with that color are displayed in the new color.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>EDIT.COLOR</strong>(<strong>color_num</strong>, red_value, green_value, blue_value)</p>
+<p><strong>EDIT.COLOR</strong>?(<strong>color_num</strong>, red_value, green_value, blue_value)</p>
+<p>Color_num    is a number from 1 to 56 specifying one of the 56 color palette boxes for which you want to set the color.</p>
+<p>Red_value, green_value, and blue_value    are numbers that specify how much red, green, and blue are in each color.</p>
+<ul>
+<li><blockquote>
+<p>In Microsoft Excel for Windows, red_value, green_value, and blue_value are numbers from 0 to 255.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In Microsoft Excel for the Macintosh, red_value, green_value, and blue_value are also numbers from 0 to 255. However, the color editing dialog box displays numbers from 0 to 65, 535. Microsoft Excel automatically converts the numbers between the two ranges. This allows you to display similar colors in all operating environments without modifying your macros.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If red_value, green_value, and blue_value are all set to 255, the resulting color is white. If they are all set to zero, the resulting color is black.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If red_value, green_value, or blue_value is omitted, Microsoft Excel assumes it to be the appropriate value for that color_num.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Your system hardware determines the number of unique colors that you can choose from and the number of colors that can be displayed on the screen at the same time.</p>
+</blockquote></li>
+<li><blockquote>
+<p>EDIT.COLOR does not use hue, saturation, or brightness values. If you are using the macro recorder and set the color of a color palette box using hue, saturation, and luminance, Microsoft Excel records the corresponding red, green, and blue values instead.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The dialog-box form of this function, EDIT.COLOR?(color_num), displays your system's color editing dialog box. The default red_value, green_value, and blue_value are determined by the current settings for the color_num you specify. Color_num is a required argument for the dialog-box form of this function.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>COLOR.PALETTE   Copies a color palette from one workbook to another</p>
+
+</body>
+</html>

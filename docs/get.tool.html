@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>get.tool</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.tool">GET.TOOL macro</h1>
+<p>Returns information about a button or buttons on a toolbar. Use GET.TOOL to get information about a button to use with functions that add, delete, or alter buttons.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.TOOL</strong>(<strong>type_num, bar_id, position</strong>)</p>
+<p>Type_num    specifies what type of information you want GET.TOOL to return.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>The button's ID number. Gaps are represented by zeros.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>The reference of the macro assigned to the button. If no macro is assigned, GET.TOOL returns the #N/A error value.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>If the button is down, returns TRUE. If the button is up, returns FALSE.</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>If the button is enabled, returns TRUE. If the button is disabled, returns FALSE.</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>A logical value indicating the type of the face on the button:</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>TRUE = bitmap</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td>FALSE = a default button face</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>The help_text reference associated with the custom button. If the button is built-in, returns #N/A.</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>The balloon_text reference associated with the custom button. If the button is built-in, returns the #N/A error value.</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>The Help context string associated with the custom button.</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>The Tip_text associated with the custom button.</td>
+</tr>
+</tbody>
+</table>
+<p>Bar_id    specifies the number or name of the toolbar for which you want information. For detailed information about bar_id, see ADD.TOOL.</p>
+<p>Position    specifies the position of the button on the toolbar. Position starts with 1 at the left side (if horizontal) or at the top (if vertical). A position can be occupied by a button or a gap.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula requests the help text associated with the third button in Toolbar2:</p>
+<p>GET.TOOL(6, "Toolbar2", 3)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds one or more buttons to a toolbar</p><p><a href="delete.tool.html">DELETE.TOOL</a>   Deletes a button from a toolbar</p><p><a href="enable.tool.html">ENABLE.TOOL</a>   Enables or disables a button on a toolbar</p><p><a href="get.toolbar.html">GET.TOOLBAR</a>   Retrieves information about a toolbar</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>copy</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="copy">COPY macro</h1>
+<p>Equivalent to clicking the Copy command on the Edit menu. Copies and pastes data or objects.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>COPY</strong>(from_reference, to_reference)</p>
+<p>From_reference    is a reference to the cell or range of cells you want to copy. If from_reference is omitted, it is assumed to be the current selection.</p>
+<p>To_reference    is a reference to the cell or range of cells where you want to paste what you have copied.</p>
+<ul>
+<li><blockquote>
+<p>To_reference should be a single cell or an enlarged multiple of from_reference. For example, if from_reference is a 2 by 4 rectangle, to_reference can be a 4 by 8 rectangle.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To_reference can be omitted so that you can subsequently paste using the PASTE, PASTE.LINK, or PASTE.SPECIAL functions.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="cut.html">CUT</a>   Cuts or moves data or objects</p><p><a href="paste.html">PASTE</a>   Pastes cut or copied data</p><p><a href="paste.link.html">PASTE.LINK</a>   Pastes copied data or objects and establishes a link to the source of the data or object</p><p><a href="paste.special.html">PASTE.SPECIAL</a>   Pastes specific components of copied data</p>
+</body>
+</html>

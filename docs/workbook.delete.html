@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>workbook.delete</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.delete">WORKBOOK.DELETE macro</h1>
+<p>Equivalent to clicking the Delete Sheet command on the Edit menu. Deletes a sheet or group of sheets from the current workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.DELETE</strong>(sheet_text)</p>
+<p>Sheet_text    is the name of the sheet to delete. If omitted, the currently active sheet or sheets is deleted.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>This function prompts for confirmation. To suppress the prompt, use the ERROR function. For example, =ERROR(FALSE).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the structure of the workbook is protected, you cannot delete any of its sheets.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you want to delete Sheet1:Sheet10, you must select them first with WORKBOOK.SELECT(). You can also place the sheets in an array first, as in {"Sheet1", "Sheet2", "Sheet3",...}.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You cannot delete the last visible sheet in a workbook.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>workbook.select</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.select">WORKBOOK.SELECT macro</h1>
+<p>Equivalent to selecting a sheet or group of sheets in the active workbook. If you select a group of sheets, subsequent commands effect all the sheets in the group.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.SELECT</strong>(name_array, active_name, replace)</p>
+<p>Name_array    is a horizontal array of text names of sheets you want to select. If name_array is omitted, no sheets are selected.</p>
+<p>Active_name    is the name of a single sheet in the workbook that you want to be the active sheet. If active_name is omitted, the first sheet in name_array is made the active sheet.</p>
+<p>Replace    specifies whether the currently selected sheets or macro sheets are to be replaced by name_array. If TRUE or omitted, then the current sheet selection is replaced by name_array. If FALSE, then name_array will be appended to the current sheet.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.workbook.html">GET.WORKBOOK</a>   Returns information about a workbook</p><p><a href="select.html">SELECT</a>   Selects a cell, worksheet object, or chart item</p>
+</body>
+</html>

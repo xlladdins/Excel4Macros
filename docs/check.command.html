@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>check.command</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="check.command">CHECK.COMMAND macro</h1>
+<p>Adds or removes a check mark to or from a command name on a menu. A check mark beside a command indicates that the command has been chosen.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CHECK.COMMAND</strong>(<strong>bar_num</strong>, <strong>menu</strong>, <strong>command</strong>, <strong>check</strong>, position)</p>
+<p>Bar_num    is the menu bar containing the command. Bar_num can be the ID number of a built-in or custom menu bar.</p>
+<p>Menu    is the menu containing the command. Menu can be either the name of a menu as text or the number of a menu. Menus are numbered starting with 1 from the left of the screen.</p>
+<p>Command    is the command you want to check or the submenu containing the command you want to check. Command can be the name of the command as text or the number of the command; the first command on a menu is in position 1.</p>
+<p>Check    is a logical value corresponding to the check mark. If check is TRUE, Microsoft Excel adds a check mark to the command; if FALSE, Microsoft Excel removes the check mark.</p>
+<p>position    is the name of a command on a submenu that you want to check.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The check mark doesn't affect execution of the command. Microsoft Excel automatically adds and deletes check marks to some commands, such as the name of the active workbook in the Window menu. If you have assigned a check mark to a built-in command that Microsoft Excel automatically changes in response to the user's actions, the check mark will be added or removed as appropriate, and any check marks you have added or deleted with CHECK.COMMAND will be ignored.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you use CHECK.COMMAND with a command on a Microsoft Excel version 4.0 menu bar, the corresponding command on the Microsoft Excel version 5.0 or later menu bar will not be effected.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>The following macro formula adds a check mark to the Sales command on the Weekly menu on a custom menu bar created by the ADD.BAR function in a cell named Reports:</p>
+<p>CHECK.COMMAND(Reports, "Weekly", "Sales", TRUE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="delete.command.html">DELETE.COMMAND</a>   Deletes a command from a menu</p><p><a href="enable.command.html">ENABLE.COMMAND</a>   Enables or disables a menu or custom command</p><p><a href="rename.command.html">RENAME.COMMAND</a>   Changes the name of a command or menu</p>
+</body>
+</html>

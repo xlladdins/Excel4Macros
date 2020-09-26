@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>get.note</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.note">GET.NOTE macro</h1>
+<p>Returns characters from a comment.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.NOTE</strong>(cell_ref, start_char, num_chars)</p>
+<p>Cell_ref    is the cell to which the note is attached. If cell_ref is omitted, the comment attached to the active cell is returned.</p>
+<p>Start_char    is the number of the first character in the comment to return. If start_char is omitted, it is assumed to be 1, the first character in the comment.</p>
+<p>Num_chars    is the number of characters to return. Num_chars must be less than or equal to 255. If num_chars is omitted, it is assumed to be the length of the comment attached to cell_ref.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula returns the first 200 characters in the comment attached to cell A3 on the active sheet:</p>
+<p>GET.NOTE(!$A$3, 1, 200)</p>
+<p>In Microsoft Excel for Windows, the following macro formula returns the 10th through the 39th characters of the comment attached to cell C2 on SALES.XLS:</p>
+<p>GET.NOTE("[SALES.XLS]Sheet1!R2C3", 10, 30)</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula returns the 10th through the 39th characters of the comment attached to cell C2 on SALES:</p>
+<p>GET.NOTE("[SALES]Sheet1!R2C3", 10, 30)</p>
+<p>Use GET.NOTE with the NOTE function to move the contents of a comment to a cell or text box or to another comment attached to a cell:</p>
+<p>NOTE(GET.NOTE(!$B$10),ACTIVE.CELL())</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.cell.html">GET.CELL</a>   Returns information about the specified cell</p><p><a href="note.html">NOTE</a>   Creates or changes a comment.</p>
+</body>
+</html>

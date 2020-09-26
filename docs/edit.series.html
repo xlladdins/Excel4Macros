@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>edit.series</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="edit.series">EDIT.SERIES macro</h1>
+<p>Equivalent to clicking the Edit Series command on the Chart menu in Microsoft Excel version 4.0. Creates or changes chart series by adding a new SERIES formula or modifying an existing SERIES formula in the topmost chart type. Chart types are displayed in the following order from top to bottom: XY (Scatter), Line, Column, Bar, Area.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>EDIT.SERIES</strong>(<strong>series_num</strong>, <strong>name_ref</strong>, <strong>x_ref</strong>, <strong>y_ref</strong>, <strong>z_ref</strong>, <strong>plot_order</strong>)</p>
+<p><strong>EDIT.SERIES</strong>?(series_num, name_ref, x_ref, y_ref, z_ref, plot_order)</p>
+<p>Series_num    is the number of the series you want to change. If series_num is 0 or omitted, Microsoft Excel creates a new data series.</p>
+<p>Name_ref    is the name of the data series. It can be an external reference to a single cell, a name defined as a single cell, or a name defined as a sequence of characters. Name_ref can also be text (for example, "Projected Sales").</p>
+<p>X_ref    is an external reference to the name of the sheet and the cells that contain one of the following sets of data:</p>
+<ul>
+<li><blockquote>
+<p>Category labels for all charts except xy (scatter) charts</p>
+</blockquote></li>
+<li><blockquote>
+<p>X-coordinate data for xy (scatter) charts</p>
+</blockquote></li>
+</ul>
+<p>Y_ref    is an external reference to the name of the sheet and the cells that contain values (or y-coordinate data in xy (scatter) charts) for all 2-D charts. Y_ref is required in 2-D charts but does not apply to 3-D charts.</p>
+<p>Z_ref    is an external reference to the name of the sheet and the cells that contain values for all 3-D charts. Z_ref is required in 3-D charts but does not apply to 2-D charts.</p>
+<p>Plot_order    is a number specifying whether the data series is plotted first, second, and so on, in the chart type.</p>
+<ul>
+<li><blockquote>
+<p>If you assign a plot_order to a series, Microsoft Excel plots that series in the order you specify, and the series that previously had that plot order (and any series following it) has its plot order increased by one.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you add a series to a chart with an overlay, the number of series in the main chart does not change, so if the series is added to the main chart, then the series that was plotted last in the main chart will be plotted first in the overlay chart. To change which series is plotted first in the overlay chart, use the (chart type) Group command from the Format menu, and then select the Series Order tab in the Format (chart type) Group dialog box. You can also use the FORMAT.OVERLAY function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you omit plot_order when you add a new series, then Microsoft Excel plots that series last and assigns it the correct plot_order value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The maximum value for plot_order is 255.</p>
+</blockquote></li>
+</ul>
+<p><strong>Remarks</strong></p>
+<p>To change where a series is plotted within a chart, you can change the chart type, using the FORMAT.CHART function, or the plot order. Plot order affects where the series appears within the chart type only.</p>
+<p>X_ref, y_ref, and z_ref can be arrays or references to a nonadjacent selection, although they cannot be names that refer to a nonadjacent selection. If you specify a nonadjacent selection for any of these arguments, make sure to enclose the reference to the selection in parentheses so that Microsoft Excel does not treat the components of the references as separate arguments.</p>
+<p><strong>Tip</strong>   To delete a data series, use the SELECT("Sn") macro function, where n is the series number, followed by the FORMULA("") macro function. You can also use the CLEAR function instead of FORMULA.</p>
+<p><strong>Related Function</strong></p>
+<p>FORMAT.CHART</p>
+
+</body>
+</html>

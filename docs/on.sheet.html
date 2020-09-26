@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>on.sheet</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="on.sheet">ON.SHEET macro</h1>
+<p>Starts a macro whenever the specified sheet is activated from another sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ON.SHEET</strong>(sheet_text, macro_text, activate_logical)</p>
+<p>Sheet_text    is the name of the sheet that triggers a macro when it is activated, in the form "[Book1]Sheet1". If omitted, then when any sheet in any book is activated, macro_text will run.</p>
+<p>Macro_text    is the name of the macro to run when the specified sheet is activated. If omitted, then the triggering of a macro on the specified sheet is cancelled.</p>
+<p>Activate_logical    is a logical value that specifies if the macro is run when the sheet is activated or deactivated. If TRUE or omitted, the macro is run when the sheet is activated. If FALSE, the macro is run when the sheet is deactivated.</p>
+<p><strong>Examples</strong></p>
+<p>ON.SHEET("[STORE.XLS]Sheet1","WeeklyCalc") will run the macro "WeeklyCalc" when "[STORE.XLS]Sheet1" is activated.</p>
+<p>ON.SHEET(,"WeeklyCalc") runs "WeeklyCalc" when any sheet in the book is activated.</p>
+<p>ON.SHEET("[STORE.XLS]Sheet1") cancels the triggering of "WeeklyCalc" when Sheet1 in the book STORE.XLS is activated.</p>
+<p>ON.SHEET("[STORE.XLS]","WeeklyCalc") runs "WeeklyCalc" when any sheet in the book STORE.XLS is activated</p>
+<p><strong>Related Function</strong></p>
+<p>ON.WINDOW   Runs a specified macro when you switch to a particular window.</p>
+
+</body>
+</html>

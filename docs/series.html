@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>series</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="series">SERIES macro</h1>
+<p>Charts Only</p>
+<p>Represents a data series in the active chart. SERIES is used only in charts; you cannot enter it on a sheet or macro sheet. You normally create or change data series by using the Chart Wizard or EDIT.SERIES macro function, which is equivalent to the Edit Series command on the Chart menu in Microsoft Excel version 4.0. However, you can edit a data series manually by selecting it, switching to the formula bar, and typing the changes.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SERIES</strong>(name_ref, categories, <strong>values, plot_order</strong>)</p>
+<p>Name_ref    is the name of the data series. It can be an external reference to a single cell or a name defined as a single cell. Name_ref can also be text enclosed in quotation marks (for example, "Projected Sales").</p>
+<p>Categories    is an external reference to the name of the workbook and to the cells that contain one of the following sets of data:</p>
+<ul>
+<li><blockquote>
+<p>Category labels for all charts except xy (scatter) charts</p>
+</blockquote></li>
+<li><blockquote>
+<p>X-coordinate data for xy (scatter) charts</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Values    is an external reference to the name of the workbook and to the cells that contain values (or y-coordinate data in scatter charts).</p>
+<p>Plot_order    is an integer specifying whether the series is plotted first, second, or third, and so on, in the chart. No two series can have the same plot_order.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Categories and values can be arrays or references to a multiple selection, although they cannot be names that refer to a multiple selection. If you specify a multiple selection for any of these arguments, make sure you include the necessary sets of parentheses so that Microsoft Excel does not treat the components of the references as separate arguments.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If either categories or values is a multiple selection, then all areas in that selection must be either vertical (more rows than columns) or horizontal (more columns than rows).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="chart.wizard.html">CHART.WIZARD</a>   Creates and formats a chart</p><p><a href="edit.series.html">EDIT.SERIES</a>   Creates or changes a chart series</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>filter</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="filter">FILTER macro</h1>
+<p>Filters lists of data one column at a time. Only one list can be filtered on any one sheet at a time.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILTER</strong>(field_num, criteria1, operation, criteria2)</p>
+<p><strong>FILTER</strong>?(field_num, criteria1, operation, criteria2)</p>
+<p>Field_num    is the number of the field that you want to filter. Fields are numbered from left to right starting with 1.</p>
+<p>Criteria1    is a text string specifying criteria for filtering a list, such as "&gt;2". If you want to include all items in the list, omit this argument.</p>
+<p>Operation    is a number that specifies how you want criteria2 used with criteria1:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Number</strong></td>
+<td><strong>Operation Used</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>AND</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table>
+<p>Criteria2    is a text string specifying criteria for filtering a list, such as "&gt;2". If you include this argument, operation is required.</p>
+<p><strong>Remarks</strong></p>
+<p>If you omit all arguments, FILTER toggles the display of filter arrows.</p>
+<p><strong>Related Function</strong></p>
+<p>FILTER.ADVANCED   Lets you set options for filtering a list</p>
+
+</body>
+</html>

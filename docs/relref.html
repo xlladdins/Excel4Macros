@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>relref</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="relref">RELREF macro</h1>
+<p>Returns the reference of a cell or cells relative to the upper-left cell of rel_to_ref. The reference is given as an R1C1-style relative reference in the form of text, such as "R[1]C[1]".</p>
+<p><strong>Syntax</strong></p>
+<p><strong>RELREF</strong>(<strong>reference, rel_to_ref</strong>)</p>
+<p>Reference    is the cell or cells to which you want to create a relative reference.</p>
+<p>Rel_to_ref    is the cell from which you want to create the relative reference.</p>
+<p><strong>Tip</strong>   If you know the absolute reference of a cell that you want to include in a formula, but your formula requires a relative reference, use RELREF to generate the relative reference. This is especially useful with the FORMULA function, since its formula_text argument requires R1C1-style references, and RELREF returns relative R1C1-style references. You can also use the FORMULA.CONVERT function to convert absolute references to relative references.</p>
+<p><strong>Examples</strong></p>
+<p>RELREF($A$1, $C$3) equals "R[-2]C[-2]"</p>
+<p>RELREF($A$1:$E$5, $C$3:$G$7) equals "R[-2]C[-2]:R[2]C[2]"</p>
+<p>RELREF($A$1:$E$5, $C$3) equals "R[-2]C[-2]:R[2]C[2]"</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="absref.html">ABSREF</a>   Returns the absolute reference of a range of cells to another range</p><p><a href="deref.html">DEREF</a>   Returns the value of the cells in the reference</p><p><a href="formula.html">FORMULA</a>   Enters values into a cell or range or onto a chart</p><p><a href="formula.convert.html">FORMULA.CONVERT</a>   Changes the reference style and type</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>query.get.data</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="query.get.data">QUERY.GET.DATA macro</h1>
+<p>Builds a new query using the supplied information. The application Microsoft Query nor any dialog boxes are displayed.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>QUERY.GET.DATA</strong>(<strong>connection_string</strong>, <strong>query_text</strong>, keep_query_def, field_names, row_numbers, destination)</p>
+<p><strong>QUERY.GET.DATA</strong>?(connection_string, query_text, keep_query_def, field_names, row_numbers, destination)</p>
+<p>Connection_string    supplies information, such as the data source name, user ID, and passwords, necessary to making a SQL connection to an external data source. For example: "DSN=Myserver; Server=server1; UID=dbayer; PWD=buyer1; Database=nwind".</p>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>You must define the data source name (DSN) used in connection_string before you try to connect to it.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You can enter connection_string as an array or a string. If connection_string exceeds 250 characters, you must enter it as an array.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If QUERY.GET.DATA is unable to access the data source using connection_string, it returns the #N/A error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Query_text    is the SQL language query to be executed on the data source.</p>
+<p>Keep_query_def    is a logical value that, if TRUE or omitted, preserves the query definition. If FALSE, the query definition is lost and the data from the query no longer constitutes a data range.</p>
+<p>Field_names    is a logical value that, if TRUE or omitted, places field names from Microsoft Query into the first row of the data range. If FALSE, the field names are discarded.</p>
+<p>Row_numbers    is a logical value that, if TRUE, places row numbers from Microsoft Query into the first column in the data range. If FALSE or omitted, the row numbers are discarded.</p>
+<p>Destination    is the location as a cell reference where you want the data placed. If destination is in a current data range then that data range is changed to reflect the new SQL statement. The default destination is the currently selected cell or range.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the information provided is not sufficient to create the query then the error value #REF! is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If Microsoft Query is unavailable or can not be found, #N/A is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If connection string is longer than 255 characters, the string will be truncated at the last semi-colon.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Function</strong></p>
+<p>QUERY.REFRESH   Refreshes the data in a data range returned by Microsoft Query</p>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>quit</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="quit">QUIT macro</h1>
+<p>Equivalent to clicking the Exit command on the File menu in Microsoft Excel for Windows. Equivalent to clicking the Quit command on the File menu in Microsoft Excel for the Macintosh. Quits Microsoft Excel and closes any open workbooks. If open workbooks have unsaved changes, Microsoft Excel displays a message asking if you want to save them. You can use QUIT in an Auto_Close macro to force Microsoft Excel to quit when a particular workbook is closed.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>QUIT</strong>( )</p>
+<p><strong>Caution   </strong>If you have cleared error-checking with an ERROR(FALSE) function, QUIT will not ask whether you want to save changes.</p>
+<p><strong>Remarks</strong></p>
+<p>When you use the QUIT function, Microsoft Excel does not run any Auto_Close macros before closing the workbook.</p>
+<p><strong>Examples</strong></p>
+<p>The following function displays a confirmation alert and quits Microsoft Excel if the user clicks OK:</p>
+<p>IF(ALERT("Are you sure you want to quit Microsoft Excel?",1), QUIT(),)</p>
+<p><strong>Related Function</strong></p>
+<p>FILE.CLOSE   Closes the active workbook</p>
+
+</body>
+</html>

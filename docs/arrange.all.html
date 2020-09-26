@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>arrange.all</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="arrange.all">ARRANGE.ALL macro</h1>
+<p>Equivalent to clicking the Arrange command on the Window menu. Rearranges open windows and icons and resizes open windows. Also can be used to synchronize scrolling of windows of the active sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ARRANGE.ALL</strong>(arrange_num, active_doc, sync_horiz, sync_vert)</p>
+<p><strong>ARRANGE.ALL</strong>?(arrange_num, active_doc, sync_horiz, sync_vert)</p>
+<p>Arrange_num    is a number from 1 to 7 specifying how to arrange the windows.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Arrange_num</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Tiled (also used to arrange icons in Microsoft Excel for Windows)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Horizontal</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Vertical</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Horizontally arranges and sizes the windows based on the position of the active cell.</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Vertically arranges and sizes the windows based on the position of the active cell.</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Arranges windows so that they cascade from the upper left to the bottom right of the application workspace.</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to change whether the windows are synchronized for scrolling but not how they are arranged, make sure arrange_num is 4.</p>
+<p>Active_doc    is a logical value specifying which windows to arrange. If active_doc is TRUE, Microsoft Excel arranges only windows on the active workbook; if FALSE or omitted, all open windows are arranged.</p>
+<p>Sync_horiz    is a logical value corresponding to the Sync Horizontal check box in Microsoft Excel version 4.0.</p>
+<ul>
+<li><blockquote>
+<p>If sync_horiz is TRUE, Microsoft Excel selects the check box and synchronizes horizontal scrolling.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If sync_horiz is FALSE or omitted, Microsoft Excel clears the check box, and windows will not be synchronized when you scroll horizontally.</p>
+</blockquote></li>
+<li><blockquote>
+<p>This argument is used only when active_doc is TRUE.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Sync_vert    is a logical value corresponding to the Sync Vertical check box in Microsoft Excel version 4.0.</p>
+<ul>
+<li><blockquote>
+<p>If sync_vert is TRUE, Microsoft Excel selects the check box and synchronizes vertical scrolling.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If sync_vert is FALSE or omitted, Microsoft Excel clears the check box, and windows will not be synchronized when you scroll vertically.</p>
+</blockquote></li>
+<li><blockquote>
+<p>This argument is used only when active_doc is TRUE.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Note</strong>   If arguments are omitted in the dialog box form of this function, the default values are the previous settings, if any; otherwise the default values are as described above.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>After arranging windows, the top or leftmost window is active.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In Microsoft Excel for Windows, if all windows are minimized, ARRANGE.ALL ignores its arguments, if any, and arranges the corresponding icons horizontally along the bottom of the workspace.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Tip</strong>   You can use synchronized horizontal or vertical scrolling when you need to scroll while viewing macro formulas in one window and corresponding macro values in another window of the same macro sheet.</p>
+<p><strong>Related Function</strong></p>
+<p>ACTIVATE   Switches to a window</p>
+
+</body>
+</html>

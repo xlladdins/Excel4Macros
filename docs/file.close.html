@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>file.close</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="file.close">FILE.CLOSE macro</h1>
+<p>Equivalent to clicking the Close command on the File menu. Closes the active workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FILE.CLOSE</strong>(save_logical, route_logical)</p>
+<p>Save_logical    is a logical value specifying whether to save the file before closing it.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Save_logical</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>TRUE</td>
+<td>Saves the workbook</td>
+</tr>
+<tr class="odd">
+<td>FALSE</td>
+<td>Does not save the workbook</td>
+</tr>
+<tr class="even">
+<td>Omitted</td>
+<td>If you've made changes to the workbook, displays a dialog box asking if you want to save the workbook</td>
+</tr>
+</tbody>
+</table>
+<p>Route_logical    is a logical value that specifies whether to route the file after closing it. This argument is ignored if there is not a routing slip present.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Route_logical</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>TRUE</td>
+<td>Routes the file</td>
+</tr>
+<tr class="odd">
+<td>FALSE</td>
+<td>Does not route the file</td>
+</tr>
+</tbody>
+</table>
+<p>Omitted   If you've specified recipients for routing, displays a dialog box asking if you want to save the file</p>
+<p><strong>Remarks</strong></p>
+<p>If you make any changes to the structure of a workbook, such as the name of sheets, their order, and so on, then a message will be displayed reminding you that there are unsaved changes, regardless of the save_logical value.</p>
+<p><strong>Note   </strong>When you use the FILE.CLOSE function, Microsoft Excel does not run any Auto_Close macros before closing the workbook.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="close.html">CLOSE</a>   Closes the active window</p><p><a href="close.all.html">CLOSE.ALL</a>   Closes all unprotected windows</p><p><a href="fclose.html">FCLOSE</a>   Closes a text file</p>
+</body>
+</html>

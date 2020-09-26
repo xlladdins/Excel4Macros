@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>sample</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="sample">SAMPLE macro</h1>
+<p>Samples data.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SAMPLE</strong>(<strong>inprng</strong>, outrng, <strong>method, rate</strong>, labels)</p>
+<p><strong>SAMPLE</strong>?(inprng, outrng, method, rate, labels)</p>
+<p>Inprng    is the input range.</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output column or the name, as text, of a new sheet to contain the output column. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Method    is a text character that indicates the type of sampling.</p>
+<ul>
+<li><blockquote>
+<p>If method is "P", then periodic sampling is used. The input range is sampled every nth cell, where n = rate.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If method is "R", then random sampling is used. The output column will contain rate samples.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Rate    is the sampling rate, if method is "P" (periodic sampling). Rate is the number of samples to take if method is "R" (random sampling).</p>
+<p>Labels    is a logical value.</p>
+<ul>
+<li><blockquote>
+<p>If labels is TRUE, then the first row or column of inprng contains labels.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If labels is FALSE or omitted, all cells in inprng are considered data. Microsoft Excel generates appropriate data labels for the output table.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

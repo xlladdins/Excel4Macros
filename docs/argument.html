@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>argument</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="argument">ARGUMENT macro</h1>
+<p>Describes the arguments used in a custom function, which is a type of macro, or in a subroutine. A custom function or subroutine must contain one ARGUMENT function for each argument in the macro itself. There are two forms of the ARGUMENT function. In the first form, only name_text is required; in the second form, only reference is required. Use the first form if you want to store the argument as a name. Use the second form if you want to store the argument in a specific cell or cells.</p>
+<p><strong>Syntax 1</strong></p>
+<p>For name storage</p>
+<p><strong>ARGUMENT</strong>(<strong>name_text</strong>, data_type_num)</p>
+<p><strong>Syntax 2</strong></p>
+<p>For cell storage</p>
+<p><strong>ARGUMENT</strong>(name_text, data_type_num, <strong>reference</strong>)</p>
+<p>Name_text    is the name of the argument or of the cells containing the argument. Name_text is required if you omit reference.</p>
+<p>Data_type_num    is a number that determines what type of values Microsoft Excel accepts for the argument. The following table lists the possible data types.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Data_type_num</strong></td>
+<td><strong>Type of value</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Number</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Text</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Logical</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Reference</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Error</td>
+</tr>
+<tr class="odd">
+<td>64</td>
+<td>Array</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>Data_type_num can be a sum of the preceding different numbers to allow for more than one possible type of data. For example, if data_type_num is 7, which is the sum of 1, 2, and 4, then the value can be a number, text, or logical value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Data_type_num is an optional argument. If you omit data_type_num, it is assumed to be 7.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the value that is passed to the function macro is not of the type specified by data_type_num, Microsoft Excel first attempts to convert it to the specified type. If the value cannot be converted, the macro returns the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Reference    is the cell or cells in which you want to store the argument's value.</p>
+<ul>
+<li><blockquote>
+<p>If you specify reference, the value that is passed to ARGUMENT is entered as a constant in the specified cell, and name_text becomes an optional argument because you can refer to the cell with either reference or name_text.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you omit reference, name_text is defined on the macro sheet and refers to the value that is passed to ARGUMENT. Once name_text is defined, you can use it in formulas.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Custom functions and subroutines can accept from 1 to 29 arguments.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If a macro contains an ARGUMENT function and you omit the corresponding argument in the function that starts the macro, the macro uses the #N/A error value as the value of the argument.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>To create a custom function that calculates profit, use the following functions to specify arguments for cost, sales, and sales volume:</p>
+<p>ARGUMENT("UnitsSold", 1)</p>
+<p>ARGUMENT("UnitCost", 1)</p>
+<p>ARGUMENT("UnitPrice", 1)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="result.html">RESULT</a>   Specifies the data type a custom function returns</p><p><a href="volatile.html">VOLATILE</a>   Makes custom functions recalculate automatically</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>restart</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="restart">RESTART macro</h1>
+<p>Removes a number of RETURN statements from the stack. When one macro calls another, the RETURN statement at the end of the second macro returns control to the calling macro. You can use the RESTART function to determine which macro regains control.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>RESTART</strong>(level_num)</p>
+<p>Level_num    is a number specifying the number of previous RETURN statements you want to be ignored. If level_num is omitted, the next RETURN statement will halt macro execution.</p>
+<p>For example, if the currently running macro has two "ancestors" (the current macro was called by one macro that, in turn, was called by another macro), using RESTART(1) in the third macro returns control to the first calling macro when the RETURN statement is encountered. The RESTART(1) formula removes one level of RETURN statements from Microsoft Excel's memory so that the second macro is skipped.</p>
+<p><strong>Remarks</strong></p>
+<p>RESTART is particularly useful if you frequently use macros to call other macros that in turn call other macros. Use RESTART in combination with IF statements to prevent macro execution from returning to macros that called, either directly or indirectly, the currently running macro.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="halt.html">HALT</a>   Stops all macros from running</p><p><a href="return.html">RETURN</a>   Ends the currently running macro</p>
+</body>
+</html>

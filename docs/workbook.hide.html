@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>workbook.hide</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workbook.hide">WORKBOOK.HIDE macro</h1>
+<p>Equivalent to clicking the Sheet command on the Format menu, and then clicking Hide on the Sheet submenu. Hides sheets in the active workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKBOOK.HIDE</strong>(sheet_text, very_hidden)</p>
+<p>Sheet_text    is the name of the sheet to hide. If omitted, the currently selected sheet(s) are hidden.</p>
+<p>Very_hidden    specifies how the sheet is hidden. If TRUE, then the sheet name does not appear in the Unhide dialog box. After using this argument, use WORKBOOK.UNHIDE to unhide the sheet. If FALSE or omitted, hides the sheet but does not prevent the sheet's name from appearing in the Unhide dialog box.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the structure of the workbook is protected, you cannot hide any sheets in the workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You cannot hide the last visible sheet in a workbook.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To hide Sheet1:Sheet10, select them first with the WORKBOOK.SELECT function. You can also place the sheets in an array first, as in {"Sheet1", "Sheet2", "Sheet3",...}.</p>
+</blockquote></li>
+</ul>
+
+</body>
+</html>

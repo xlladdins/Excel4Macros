@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>listbox.properties</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="listbox.properties">LISTBOX.PROPERTIES macro</h1>
+<p>Sets the properties of a list box and drop-down controls on a worksheet or dialog sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>LISTBOX.PROPERTIES</strong>(range, link, drop_size, multi_select, 3d_shading)</p>
+<p><strong>LISTBOX.PROPERTIES</strong>?(range, link, drop_size, multi_select, 3d_shading)</p>
+<p>Range    is the cell range that the initial contents of the list box are taken from. If blank (empty text), the list box is initially unfilled.</p>
+<p>Link    is the cell on the sheet to which the list box is linked, and indicates the numeric position of the currently selected item in the list box. Whenever an item in the list box is selected, its numeric position is entered into the linked cell on the sheet.</p>
+<p>Drop_size    is the number of lines shown when a drop-down control is dropped. This value is ignored when applied to a non-drop-down list box.</p>
+<p>Multi_select    is a number that specifies the selection mode of the list box. Zero is single selection. 1 is simple multi-select. 2 is extended multi-select.</p>
+<p>3d_shading    is a logical value that specifies whether the list box appears as 3-D. If TRUE, the list box will appear as 3-D. If FALSE or omitted, the list box will not be 3-D. This argument is available for only worksheets.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.list.item.html">ADD.LIST.ITEM</a>   Adds an item in a list box or drop-down control on a worksheet or dialog sheet control</p><p><a href="select.list.item.html">SELECT.LIST.ITEM</a>   Selects an item in a list box or in a group box</p><p><a href="checkbox.properties.html">CHECKBOX.PROPERTIES</a>   Sets various properties of check box and option box controls</p><p><a href="scrollbar.properties.html">SCROLLBAR.PROPERTIES</a>   Sets the properties of the scroll bar and spinner controls</p><p><a href="pushbutton.properties.html">PUSHBUTTON.PROPERTIES</a>   Sets the properties of the push button control</p>
+</body>
+</html>

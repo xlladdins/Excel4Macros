@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>solver.change</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="solver.change">SOLVER.CHANGE macro</h1>
+<p>Equivalent to clicking the Solver command on the Tools menu and clicking the Change button in the Solver Parameters dialog box. Changes the right side of an existing constraint.</p>
+<p>If this function is not available, you must install the Solver add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SOLVER.CHANGE</strong>(<strong>cell_ref, relation</strong>, formula)</p>
+<p>For an explanation of the arguments and constraints, see SOLVER.ADD.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the combination of cell_ref and relation does not match any existing constraint, the function returns the value 4 and no action is taken.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To change the cell_ref or relation of an existing constraint, use SOLVER.DELETE to delete the old constraint and then use SOLVER.ADD to add the constraint in the form you want.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="solver.delete.html">SOLVER.DELETE</a>   Deletes an existing constraint</p><p><a href="solver.add.html">SOLVER.ADD</a>   Adds a constraint to the current problem</p>
+</body>
+</html>

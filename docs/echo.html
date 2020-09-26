@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>echo</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="echo">ECHO macro</h1>
+<p>Controls screen updating while a macro is running. If a large macro uses many commands that update the screen, use ECHO to make the macro run faster.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ECHO</strong>(logical)</p>
+<p>Logical    is a logical value specifying whether screen updating is on or off.</p>
+<ul>
+<li><blockquote>
+<p>If logical is TRUE, Microsoft Excel selects screen updating.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If logical is FALSE, Microsoft Excel clears screen updating.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If logical is omitted, Microsoft Excel changes the current screen update condition.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>Screen updating is always turned back on when a macro ends.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You can use GET.WORKSPACE to determine whether screen updating is on or off.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>GET.WORKSPACE   Returns information about the workspace</p>
+
+</body>
+</html>

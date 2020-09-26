@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>workgroup</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="workgroup">WORKGROUP macro</h1>
+<p>Equivalent to clicking the Group Edit command on the Options menu in Microsoft Excel version 4.0. Creates a group. This function is provided for compatibility only. In Microsoft Excel version 5.0 and later versions, you can create a group by using the WORKBOOK.SELECT function.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WORKGROUP</strong>(name_array)</p>
+<p><strong>WORKGROUP</strong>?(name_array)</p>
+<p>Name_array    is the list of workbooks or sheets in workbooks that you want grouped.</p>
+<ul>
+<li><blockquote>
+<p>If name_array is omitted, the most recently created group is recreated.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If no group has been created during the current Microsoft Excel session, all open, unhidden worksheets are created as a group.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you specify just the name of a workbook, WORKGROUP adds the first sheet of the workbook to the group.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>WORKGROUP returns the #VALUE! error value and interrupts the macro if it can't find any of the sheets in name_array or if any of the sheets is a chart or module.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="fill.group.html">FILL.GROUP</a>   Fills the contents of the active worksheet's selection to the same area on all other worksheets in the group</p><p><a href="workbook.select.html">WORKBOOK.SELECT</a>   Selects one or more sheets in a workbook</p>
+</body>
+</html>

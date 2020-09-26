@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>define.style</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="define.style">DEFINE.STYLE macro</h1>
+<p>Equivalent to clicking the Define button in the Style dialog box, which appears when you click the Style command on the Format menu. Creates and changes cell styles. There are seven syntax forms of this function. Use syntax 1 of DEFINE.STYLE to define styles based on the format of the active cell. To create a style by specifying number, font, and other formats, use syntaxes 2 through 7 of DEFINE.STYLE.</p>
+<p>Syntax 1</p>
+<p>Syntaxes 2-7</p>
+<h1 id="define.style-syntax-1">DEFINE.STYLE Syntax 1</h1>
+<p>Equivalent to clicking the Define button in the Style dialog box, which appears when you click the Style command on the Format menu. Creates and changes cell styles. There are seven syntax forms of this function. Use syntax 1 of DEFINE.STYLE to define styles based on the format of the active cell. To create a style by specifying number, font, and other formats, use syntaxes 2 through 7 of DEFINE.STYLE.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text</strong>, number, font, alignment, border, pattern, protection)</p>
+<p><strong>DEFINE.STYLE</strong>?(style_text, number, font, alignment, border, pattern, protection)</p>
+<p>Style_text    is the name, as text, that you want to assign to the style.</p>
+<p>The following arguments are logical values corresponding to check boxes in the Style dialog box. If an argument is TRUE, Microsoft Excel selects the check box and uses the corresponding format of the active cell in the style; if FALSE, Microsoft Excel clears the check box and omits formatting descriptions for that attribute. If style_text is omitted and all selected cells have identical formatting, the default is TRUE; if cells have different formatting, the default is FALSE.</p>
+<p>Number    corresponds to the Number check box.</p>
+<p>Font    corresponds to the Font check box.</p>
+<p>Alignment    corresponds to the Alignment check box.</p>
+<p>Border    corresponds to the Border check box.</p>
+<p>Pattern    corresponds to the Pattern check box.</p>
+<p>Protection    corresponds to the Protection check box.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="define.style.html">DEFINE.STYLE</a> Syntaxes 2-7</p><p><a href="apply.style.html">APPLY.STYLE</a>   Applies a style to the selection</p><p><a href="delete.style.html">DELETE.STYLE</a>   Deletes a cell style</p><p><a href="merge.styles.html">MERGE.STYLES</a>   Imports styles from another workbook into the active workbook</p><h1 id="define.style-syntaxes-2---7">DEFINE.STYLE Syntaxes 2 - 7</h1>
+<p>Equivalent to clicking the Define button in the Style dialog box, which appears when you click the Style command on the Format menu. Creates and changes cell styles. Use one of the following syntax forms of DEFINE.STYLE to select cell formats for a new style or to alter the formats of an existing style. Use syntax 1 of DEFINE.STYLE to define styles based on the format of the active cell.</p>
+<p><strong>Syntax 2</strong></p>
+<p>Number format, using the arguments from the FORMAT.NUMBER function</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text, attribute_num</strong>, format_text)</p>
+<p><strong>Syntax 3</strong></p>
+<p>Font format, using the arguments from the FORMAT.FONT and FONT.PROPERTIES functions</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text, attribute_num</strong>, name_text, size_num, bold, italic, underline, strike, color, outline, shadow, superscript, subscript)</p>
+<p><strong>Syntax 4</strong></p>
+<p>Alignment, using the arguments from the ALIGNMENT function</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text</strong>, <strong>attribute_num</strong>, horiz_align, wrap, vert_align, orientation)</p>
+<p><strong>Syntax 5</strong></p>
+<p>Border, using the arguments from the BORDER function</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text</strong>, <strong>attribute_num</strong>, left, right, top, bottom, left_color, right_color, top_color, bottom_color)</p>
+<p><strong>Syntax 6</strong></p>
+<p>Pattern, using the arguments from the cell form of the PATTERNS function</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text, attribute_num</strong>, apattern, afore, aback)</p>
+<p><strong>Syntax 7</strong></p>
+<p>Cell protection, using the arguments from the CELL.PROTECTION function</p>
+<p><strong>DEFINE.STYLE</strong>(<strong>style_text, attribute_num</strong>, locked, hidden)</p>
+<p>Style_text    is the name, as text, that you want to assign to the style.</p>
+<p>Attribute_num    is a number from 2 to 7 that specifies which attribute of the style, such as its font, alignment, or number format, you want to designate with this function.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Attribute_num</strong></td>
+<td><strong>Specifies</strong></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Number format</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Font format</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Alignment</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Border</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Pattern</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Cell protection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The remaining arguments are different for each form and are identical to arguments in the corresponding function. For example, form 2 of DEFINE.STYLE defines the number format of a style and corresponds to the FORMAT.NUMBER function. The exception is form 5, which does not include every argument for BORDER. For details on the values you can use for these arguments, see the description under the corresponding function.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you define a style using one of these forms, then any attributes you don't explicitly define are not changed.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="define.style.html">DEFINE.STYLE</a> Syntax 1</p><p><a href="alignment.html">ALIGNMENT</a>   Aligns or wraps text in cells</p><p><a href="apply.style.html">APPLY.STYLE</a>   Applies a style to the selection</p><p><a href="border.html">BORDER</a>   Adds a border to the selected cell or object</p><p><a href="cell.protection.html">CELL.PROTECTION</a>   Allows you to control cell protection and display</p><p><a href="delete.style.html">DELETE.STYLE</a>   Deletes a cell style</p><p><a href="font.properties.html">FONT.PROPERTIES</a>   Applies a font to the selection</p><p><a href="format.number.html">FORMAT.NUMBER</a>   Formats numbers, dates, and times in the selected cells</p><p><a href="merge.styles.html">MERGE.STYLES</a>   Imports styles from another workbook into the active workbook</p><p><a href="patterns.html">PATTERNS</a>   Changes the appearance of the selected object</p>
+</body>
+</html>

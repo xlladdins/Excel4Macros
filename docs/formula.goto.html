@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>formula.goto</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="formula.goto">FORMULA.GOTO macro</h1>
+<p>Equivalent to clicking the Go To command on the Edit menu or to pressing F5. Scrolls through the worksheet and selects a named area or reference. Use FORMULA.GOTO to select a range on any open workbook; use SELECT to select a range on the active workbook.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMULA.GOTO</strong>(reference, corner)</p>
+<p><strong>FORMULA.GOTO</strong>?(reference, corner)</p>
+<p>Reference    specifies where to scroll and what to select.</p>
+<ul>
+<li><blockquote>
+<p>Reference should be either an external reference to a workbook, an R1C1-style reference in the form of text (see the second example following), or a name.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the Go To command has already been carried out, reference is optional. If reference is omitted, it is assumed to be the reference of the cells you selected before the previous Go To command or FORMULA.GOTO macro function was carried out. This feature distinguishes FORMULA.GOTO from SELECT.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Corner    is a logical value that specifies whether to scroll through the window so that the upper-left cell in reference is in the upper-left corner of the active window. If corner is TRUE, Microsoft Excel places reference in the upper-left corner of the window; if FALSE or omitted, Microsoft Excel scrolls through normally.</p>
+<p><strong>Tip</strong>   Microsoft Excel keeps a list of the cells you've selected with previous FORMULA.GOTO functions or Go To commands. When you use FORMULA.GOTO with GET.WORKSPACE(41), which returns a horizontal array of previous Go To selections, you can backtrack through multiple previous selections. See the last example below.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If you are recording a macro when you click the Go To command, the reference you enter in the Reference box of the Go To dialog box is recorded as text in the R1C1 reference style.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you are recording a macro when you double-click a cell that has precedents on another worksheet, Microsoft Excel records a FORMULA.GOTO function.</p>
+</blockquote></li>
+</ul>
+<p><strong>Examples</strong></p>
+<p>Each of the following macro formulas goes to cell A1 on the active worksheet:</p>
+<p>FORMULA.GOTO(!$A$1)</p>
+<p>FORMULA.GOTO("R1C1")</p>
+<p>Each of the following macro formulas goes to the cells named Sales on the active worksheet and scrolls through the worksheet so that the upper-left corner of Sales is in the upper-left corner of the window:</p>
+<p>FORMULA.GOTO(!Sales, TRUE)</p>
+<p>FORMULA.GOTO("Sales", TRUE)</p>
+<p>The following macro formula goes to the cells that were selected by the third most recent FORMULA.GOTO function or Go To command:</p>
+<p>FORMULA.GOTO(INDEX(GET.WORKSPACE(41), 1, 3))</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="goto.html">GOTO</a>   Directs macro execution to another cell</p><p><a href="hscroll.html">HSCROLL</a>   Horizontally scrolls through a sheet by percentage or by column or row number</p><p><a href="select.html">SELECT</a>   Selects a cell, worksheet object, or chart item</p><p><a href="vscroll.html">VSCROLL</a>   Vertically scrolls through a sheet by percentage or by column or row number</p>
+</body>
+</html>

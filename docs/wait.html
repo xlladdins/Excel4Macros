@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>wait</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="wait">WAIT macro</h1>
+<p>Pauses the macro until the time specified by the serial number.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>WAIT</strong>(<strong>serial_number</strong>)</p>
+<p>Serial_number    is the date-time code used by Microsoft Excel for date and time calculations. You can give serial_number as text, such as "4:30 PM", or as a formula, such as NOW()+"00:00:04", instead of as a number. The text or formula is automatically converted to a serial number. For more information about serial_number, see NOW.</p>
+<p><strong>Important   </strong>WAIT suspends all Microsoft Excel activity and may prevent you from performing other operations on your computer. Background processes, such as printing and recalculation, are continued.</p>
+<p><strong>Example</strong></p>
+<p>Use WAIT with NOW to pause a macro for a length of time or until the time specified by the serial number. For example, the following macro formula waits 3 seconds from the time the functions are evaluated:</p>
+<p>WAIT(NOW()+"00:00:03")</p>
+<p><strong>Related Function</strong></p>
+<p>ON.TIME   Runs a macro at a specific time</p>
+
+</body>
+</html>

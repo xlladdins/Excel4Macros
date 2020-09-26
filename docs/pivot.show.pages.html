@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>pivot.show.pages</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.show.pages">PIVOT.SHOW.PAGES macro</h1>
+<p>Creates new sheets in the workbook containing the active cell. The function will iterate through each item in page_field and create a new PivotTable report on a new sheet with the page field set to that particular item.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.SHOW.PAGES</strong>(name, page_field)</p>
+<p>Name    is the name of the target PivotTable report. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Page_field    is the name of a page field in the PivotTable report specified by the name argument.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If the function is successful, it returns TRUE; otherwise, it returns the #VALUE! error value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If name is not a valid PivotTable name then the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

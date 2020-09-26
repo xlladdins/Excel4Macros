@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>pivot.add.data</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.add.data">PIVOT.ADD.DATA macro</h1>
+<p>Adds a field to a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.ADD.DATA</strong>(name, pivot_field_name, new_name, position, function, calculation, base_field, base_item, format_text)</p>
+<p>Name    is the name of the PivotTable report to which the user wants to add as a data field. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Pivot_field_name    is the name of a field which the user would like to add to the PivotTable report as data or as text.</p>
+<p>New_name    is the name you would like to give to the new field once it is added to your PivotTable report. If this argument is omitted, Microsoft Excel will pick a default name for you. This function returns new_name or the name Microsoft Excel gives the field.</p>
+<p>Position    is the position within all the Data fields you would like to place the new data field. If position is omitted, the field will be added as the last data field.</p>
+<p>Function    is a number from 2 to 2048 specifying how the new field is to be calculated. To compute the value to place in this column use one value from the following table. If function is omitted, SUM will be used. If the field is a numeric field or text field, COUNTA will be used.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Function</strong></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>SUM</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>COUNTA</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>COUNT</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>AVERAGE</td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td>MAX</td>
+</tr>
+<tr class="odd">
+<td>64</td>
+<td>MIN</td>
+</tr>
+<tr class="even">
+<td>128</td>
+<td>PRODUCT</td>
+</tr>
+<tr class="odd">
+<td>256</td>
+<td>STDEV</td>
+</tr>
+<tr class="even">
+<td>512</td>
+<td>STDEVP</td>
+</tr>
+<tr class="odd">
+<td>1024</td>
+<td>VAR</td>
+</tr>
+<tr class="even">
+<td>2048</td>
+<td>VARP</td>
+</tr>
+</tbody>
+</table>
+<p>Calculation    is a number between 1 and 9 representing which custom calculation you would like to apply to this data field. This corresponds to the Show Data As drop-down box on the PivotTable Field dialog box. If this argument is omitted, no special calculation will be applied to the data field.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td><strong>Calculation</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Normal</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Difference From</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>% Of Item</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>% Difference From</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Running Total In</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>% of Row</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>% of Column</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>% of Total</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Index</td>
+</tr>
+</tbody>
+</table>
+<p>Base_Field    is the field on which you want to base the calculation.</p>
+<p>Base_Item    is the item within base_field on which you want to base the calculation.</p>
+<p>Format_text    is the type of number format you want to apply to the PivotTable data. Corresponds to the number button in the PivotTable Field dialog box, which appears when you click the PivotTable Field command on the Data menu when the selection is in a data field.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If name is not a valid PivotTable name, then the #VALUE! error value is returned.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If field_name is not a valid field for the current PivotTable report then the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.fields.html">PIVOT.ADD.FIELDS</a>   Adds fields to a PivotTable report</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

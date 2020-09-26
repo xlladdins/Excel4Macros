@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>formula.find</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="formula.find">FORMULA.FIND macro</h1>
+<p>Equivalent to clicking the Find command on the Edit menu. Selects the next or previous cell containing the specified text and returns TRUE. If a matching cell is not found, FORMULA.FIND returns FALSE and displays a message.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMULA.FIND</strong>(<strong>text, in_num, at_num, by_num</strong>, dir_num, match_case)</p>
+<p><strong>FORMULA.FIND</strong>?(text, in_num, at_num, by_num, dir_num, match_case)</p>
+<p>Text    is the text you want to find. Text corresponds to the Find What box in the Find dialog box.</p>
+<p>In_num    is a number from 1 to 3 specifying where to search.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>In_num</strong></td>
+<td><strong>Searches</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Formulas</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Values</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Notes</td>
+</tr>
+</tbody>
+</table>
+<p>At_num    is the number 1 or 2 and specifies whether to find cells containing only text or also cells containing text within a longer string of characters.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>At_num</strong></td>
+<td><strong>Searches for text as</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>A whole string (the only value in the cell)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Either a whole string or part of a longer string</td>
+</tr>
+</tbody>
+</table>
+<p>By_num    is the number 1 or 2 and specifies whether to search by rows or by columns.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>By_num</strong></td>
+<td><strong>Searches by</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Rows</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Columns</td>
+</tr>
+</tbody>
+</table>
+<p>Dir_num    is the number 1 or 2 and specifies whether to search for the next or previous occurrence of text.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Dir_num</strong></td>
+<td><strong>Searches for</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>The next occurrence of text</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>The previous occurrence of text</td>
+</tr>
+</tbody>
+</table>
+<p>Match_case    is a logical value corresponding to the Match Case check box in the Find dialog box. If match_case is TRUE, Microsoft Excel matches characters exactly, including uppercase and lowercase; if FALSE or omitted, matching is not case-sensitive.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>In Microsoft Excel for Windows, the dialog-box form of FORMULA.FIND is equivalent to pressing SHIFT+F5.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If more than one cell is selected when you use FORMULA.FIND, Microsoft Excel searches only that selection.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+
+</body>
+</html>

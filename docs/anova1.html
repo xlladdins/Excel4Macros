@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>anova1</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="anova1">ANOVA1 macro</h1>
+<p>Performs single-factor analysis of variance, which tests the hypothesis that means from several samples are equal.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ANOVA1</strong>(<strong>inprng</strong>, outrng, grouped, labels, alpha)</p>
+<p><strong>ANOVA1</strong>?(inprng, outrng, grouped, labels, alpha)</p>
+<p>Inprng    is the input range.</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output table or the name, as text, of a new sheet to contain the output table. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Grouped    is a text character that indicates whether the data in the input range is organized by row or column.</p>
+<ul>
+<li><blockquote>
+<p>If grouped is "C" or omitted, then the data is organized by column.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If grouped is "R", then the data is organized by row.</p>
+</blockquote></li>
+</ul>
+<p>Labels    is a logical value that describes where the labels are located in the input range, as shown in the following table:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Labels</strong></td>
+<td><strong>Grouped</strong></td>
+<td><strong>Labels are in</strong></td>
+</tr>
+<tr class="even">
+<td>TRUE</td>
+<td>"C"</td>
+<td>First row of the input range.</td>
+</tr>
+<tr class="odd">
+<td>TRUE</td>
+<td>"R"</td>
+<td>First column of the input range.</td>
+</tr>
+<tr class="even">
+<td>FALSE or omitted</td>
+<td>(ignored)</td>
+<td>No labels. All cells in the input range are data.</td>
+</tr>
+</tbody>
+</table>
+<p>Alpha    is the significance level at which to evaluate critical values for the F statistic. If omitted, alpha is 0.05.</p>
+<p><strong>Related Functions</strong></p>
+<p>ANOVA2   Performs two-factor analysis of variance with replication</p>
+<p>ANOVA3   Performs two-factor analysis of variance without replication</p>
+
+</body>
+</html>

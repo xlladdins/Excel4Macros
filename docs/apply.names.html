@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>apply.names</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="apply.names">APPLY.NAMES macro</h1>
+<p>Equivalent to clicking the Apply command on the Name submenu on the Insert menu. Replaces definitions with their respective names. If no names are defined in the current selection, APPLY.NAMES returns the #VALUE! error value. Use APPLY.NAMES to replace references and values in formulas with names.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>APPLY.NAMES</strong>(<strong>name_array</strong>, ignore, use_rowcol, omit_col, omit_row, order_num, append_last)</p>
+<p><strong>APPLY.NAMES</strong>?(name_array, ignore, use_rowcol, omit_col, omit_row, order_num, append_last)</p>
+<p>Name_array    is the name or names to apply as text elements in an array.</p>
+<ul>
+<li><blockquote>
+<p>To give more than one name as the argument, you must use an array. For example:</p>
+</blockquote></li>
+<li><blockquote>
+<p>APPLY.NAMES({"DataRange", "CriteriaRange"})</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the names indicated by the argument name_array have already replaced all of the appropriate references or values, the #VALUE! error value is returned.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>The next four arguments correspond to check boxes and options in the Apply Names dialog box. Arguments that correspond to check boxes are logical values. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box.</p>
+<p>Ignore    corresponds to the Ignore Relative/Absolute check box.</p>
+<p>Use_rowcol    corresponds to the Use Row And Column Names check box. If use_rowcol is FALSE, the next three arguments are ignored.</p>
+<p>Omit_col    corresponds to the Omit Column Name If Same Column check box.</p>
+<p>Omit_row    corresponds to the Omit Row Name If Same Row check box.</p>
+<p>Order_num    determines which range name is listed first when a cell reference is replaced by a row-oriented and a column-oriented range name, as shown in the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Order_num</strong></td>
+<td><strong>Order of range names</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Row Column</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Column Row</td>
+</tr>
+</tbody>
+</table>
+<p>Append_last    determines whether the names most recently defined are also replaced.</p>
+<ul>
+<li><blockquote>
+<p>If append_last is TRUE, Microsoft Excel replaces the definitions of the names in name_array and also replaces the definitions of the last names defined.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If append_last is FALSE or omitted, Microsoft Excel replaces the definitions of the names in name_array only.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.names.html">CREATE.NAMES</a>   Creates names automatically from text labels on a sheet</p><p><a href="define.name.html">DEFINE.NAME</a>   Defines a name in the active workbook</p><p><a href="list.names.html">LIST.NAMES</a>   Lists names and their associated information</p>
+</body>
+</html>

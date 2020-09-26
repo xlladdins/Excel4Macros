@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>pivot.add.fields</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="pivot.add.fields">PIVOT.ADD.FIELDS macro</h1>
+<p>Add fields onto a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>PIVOT.ADD.FIELDS</strong>(name, row_array, column_array, page_array, add_to_table)</p>
+<p>Name    is the name of the PivotTable report to which the user wants to add fields. If name is omitted, Microsoft Excel will use the PivotTable report containing the active cell.</p>
+<p>Row_array    is an array of text constants consisting of the names of the fields which the user would like to add to the PivotTable report as row fields.</p>
+<p>Column_array    is an array of text constants consisting of the names of the fields which the user would like to add to the PivotTable report as column fields.</p>
+<p>Page_array    is an array of text constants consisting of the names of the fields which the user would like to add to the PivotTable report as page fields.</p>
+<p>Add_to_table    is a logical value which if TRUE adds the fields specified by row_array, column_array and page_array to the existing fields on the PivotTable report. If add_to_table is FALSE, Microsoft Excel will replace the fields already along the rows, columns and pages with the fields specified by row_array, column_array and page_array.</p>
+<p><strong>Remarks</strong></p>
+<p>If name is not a valid PivotTable name, then the #VALUE! error value is returned.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="pivot.add.data.html">PIVOT.ADD.DATA</a>   Adds a field to a PivotTable report as a data field</p><p><a href="pivot.field.html">PIVOT.FIELD</a>   Pivots fields within a PivotTable report</p><p><a href="pivot.field.group.html">PIVOT.FIELD.GROUP</a>   Creates groups within a PivotTable report</p><p><a href="pivot.field.properties.html">PIVOT.FIELD.PROPERTIES</a>   Changes the properties of a field inside a PivotTable report</p><p><a href="pivot.field.ungroup.html">PIVOT.FIELD.UNGROUP</a>   Ungroups all selected groups within a PivotTable report</p><p><a href="pivot.item.html">PIVOT.ITEM</a>   Moves an item within a PivotTable report</p><p><a href="pivot.item.properties.html">PIVOT.ITEM.PROPERTIES</a>   Changes the properties of an item within a header field</p><p><a href="pivot.refresh.html">PIVOT.REFRESH</a>   Refreshes a PivotTable report</p><p><a href="pivot.show.pages.html">PIVOT.SHOW.PAGES</a>   Creates new sheets in the workbook containing the active cell</p><p><a href="pivot.table.wizard.html">PIVOT.TABLE.WIZARD</a>   Creates an empty PivotTable report</p>
+</body>
+</html>

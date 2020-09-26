@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>hide.object</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="hide.object">HIDE.OBJECT macro</h1>
+<p>Hides or displays the specified object.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>HIDE.OBJECT</strong>(object_id_text, hide)</p>
+<p>Object_id_text    is the name and number, or number alone, of the object, as text, as it appears in the reference area when the object is selected. The name of the object is also the text returned by the CREATE.OBJECT function, so object_id_text can be a reference to a cell containing CREATE.OBJECT. To give the name of more than one object, use the following format for object_id_text:</p>
+<p>"oval 3, text 2, arc 5"</p>
+<p> </p>
+<p>If object_id_text is omitted, the function operates on all selected objects. If no object is selected or if the object specified by object_id_text does not exist, HIDE.OBJECT returns the #VALUE! error value.</p>
+<p>Hide    is a logical value that specifies whether to hide or display the specified object. If hide is TRUE or omitted, Microsoft Excel hides the object; if FALSE, Microsoft Excel displays the object.</p>
+<p><strong>Remarks</strong></p>
+<p>Objects are not automatically selected after they are unhidden.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula hides the selected object:</p>
+<p>HIDE.OBJECT(, TRUE)</p>
+<p>The following macro formula displays the object named Oval 3:</p>
+<p>HIDE.OBJECT("Oval 3", FALSE)</p>
+<p>The following macro formula displays the three specified objects:</p>
+<p>HIDE.OBJECT("oval 3, text 2, arc 5", FALSE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="display.html">DISPLAY</a>   Controls how an object is displayed</p>
+</body>
+</html>

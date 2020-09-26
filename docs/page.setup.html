@@ -1,0 +1,340 @@
+<html>
+<head>
+<title>page.setup</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="page.setup">PAGE.SETUP macro</h1>
+<p>Equivalent to clicking the Page Setup command on the File menu. Use PAGE.SETUP to control the printed appearance of your sheets.</p>
+<p>There are three syntax forms of PAGE.SETUP. Syntax 1 applies if a sheet or macro sheet is active; syntax 2 applies if a chart is active; syntax three applies to Visual Basic modules and the info Window.</p>
+<p>Arguments correspond to check boxes and text boxes in the Page Setup dialog box. Arguments that correspond to check boxes are logical values. If an argument is TRUE, Microsoft Excel selects the check box; if FALSE, Microsoft Excel clears the check box. Arguments for margins are always in inches, regardless of your country setting.</p>
+<p><strong>Syntax 1</strong></p>
+<p>Worksheets and macro sheets</p>
+<p><strong>PAGE.SETUP</strong>(head, foot, left, right, top, bot, hdng, grid, h_cntr, v_cntr, orient, paper_size, scale, pg_num, pg_order, bw_cells, quality, head_margin, foot_margin, notes, draft)</p>
+<p><strong>PAGE.SETUP</strong>?(head, foot, left, right, top, bot, hdng, grid, h_cntr, v_cntr, orient, paper_size, scale, pg_num, pg_order, bw_cells, quality, head_margin, foot_margin, notes, draft)</p>
+<p><strong>Syntax 2</strong></p>
+<p>Charts</p>
+<p><strong>PAGE.SETUP</strong>(head, foot, left, right, top, bot, size, h_cntr, v_cntr, orient, paper_size, scale, pg_num, bw_chart, quality, head_margin, foot_margin, draft)</p>
+<p><strong>PAGE.SETUP</strong>?(head, foot, left, right, top, bot, size, h_cntr, v_cntr, orient, paper_size, scale, pg_num, bw_chart, quality, head_margin, foot_margin, draft)</p>
+<p><strong>Syntax 3</strong></p>
+<p>Visual Basic Modules and the Info Window</p>
+<p><strong>PAGE.SETUP</strong>(head, foot, left, right, top, bot, orient, paper_size, scale, quality, head_margin, foot_margin, pg_num)</p>
+<p><strong>PAGE.SETUP</strong>?(head, foot, left, right, top, bot, orient, paper_size, scale, quality, head_margin, foot_margin, pg_num)</p>
+<p>Head    specifies the text and formatting codes for the header for the current sheet . For information about formatting codes, see "Remarks" later in this topic.</p>
+<p>Foot    specifies the text and formatting codes for the workbook footer.</p>
+<p>Left    corresponds to the Left box and is a number specifying the left margin.</p>
+<p>Right    corresponds to the Right box and is a number specifying the right margin.</p>
+<p>Top    corresponds to the Top box and is a number specifying the top margin.</p>
+<p>Bot    corresponds to the Bottom box and is a number specifying the bottom margin.</p>
+<p>Hdng    corresponds to the Row &amp; Column Headings check box. Hdng is available only in the sheet and macro sheet form of the function.</p>
+<p>Grid    corresponds to the Cell Gridlines check box. Grid is available only in the sheet and macro sheet form of the function.</p>
+<p>H_cntr    corresponds to the Center Horizontally check box in the Margins panel of the Page Setup dialog box.</p>
+<p>V_cntr    corresponds to the Center Vertically check box in the Margins panel of the Page Setup dialog box.</p>
+<p>Orient    determines the direction in which your workbook is printed.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Orient</strong></td>
+<td><strong>Print format</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Portrait</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Landscape</td>
+</tr>
+</tbody>
+</table>
+<p>Paper_size    is a number from 1 to 26 that specifies the size of the paper.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Paper_size</strong></td>
+<td><strong>Paper type</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Letter</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Letter (small)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Tabloid</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Ledger</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Legal</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Statement</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Executive</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>A3</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>A4</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>A4 (small)</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>A5</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>B4</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>B5</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Folio</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>Quarto</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>10x14</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td>11x17</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>Note</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td>ENV9</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>ENV10</td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>ENV11</td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td>ENV12</td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td>ENV14</td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td>C Sheet</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>D Sheet</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>E Sheet</td>
+</tr>
+</tbody>
+</table>
+<p>Scale    is a number representing the percentage to increase or decrease the size of the sheet. All scaling retains the aspect ratio of the original.</p>
+<ul>
+<li><blockquote>
+<p>To specify a percentage of reduction or enlargement, set scale to the percentage.</p>
+</blockquote></li>
+<li><blockquote>
+<p>For worksheets and macros, you can specify the number of pages that the printout should be scaled to fit. Set scale to a two-item horizontal array, with the first item equal to the width and the second item equal to the height. If no constraint is necessary in one direction, you can set the corresponding value to #N/A.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Scale can also be a logical value. To fit the print area on a single page, set scale to TRUE.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Pg_num    specifies the number of the first page. If zero, sets first page to zero. If "Auto" is used, then the page numbering is set to automatic. If omitted, PAGE.SETUP retains the existing pg_num.</p>
+<p>Pg_order    specifies whether pagination is left-to-right and then down, or top-to-bottom and then right.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Pg_order</strong></td>
+<td><strong>Pagination</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Top-to-bottom, then right</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Left-to-right, then down</td>
+</tr>
+</tbody>
+</table>
+<p>Bw_cells    is a logical value that specifies whether to print cells and all graphic objects, such as text boxes and buttons, in color.</p>
+<ul>
+<li><blockquote>
+<p>If bw_cells is TRUE, Microsoft Excel prints cell text and borders in black and cell backgrounds in white.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If bw_cells is FALSE , Microsoft Excel prints cell text, borders, and background patterns in color (or in gray scale).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Bw_chart    is a logical value that specifies whether to print chart in color.</p>
+<p>Size    is a number corresponding to the options in the Chart Size box, and determines how you want the chart printed on the page within the margins. Size is available only in the chart form of the function.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Size</strong></td>
+<td><strong>Size to print the chart</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Screen size</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Fit to page</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Full page</td>
+</tr>
+</tbody>
+</table>
+<p>Quality    specifies the print quality in dots-per-inch. To specify both horizontal and vertical print quality, use an array of two values.</p>
+<p>Head_margin    is the placement, in inches, of the running head margin from the edge of the page.</p>
+<p>Foot_margin    is the placement, in inches, of the running foot margin from the edge of the page.</p>
+<p>Draft    corresponds to the Draft Quality checkbox in the Sheet tab and in the Chart tab of the Page Setup dialog box. If FALSE or omitted, graphics are printed with the sheet. If TRUE, no graphics are printed.</p>
+<p>Notes    specifies whether to print cell notes with the sheet. If TRUE, both the sheet and the cell notes are printed. If FALSE or omitted, just the sheet is printed.</p>
+<p><strong>Remarks</strong></p>
+<p>Microsoft Excel no longer requires you to enter formatting codes to format headers and footers, but the codes are still supported and recorded by the macro recorder. You can include these codes as part of the head and foot text strings to align portions of the header or footer to the left, right, or center; to include the page number, date, time, or workbook name; and to print the header or footer in bold or italic.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Formatting code</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>&amp;L</td>
+<td>Left-aligns the characters that follow.</td>
+</tr>
+<tr class="odd">
+<td>&amp;C</td>
+<td>Centers the characters that follow.</td>
+</tr>
+<tr class="even">
+<td>&amp;R</td>
+<td>Right-aligns the characters that follow.</td>
+</tr>
+<tr class="odd">
+<td>&amp;B</td>
+<td>Turns bold printing on or off (now obsolete).</td>
+</tr>
+<tr class="even">
+<td>&amp;I</td>
+<td>Turns italic printing on or off.</td>
+</tr>
+<tr class="odd">
+<td>&amp;U</td>
+<td>Turns single underlining printing on or off.</td>
+</tr>
+<tr class="even">
+<td>&amp;S</td>
+<td>Turns strikethrough printing on or off.</td>
+</tr>
+<tr class="odd">
+<td>&amp;O</td>
+<td>Turns outline printing on or off (Macintosh only).</td>
+</tr>
+<tr class="even">
+<td>&amp;H</td>
+<td>Turns shadow printing on or off (Macintosh only).</td>
+</tr>
+<tr class="odd">
+<td>&amp;D</td>
+<td>Prints the current date.</td>
+</tr>
+<tr class="even">
+<td>&amp;T</td>
+<td>Prints the current time.</td>
+</tr>
+<tr class="odd">
+<td>&amp;A</td>
+<td>Prints the name of the sheet</td>
+</tr>
+<tr class="even">
+<td>&amp;F</td>
+<td>Prints the name of the workbook.</td>
+</tr>
+<tr class="odd">
+<td>&amp;P</td>
+<td>Prints the page number.</td>
+</tr>
+<tr class="even">
+<td>&amp;P+number</td>
+<td>Prints the page number plus number.</td>
+</tr>
+<tr class="odd">
+<td>&amp;P-number</td>
+<td>Prints the page number minus number.</td>
+</tr>
+<tr class="even">
+<td>&amp;&amp;</td>
+<td>Prints a single ampersand.</td>
+</tr>
+<tr class="odd">
+<td>&amp; "fontname, fontstyle"</td>
+<td>Prints the characters that follow in the specified font and style. Be sure to include a comma immediately following the fontname, and double quotation marks around fontname and fontstyle.</td>
+</tr>
+<tr class="even">
+<td>&amp;nn</td>
+<td>Prints the characters that follow in the specified font size. Use a two-digit number to specify a size in points.</td>
+</tr>
+<tr class="odd">
+<td>&amp;N</td>
+<td>Prints the total number of pages in the workbook.</td>
+</tr>
+<tr class="even">
+<td>&amp;E</td>
+<td>Prints a double underline</td>
+</tr>
+<tr class="odd">
+<td>&amp;X</td>
+<td>Prints the character as superscript</td>
+</tr>
+<tr class="even">
+<td>&amp;Y</td>
+<td>Prints the character as subscript</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="display.html">DISPLAY</a>   Controls screen and Info Window display</p><p><a href="get.document.html">GET.DOCUMENT</a>   Returns information about a workbook</p><p><a href="print.html">PRINT</a>   Prints the active workbook</p><p><a href="workspace.html">WORKSPACE</a>   Changes workspace settings</p>
+</body>
+</html>

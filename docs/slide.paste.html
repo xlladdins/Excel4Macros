@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>slide.paste</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="slide.paste">SLIDE.PASTE macro</h1>
+<p>This function should not be used in Microsoft Excel 95 or later because the Slide Show add-in is available only in Microsoft Excel version 5.0 or earlier versions.</p>
+<p>Equivalent to clicking the Paste button on a slide show sheet. Pastes the contents of the Clipboard as the next available slide of the active slide show sheet, and gives the slide the attributes you specify.</p>
+<p>If this function is not available, you must install the Slide Show add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>SLIDE.PASTE</strong>(effect_num, speed_num, advance_rate_num, soundfile_text)</p>
+<p><strong>SLIDE.PASTE</strong>?(effect_num, speed_num, advance_rate_num, soundfile_text)</p>
+<p>Effect_num    is a number specifying the transition effect you want to use when displaying the slide.</p>
+<ul>
+<li><blockquote>
+<p>The numbers correspond to the effects in the Effect list in the Edit Slide dialog box. The first effect in the list is 1 (None).</p>
+</blockquote></li>
+<li><blockquote>
+<p>If effect_num is omitted, the default setting is used.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Speed_num    is a number from 1 to 10 specifying the speed of the transition effect.</p>
+<ul>
+<li><blockquote>
+<p>If speed_num is omitted, the default setting is used.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If speed_num is greater than 10, Microsoft Excel uses the value 10 anyway.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If effect_num is 1 (none), speed_num is ignored.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Advance_rate_num    is a number specifying how long (in seconds) the slide is displayed before advancing to the next one.</p>
+<ul>
+<li><blockquote>
+<p>If advance_rate_num is omitted, the default setting is used.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If advance_rate_num is 0, you must press a key or click with the mouse to advance to the next slide.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Soundfile_text    is the name of a file enclosed in quotation marks and specifies sound that will be played when the slide is displayed.</p>
+<ul>
+<li><blockquote>
+<p>If soundfile_text is omitted, Microsoft Excel plays the default sound defined for the slide show sheet, if any.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If soundfile_text is empty text (""), no sound is played.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In Microsoft Excel for the Macintosh, soundfile_text also includes the number or name of the sound resource to play in the file.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Resource    is the number or name of a sound resource in soundfile_text.</p>
+<ul>
+<li><blockquote>
+<p>This argument applies only to Microsoft Excel for the Macintosh.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If resource is omitted, Microsoft Excel uses the first resource in the file.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the file does not contain a sound resource with the specified name or number, Microsoft Excel halts the macro and displays an error message.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>SLIDE.PASTE returns TRUE if it successfully pastes the slide, or FALSE if you click the Cancel button when using the dialog-box form. If the active sheet is not a slide show or is protected, SLIDE.PASTE returns the #N/A error value. If the Clipboard format is not compatible with the slide show sheet's format, SLIDE.PASTE returns the #VALUE error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula pastes the contents of the Clipboard into the active slide show sheet. The slide's transition effect is fade, at a speed of 8; it is displayed for five seconds; and Microsoft Excel plays the specified sound file:</p>
+<p>SLIDE.PASTE(3, 8, 5, "C:\SLIDES\SOUND\MACHINES.WAV")</p>
+<p>In Microsoft Excel for the Macintosh, the formula is:</p>
+<p>SLIDE.PASTE(3, 8, 5, "HARD DISK:SLIDES:SOUND:MACHINE SOUNDS")</p>
+
+</body>
+</html>

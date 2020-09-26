@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>errorbar.x-errorbar.y</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="errorbar.x-errorbar.y">ERRORBAR.X, ERRORBAR.Y macro</h1>
+<p>Adds error bars to the selected series in a chart. ERRORBAR.X adds bars showing the error factor for the X (category) axis and works for XY (scatter) charts only. ERRORBAR.Y adds bars showing the error factor for the Y (value) axis for all charts.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ERRORBAR.X</strong>(include, type, amount, minus)</p>
+<p><strong>ERRORBAR.Y</strong>(include, type, amount, minus)</p>
+<p>Include    specifies the type of error value to include:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Include</strong></td>
+<td><strong>Type of error value</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Plus and minus</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Plus</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Minus</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Type    specifies the type of error bars to display:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td><strong>Type of error displayed</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Fixed amount</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Percent</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Multiplying factor standard deviation (default value is 1)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Standard error</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Custom</td>
+</tr>
+</tbody>
+</table>
+<p>Amount    is the range of error values to display. This argument depends on the value of type:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>If type is</strong></td>
+<td><strong>then amount</strong></td>
+</tr>
+<tr class="even">
+<td>1 or omitted</td>
+<td>Can be any number greater than 0</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Can be any number greater than 0</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Can be any number greater than or 0</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Not required</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Is the positive amount for custom error bars</td>
+</tr>
+</tbody>
+</table>
+<p>Minus    is the negative amount for custom error bars. Applicable only if type is 5.</p>
+<p><strong>Remarks</strong></p>
+<p>For the amount argument, standard deviation(s) can be calculated using this equation:</p>
+<p><img src="./media/image1.png" /></p>
+<p>The standard deviation is multiplied by the value specified by amount and the error bars are placed this distance from the arithmetic mean. Therefore, these error bars are plotted along the arithmetic mean, not attached to data series.</p>
+<p>Microsoft Excel calculates the standard error using the following equation:</p>
+<p><img src="./media/image2.png" /></p>
+<p>Both the standard deviation and standard error functions use the following variables:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Equals</strong></td>
+</tr>
+<tr class="even">
+<td>s</td>
+<td>Series number</td>
+</tr>
+<tr class="odd">
+<td>i</td>
+<td>Point number in series s</td>
+</tr>
+<tr class="even">
+<td>m</td>
+<td>Number of series for point y in chart</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td>Number of points in each series</td>
+</tr>
+<tr class="even">
+<td>Yi</td>
+<td>Data value of series s and the ith point</td>
+</tr>
+<tr class="odd">
+<td>Ny</td>
+<td>Total number of data values in all series</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>Arithmetic mean</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

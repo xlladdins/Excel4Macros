@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>goal.seek</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="goal.seek">GOAL.SEEK macro</h1>
+<p>Equivalent to clicking the Goal Seek command on the Tools menu. Calculates the values necessary to achieve a specific goal. If the goal is an amount returned by a formula, the GOAL.SEEK function calculates values that, when supplied to your formula, cause your formula to return the amount you want.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GOAL.SEEK</strong>(<strong>target_cell, target_value, variable_cell</strong>)</p>
+<p><strong>GOAL.SEEK</strong>?(target_cell, target_value, variable_cell)</p>
+<p>Target_cell    corresponds to the Set Cell box in the Goal Seek dialog box and is a reference to the cell containing the formula. If target_cell does not contain a formula, Microsoft Excel displays an error message.</p>
+<p>Target_value    corresponds to the To Value box in the Goal Seek dialog box and is the value you want the formula in target_cell to return. This value is called a goal.</p>
+<p>Variable_cell    corresponds to the By Changing Cell box in the Goal Seek dialog box and is the single cell that you want Microsoft Excel to change so that the formula in target_cell returns target_value. Target_cell must depend on variable_cell; if it does not, Microsoft Excel will not be able to find a solution.</p>
+<p><strong>Remarks</strong></p>
+<p>The max_num and max_change values set with the CALCULATION function can be used to change the solution process. Max_num sets the number of iterations; max_change determines the precision of the solution.</p>
+<p><strong>Tip</strong>   You can also use Microsoft Excel Solver to help solve your math equations for optimal values.</p>
+<p><strong>Related Functions</strong></p>
+<p>Related functions include the SOLVER functions, such as SOLVER.OPTIONS, SOLVER.SOLVE, and so on.</p>
+
+</body>
+</html>

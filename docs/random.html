@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>random</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="random">RANDOM macro</h1>
+<p>Fills a range with independent random or patterned numbers drawn from one of several distributions.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p>RANDOM provides six different random distributions and one patterned data option. Because the distributions require different argument lists, there are seven syntax forms for RANDOM.</p>
+<p><strong>Syntax 1</strong></p>
+<p>Uniform distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>from, to</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, from, to)</p>
+<p><strong>Syntax 2</strong></p>
+<p>Normal distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>mean, standard_dev</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, mean, standard_dev)</p>
+<p><strong>Syntax 3</strong></p>
+<p>Bernoulli distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>probability</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, probability)</p>
+<p><strong>Syntax 4</strong></p>
+<p>Binomial distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>probability, trials</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, probability, trials)</p>
+<p><strong>Syntax 5</strong></p>
+<p>Poisson distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>lambda</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, lambda)</p>
+<p><strong>Syntax 6</strong></p>
+<p>Patterned distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>from, to, step, repeat_num, repeat_seq</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, from, to, step, repeat_num, repeat_seq)</p>
+<p><strong>Syntax 7</strong></p>
+<p>Discrete distribution</p>
+<p><strong>RANDOM</strong>(outrng, variables, points, <strong>distribution</strong>, seed, <strong>inprng</strong>)</p>
+<p><strong>RANDOM</strong>?(outrng, variables, points, distribution, seed, inprng)</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output table or the name, as text, of a new sheet to contain the output table. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Variables    is the number of random number sets to generate. RANDOM will generate variables columns of random numbers. If omitted, variables is equal to the number of columns in the output range.</p>
+<p>Points    is the number of data points per random number set. RANDOM will generate points rows of random numbers for each random number set. If omitted, points is equal to the number of rows in the output range. Points is ignored when distribution is 6 (Patterned).</p>
+<p>Distribution    indicates the type of number distribution.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Distribution</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Distribution type</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>Uniform</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>Normal</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>Bernoulli</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>4</p>
+</blockquote></td>
+<td><blockquote>
+<p>Binomial</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td><blockquote>
+<p>Poisson</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>6</p>
+</blockquote></td>
+<td><blockquote>
+<p>Patterned</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>7</p>
+</blockquote></td>
+<td><blockquote>
+<p>Discrete</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Seed    is an optional value with which to begin random number generation. Seed is ignored when distribution is 6 (Patterned) or 7 (Discrete).</p>
+<p>From    is the lower bound.</p>
+<p>To    is the upper bound.</p>
+<p>Mean    is the mean.</p>
+<p>Standard_dev    is the standard deviation.</p>
+<p>Probability    is the probability of success on each trial.</p>
+<p>Trials    is the number of trials.</p>
+<p>Lambda    is the Poisson distribution parameter.</p>
+<p>Step    is the increment between from and to.</p>
+<p>Repeat_num    is the number of times to repeat each value.</p>
+<p>Repeat_seq    is the number of times to repeat each sequence of values.</p>
+<p>Inprng    is a two-column range of values and their probabilities.</p>
+
+</body>
+</html>

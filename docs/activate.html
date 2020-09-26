@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>activate</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="activate">ACTIVATE macro</h1>
+<p>Switches to a window if more than one window is open, or a pane of a window if the window is split and its panes are not frozen. Switching to a pane is useful with functions such as VSCROLL, HSCROLL, and GOTO, which operate only on the active pane.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ACTIVATE</strong>(window_text, pane_num)</p>
+<p><strong>ACTIVATE</strong>?(window_text, pane_num)</p>
+<p>Window_text    is text specifying the name of a window to switch to: for example, "Book1" or "Book1:2".</p>
+<ul>
+<li><blockquote>
+<p>If a workbook is displayed in more than one window and window_text does not specify which window to switch to, the first window containing that workbook is switched to.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If window_text is omitted, the active window is not changed.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Pane_num    is a number from 1 to 4 specifying which pane to switch to. If pane_num is omitted and the window has more than one pane, the active pane is not changed.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Pane_num</strong></td>
+<td><strong>Activates</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Upper-left pane of the active sheet. If the window is not split, this is the only pane. If the window is split only horizontally, this is the upper pane. If the window is split only vertically, this is the left pane.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Upper-right pane of the active sheet. If the window is split only vertically, this is the right pane. If the window is split only horizontally, an error occurs.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Lower-left pane of the active sheet. If the window is split only horizontally, this is the lower pane. If the window is split only vertically, an error occurs.</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Lower-right pane of the active sheet. If the window is split into only two panes either vertically or horizontally, an error occurs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Functions</strong></p>
+<p><a href="activate.next-activate.prev.html">ACTIVATE.NEXT</a>   Switches to the next window, or switches to the next sheet in a workbook</p><p><a href="activate.next-activate.prev.html">ACTIVATE.PREV</a>   Switches to the previous window, or switches to the previous sheet in a workbook</p><p><a href="documents.html">DOCUMENTS</a>   Returns the names of the specified open workbooks</p><p><a href="freeze.panes.html">FREEZE.PANES</a>   Freezes the panes of a window so that they do not scroll</p><p><a href="on.window.html">ON.WINDOW</a>   Runs a macro when you switch to a window</p><p><a href="split.html">SPLIT</a>   Splits a window</p><p><a href="windows.html">WINDOWS</a>   Returns the names of all open windows</p><p><a href="workbook.select.html">WORKBOOK.SELECT</a>   Select a sheet in a workbook</p>
+</body>
+</html>

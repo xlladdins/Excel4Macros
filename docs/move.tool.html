@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>move.tool</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="move.tool">MOVE.TOOL macro</h1>
+<p>Moves or copies a button from one toolbar to another.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>MOVE.TOOL</strong>(<strong>from_bar_id, from_bar_position</strong>, to_bar_id, to_bar_position, copy, width)</p>
+<p>From_bar_id    specifies the number or name of a toolbar from which you want to move or copy the button. For detailed information, see the description of bar_id in ADD.TOOL.</p>
+<p>From_bar_position    specifies the current position of the button within the toolbar. From_bar_position starts with 1 at the left side (if horizontal) or at the top (if vertical).</p>
+<p>To_bar_id    specifies the number or name of a toolbar to which you want to move or paste the button. For detailed information, see the description of bar_id in ADD.TOOL. To_bar_id is optional if you are moving a button within the same toolbar.</p>
+<p>To_bar_position    specifies where you want to move or paste the button within the toolbar. To_bar_position starts with 1 at the left side (if horizontal) or at the top (if vertical). To_bar_position is optional if you are only adjusting the width of a drop-down list.</p>
+<p>Copy    is a logical value specifying whether to copy the button. If copy is TRUE, the button is copied; if FALSE or omitted, the button is moved.</p>
+<p>Width    is the width, measured in points, of a drop-down list. If the button you are moving is not a drop-down list, width is ignored.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds one or more buttons to a toolbar</p><p><a href="copy.tool.html">COPY.TOOL</a>   Copies a button face to the Clipboard</p><p><a href="get.tool.html">GET.TOOL</a>   Returns information about a button or buttons on a toolbar</p>
+</body>
+</html>

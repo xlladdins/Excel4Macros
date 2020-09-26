@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>app.activate</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="app.activate">APP.ACTIVATE macro</h1>
+<p>Switches to an application. Use APP.ACTIVATE to switch to another application that is already running or that you have started by using EXEC.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>APP.ACTIVATE</strong>(title_text, wait_logical)</p>
+<p><strong>Important   </strong>Microsoft Excel for the Macintosh requires system software version 7.0 or later for this function.</p>
+<p>Title_text    is the name of an application as displayed in its title bar.</p>
+<ul>
+<li><blockquote>
+<p>If title_text is omitted, APP.ACTIVATE switches to Microsoft Excel.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If title_text is not a currently running application, APP.ACTIVATE returns the #VALUE! error value and interrupts the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Title_text is not necessarily the name of the application file. Use the text that appears in the title bar of the application, which might include the name of the open workbook and path information.</p>
+</blockquote></li>
+<li><blockquote>
+<p>In Microsoft Excel for the Macintosh, title_text can also refer to the Process Serial Number (PSN) that is returned by an EXEC function.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Wait_logical    is a logical value determining when to switch to the application specified by title_text.</p>
+<ul>
+<li><blockquote>
+<p>If wait_logical is TRUE, Microsoft Excel waits to be switched to before switching to the application specified by title_text.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If wait_logical is FALSE or omitted, Microsoft Excel immediately switches to the application specified by title_text.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>If you are running an application using Microsoft Excel macros, and you want to switch to a third application without switching to Microsoft Excel first, use FALSE as the wait_logical argument. With FALSE, you can use the application title_text without having to switch to Microsoft Excel first.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula switches to Microsoft Word, which is currently displaying the workbook MONTHRPT.DOC in full screen mode:</p>
+<p>APP.ACTIVATE("MICROSOFT WORD - MONTHRPT.DOC")</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula switches to Microsoft Word:</p>
+<p>APP.ACTIVATE("MICROSOFT WORD")</p>
+<p><strong>Tip</strong>   Use an IF statement with APP.ACTIVATE to run an EXEC function if the application you want to switch to is not yet running.</p>
+<p><strong>Related Functions</strong></p>
+<p>The first five functions following are only for Microsoft Excel for Windows.</p>
+<p><a href="app.maximize.html">APP.MAXIMIZE</a>   Maximizes the Microsoft Excel application window</p><p><a href="app.minimize.html">APP.MINIMIZE</a>   Minimizes the Microsoft Excel application window</p><p><a href="app.move.html">APP.MOVE</a>   Moves the Microsoft Excel application window</p><p><a href="app.restore.html">APP.RESTORE</a>   Restores the Microsoft Excel application window</p><p><a href="app.size.html">APP.SIZE</a>   Changes the size of the Microsoft Excel application window</p><p><a href="exec.html">EXEC</a>   Starts another application</p>
+</body>
+</html>

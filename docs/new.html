@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>new</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="new">NEW macro</h1>
+<p>Equivalent to clicking the New command on the File menu. Creates a new Microsoft Excel workbook or opens a template.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>NEW</strong>(type_num, xy_series, add_logical)</p>
+<p><strong>NEW</strong>?(type_num, xy_series, add_logical)</p>
+<p>Type_num    specifies the type of workbook to create, as shown in the following table. Type_num is most often 5 or quoted text; other values are mainly for compatibility with Microsoft Excel version 4.0.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Workbook</strong></td>
+</tr>
+<tr class="even">
+<td>Omitted</td>
+<td>New workbook with a single worksheet of the same type as the active worksheet</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>New workbook with one worksheet</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>New workbook with one chart based on the current selection</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>New workbook with one macro sheet</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>New workbook with one international macro sheet</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>New workbook with 16 worksheets or based on the default workbook</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>New workbook with one Visual Basic module</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>New workbook with one dialog sheet</td>
+</tr>
+<tr class="even">
+<td>Quoted text</td>
+<td>Template.</td>
+</tr>
+</tbody>
+</table>
+<p>Xy_series    is a number from 0 to 3 that specifies how data is arranged in a chart.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Xy_series</strong></td>
+<td><strong>Result</strong></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>Displays a dialog box if the selection is ambiguous.</td>
+</tr>
+<tr class="odd">
+<td>1 or omitted</td>
+<td>The first row/column is the first data series.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>The first row/column contains the category (x) axis labels.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>The first row/column contains the x-values; the created chart is an xy (scatter) chart.</td>
+</tr>
+</tbody>
+</table>
+<p>Add_logical    specifies whether or not to add the sheet type to the open workbook. If add_logical is TRUE, the sheet type is inserted before the current sheet; if FALSE or omitted, it is not inserted. This argument is for compatibility with Microsoft Excel version 4.0.</p>
+<p>Add_logical is ignored if type_num is 5.</p>
+<p><strong>Remarks</strong></p>
+<p>You can also use NEW to create new sheets from templates that exist in the startup directory or folder, using for type_num the text that appears in the File New list box. To create new sheets from any template that is not in the start-up directory, use the OPEN function.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="new.window.html">NEW.WINDOW</a>   Creates a new window for an existing worksheet or macro sheet</p><p><a href="open.html">OPEN</a>   Opens a workbook</p>
+</body>
+</html>

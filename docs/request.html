@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>request</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="request">REQUEST macro</h1>
+<p>Requests an array of a specific type of information from an application with which you have a dynamic data exchange (DDE) link. Use REQUEST with other Microsoft Excel DDE functions to move information from another application into Microsoft Excel.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>REQUEST</strong>(<strong>channel_num, item_text</strong>)</p>
+<p><strong>Important</strong>   Microsoft Excel for the Macintosh requires system software version 7.0 or later for this function.</p>
+<p>Channel_num    is a number returned by a previously run INITIATE function. Channel_num refers to a channel through which Microsoft Excel communicates with another program.</p>
+<p>Item_text    is a code indicating the type of information you want to request from another application. The form of item_text depends on the application connected to channel_num.</p>
+<p>REQUEST returns the data as an array. For example, suppose the remote data to be returned came from a sheet that looked like the following illustration.</p>
+<p><img src="./media/image1.png" /></p>
+<p>REQUEST would return that data as the following array:</p>
+<p>{1, 2, 3;4, 5, 6}</p>
+<p>If REQUEST is not successful, it returns the following error values.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Value returned</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Situation</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>#VALUE!</p>
+</blockquote></td>
+<td><blockquote>
+<p>Channel_num is not a valid channel number.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>#N/A</p>
+</blockquote></td>
+<td><blockquote>
+<p>The application you are accessing is busy doing something else.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>#DIV/0!</p>
+</blockquote></td>
+<td><blockquote>
+<p>The application you are accessing does not respond after a certain length of time, or you have pressed ESC or COMMAND+PERIOD to cancel.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>#REF!</p>
+</blockquote></td>
+<td><blockquote>
+<p>The request is refused.</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tip   </strong>Use the ERROR.TYPE function to distinguish between the different error values.</p>
+<p><strong>Example</strong></p>
+<p>Suppose you had opened a DDE channel to Microsoft Word for Windows. WChan contains the number of the open channel. In Microsoft Excel for Windows, the following function returns the text specified by the bookmark named BMK1.</p>
+<p>=REQUEST(WChan, "BMK1")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="execute.html">EXECUTE</a>   Carries out a command in another application</p><p><a href="initiate.html">INITIATE</a>   Opens a channel to another application</p><p><a href="poke.html">POKE</a>   Sends data to another application</p><p><a href="send.keys.html">SEND.KEYS</a>   Sends a key sequence to another application</p><p><a href="terminate.html">TERMINATE</a>   Closes a dynamic data exchange (DDE) channel previously opened with the INITIATE function</p>
+</body>
+</html>

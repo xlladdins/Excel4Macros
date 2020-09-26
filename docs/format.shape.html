@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>format.shape</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="format.shape">FORMAT.SHAPE macro</h1>
+<p>Equivalent to clicking the reshape button on the Drawing toolbar and then inserting, moving, or deleting vertices of the selected polygon. A vertex is a point defined by a pair of coordinates in one row of the array that defines the polygon. The array is created by CREATE.OBJECT and EXTEND.POLYGON functions.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.SHAPE</strong>(<strong>vertex_num, insert</strong>, reference, x_offset, y_offset)</p>
+<p>Vertex_num    is a number corresponding to the vertex you want to insert, move, or delete.</p>
+<p>Insert    is a logical value specifying whether to insert a vertex, or move or delete a vertex.</p>
+<ul>
+<li><blockquote>
+<p>If insert is TRUE, Microsoft Excel inserts a vertex between the vertices vertex_num and vertex_num-1. The number of the new vertex then becomes vertex_num. The number of the vertex previously identified by vertex_num becomes vertex_num+1, and so on.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If insert is FALSE, Microsoft Excel deletes the vertex (if the remaining arguments are omitted) or moves the vertex to the position specified by the remaining arguments.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Reference    is the reference from which the vertex you are inserting or moving is measured; that is, the cell or range of cells to use as the basis for the x and y offsets.</p>
+<ul>
+<li><blockquote>
+<p>If reference is a range of cells, only the upper-left cell is used.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If reference is omitted, the vertex is measured from the upper-left corner of the polygon's bounding rectangle.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>X_offset    is the horizontal distance from the upper-left corner of reference to the vertex. X_offset is measured in points. A point is 1/72nd of an inch. If reference is omitted, x_offset specifies the horizontal distance from the upper-left corner of the polygon bounding rectangle.</p>
+<p>Y_offset    is the vertical distance from the upper-left corner of reference to the vertex. Y_offset is measured in points. If reference is omitted, y_offset specifies the vertical distance from the upper-left corner of the polygon bounding rectangle.</p>
+<p><strong>Remarks</strong></p>
+<p>You cannot delete a vertex if only two vertices remain.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formula deletes the second vertex of the selected polygon:</p>
+<p>FORMAT.SHAPE(2, FALSE)</p>
+<p>The following macro formula moves the thirteenth vertex 6 points to the right and 4 points below the upper-left corner of cell B5 on the active worksheet:</p>
+<p>FORMAT.SHAPE(13, FALSE, !$B$5, 6, 4)</p>
+<p>The following macro formula inserts a new vertex between vertices 2 and 3. The new vertex is 60 points to the right and 75 points below the upper-left corner of the polygon's bounding rectangle:</p>
+<p>FORMAT.SHAPE(3, TRUE, , 60, 75)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="extend.polygon.html">EXTEND.POLYGON</a>   Adds vertices to a polygon</p>
+</body>
+</html>

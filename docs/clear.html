@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>clear</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="clear">CLEAR macro</h1>
+<p>Equivalent to clicking the Clear command on the Edit menu. Clears contents, formats, notes, or all of these from the active worksheet or macro sheet. Clears series or formats from the active chart.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>CLEAR</strong>(type_num)</p>
+<p><strong>CLEAR</strong>?(type_num)</p>
+<p>Type_num    is a number from 1 to 4 specifying what to clear. Only values 1, 2, and 3 are valid if the selected item is a chart.</p>
+<p>On a worksheet or macro sheet, or if an entire chart is selected, the following occurs.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Clears</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>All</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Formats (if a chart, clears the chart format or clears pictures)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Contents (if a chart, clears all data series)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Comments (this does not apply to charts)</td>
+</tr>
+</tbody>
+</table>
+<p>On a chart, if a single point, an entire data series, error bars, or a trend line is selected, the following occurs.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Clears</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Selected series, error bars, or trend line</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Format in the selected point, series, error bars, or trend line</td>
+</tr>
+</tbody>
+</table>
+<p>If type_num is omitted, the default values are set as shown in the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Active sheet</strong></td>
+<td><strong>Type_num</strong></td>
+</tr>
+<tr class="even">
+<td>Worksheet</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Macro sheet</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Chart (with no selection)</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Chart (with item selected)</td>
+<td>Deletes the selected item</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Function</strong></p>
+<p>EDIT.DELETE   Removes cells from a sheet</p>
+
+</body>
+</html>

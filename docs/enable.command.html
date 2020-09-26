@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>enable.command</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="enable.command">ENABLE.COMMAND macro</h1>
+<p>Enables or disables a custom command or menu. Disabled commands appear dimmed and can't be chosen. Use ENABLE.COMMAND to control which commands the user can click in a menu bar.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ENABLE.COMMAND</strong>(<strong>bar_num</strong>, <strong>menu</strong>, <strong>command</strong>, <strong>enable</strong>, subcommand)</p>
+<p>Bar_num    is the menu bar in which a command resides. Bar_num can be the number of a built-in menu bar or the number returned by a previously run ADD.BAR function. See ADD.COMMAND for a list of the built-in menu bar numbers.</p>
+<p>Menu    is the menu on which the command resides. Menu can be either the name of a menu as text or the number of a menu. Menus are numbered starting with 1 from the left of the screen.</p>
+<p>Command    is the command you want to enable or disable. Command can be either the name of the command as text or the number of the command. The top command on a menu is command 1. If command is 0, ENABLE.COMMAND enables or disables the entire menu.</p>
+<p>Enable    is a logical value specifying whether the command should be enabled or disabled. If enable is TRUE, Microsoft Excel enables the command; if FALSE, it disables the command.</p>
+<p>Subcommand    is the name of the command on a submenu that you want to enable. If you use subcommand, you must use command as the name of the submenu. Use subcommand 0 to enable an entire submenu.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>You cannot disable built-in commands. If the specified command is a built-in command or does not exist, ENABLE.COMMAND returns the #VALUE! error value and interrupts the macro.</p>
+</blockquote></li>
+<li><blockquote>
+<p>You can hide any shortcut menu from users by using ENABLE.COMMAND with command set to 0.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>The following macro formula disables a custom command that had been added previously to the View menu on the worksheet and macro sheet menu bar:</p>
+<p>ENABLE.COMMAND(10, "View", "Audit...", FALSE)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.bar.html">ADD.BAR</a>   Adds a menu bar</p><p><a href="add.command.html">ADD.COMMAND</a>   Adds a command to a menu</p><p><a href="check.command.html">CHECK.COMMAND</a>   Adds or deletes a check mark to or from a command</p><p><a href="delete.command.html">DELETE.COMMAND</a>   Deletes a command from a menu</p><p><a href="rename.command.html">RENAME.COMMAND</a>   Changes the name of a command or menu</p>
+</body>
+</html>

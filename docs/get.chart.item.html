@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>get.chart.item</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.chart.item">GET.CHART.ITEM macro</h1>
+<p>Returns the vertical or horizontal position of a point on a chart item. Use these position numbers with FORMAT.MOVE and FORMAT.SIZE to change the position and size of chart items. Position is measured in points; a point is 1/72nd of an inch.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.CHART.ITEM</strong>(<strong>x_y_index</strong>, point_index, item_text)</p>
+<p>X_y_index    is a number specifying which of the coordinates you want returned.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>X_y_index</strong></td>
+<td><strong>Coordinate returned</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Horizontal coordinate</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Vertical coordinate</td>
+</tr>
+</tbody>
+</table>
+<p>Point_index    is a number specifying the point on the chart item. These indexes are described below. If point_index is omitted, it is assumed to be 1.</p>
+<ul>
+<li><blockquote>
+<p>If the specified item is a point, point_index must be 1.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If the specified item is any line other than a data line, use the following values for point_index.</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Point_index</strong></td>
+<td><strong>Chart item position</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Lower or left</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Upper or right</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>If the selected item is a legend, plot area, chart area, or an area in an area chart, use the following values for point_index.</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Point_index</strong></td>
+<td><strong>Chart item position</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Upper left</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Upper middle</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Upper right</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Right middle</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Lower right</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Lower middle</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Lower left</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Left middle</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>If the selected item is an arrow in Microsoft Excel 4.0, use the following values for point_index. In Microsoft Excel version 5.0 or later, arrows are named lines, and the arrowhead position returned is equivalent to the end of a line where the arrowhead begins.</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Point_index</strong></td>
+<td><strong>Chart item position</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Arrow shaft</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Arrowhead</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<ul>
+<li><blockquote>
+<p>If the selected item is a pie slice, use the following values for point_index.</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Point_index</strong></td>
+<td><strong>Chart item position</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Outermost counterclockwise point</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Outer center point</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Outermost clockwise point</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Midpoint of the most clockwise radius</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Center point</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Midpoint of the most counterclockwise radius</td>
+</tr>
+</tbody>
+</table>
+<p>Item_text    is a selection code that specifies which item of a chart to select. See the chart form of SELECT for the item_text codes to use for each item of a chart.</p>
+<ul>
+<li><blockquote>
+<p>If item_text is omitted, it is assumed to be the currently selected item.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If item_text is omitted and no item is selected, GET.CHART.ITEM returns the #VALUE! error value.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>If the specified item does not exist, or if a chart is not active when the function is carried out, the #VALUE! error value is returned.</p>
+<p><strong>Examples</strong></p>
+<p>The following macro formulas return the horizontal and vertical locations, respectively, of the top of the main-chart value axis:</p>
+<p>GET.CHART.ITEM(1, 2, "Axis 1")</p>
+<p>GET.CHART.ITEM(2, 2, "Axis 1")</p>
+<p>You could then use FORMAT.MOVE to move a floating text item to the position returned by these two formulas.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.document.html">GET.DOCUMENT</a>   Returns information about a workbook</p><p><a href="get.formula.html">GET.FORMULA</a>   Returns the contents of a cell</p>
+</body>
+</html>

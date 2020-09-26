@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>insert.object</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="insert.object">INSERT.OBJECT macro</h1>
+<p>Equivalent to choosing the Object command from the Insert menu, and then selecting an object type and choosing the OK button. Creates an embedded object whose source data is supplied by another application. Also starts an application of the appropriate class for the specified object type.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>INSERT.OBJECT</strong>(<strong>object_class</strong>, file_name, link_logical, display_icon_logical, icon_file, icon_number, icon_label)</p>
+<p><strong>INSERT.OBJECT</strong>?(object_class, file_name, link_logical, display_icon_logical, icon_file, icon_number, icon_label)</p>
+<p>Object_class    is a text string containing the classname for the object you want to create.</p>
+<ul>
+<li><blockquote>
+<p>Object_class is the classname corresponding to the Object Type selection in the Insert Object dialog box.</p>
+</blockquote></li>
+<li><blockquote>
+<p>For more information about object classnames, consult the documentation for your source application to see how it supports object linking and embedding (OLE).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>File_name    is a text string specifying the file from which to create an OLE object.</p>
+<p>Link_logical    is a logical value indicating whether the new object based on file_name should be linked to file_name. If it is not linked, the object is created as a copy or the file. Link_logical is ignored if file_name is not specified. If link_logical is FALSE or omitted, then no link is established.</p>
+<p>Display_icon_logical    is a logical value corresponding to the Display as Icon checkbox. If it is FALSE or omitted, then the regular picture for the object is displayed. If it is TRUE, then the icon icon_number found in icon_file is displayed with the label icon_label. If display_icon_logical is not TRUE, then icon_file, icon_number, and icon_label are ignored.</p>
+<p>Icon_file    is the name of the file where the icon to display is located.</p>
+<p>Icon_number    is the number of the icon within icon_file that should be used.</p>
+<p>Icon_label    is a text string indicating a label to display beneath the icon. If the parameter is an empty string ("") or is omitted, no label is displayed.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If INSERT.OBJECT starts another application, your macro pauses. Your macro resumes when you return to Microsoft Excel.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Although you will not normally use Microsoft Excel class names in a Microsoft Excel macro, you may need them in macros written for other applications. Microsoft Excel uses classnames "Excel.Sheet.5" and "Excel.Chart.5".</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>EDIT.OBJECT   Edits an object</p>
+
+</body>
+</html>

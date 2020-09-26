@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>mail.logon</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="mail.logon">MAIL.LOGON macro</h1>
+<p>Starts a mail session.</p>
+<p><strong>Important   </strong>To use MAIL.LOGON in Microsoft Excel for Windows, you must be using a mail client that supports the Messaging Applications Programming Interface (MAPI) or Vendor-Independent Messaging (VIM). The function is available for only Microsoft Excel for Windows.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>MAIL.LOGON</strong>(name_text, password_text, download_logical)</p>
+<p><strong>MAIL.LOGON</strong>?(name_text, password_text, download_logical)</p>
+<p>Name_text    is the username of the mail account or Microsoft Exchange profile name. If omitted, prompts for username.</p>
+<p>Password_text    is the password for the account. If omitted, prompts for password. Ignored when the dialog box form is used. This argument is ignored in Microsoft Exchange.</p>
+<p>Download_logical    specifies whether to download new mail. Use TRUE to download new mail; use FALSE or leave blank to skip downloading new mail.</p>
+<p><strong>Remarks</strong></p>
+<p>Returns FALSE if you cancel the dialog box or #VALUE! if you can't log on.</p>
+<p>If you omit both name_text and password_text, Microsoft Excel tries to log on using an existing mail session.</p>
+<p><strong>Related Function</strong></p>
+<p>MAIL.LOGOFF   Ends the current mail session</p>
+
+</body>
+</html>

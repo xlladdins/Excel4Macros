@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>add.toolbar</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="add.toolbar">ADD.TOOLBAR macro</h1>
+<p>Creates a new toolbar with the specified buttons.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ADD.TOOLBAR</strong>(<strong>bar_name</strong>, tool_ref)</p>
+<p>Bar_name    is a text string identifying the toolbar you want to create.</p>
+<p>Tool_ref    is either a number specifying a built-in button or a reference to an area on the macro sheet that defines a custom button or set of buttons (or an array containing this information).</p>
+<p>For a complete description of tool_ref, see ADD.TOOL.</p>
+<p><strong>Remarks</strong></p>
+<p>If you create a toolbar without buttons, use ADD.TOOL to add them. Use SHOW.TOOLBAR to display the toolbar.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula creates Toolbar9 with one button in it. The cell range B7:I7 contains tool_ref.</p>
+<p>ADD.TOOLBAR("Toolbar9", B7:I7)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.tool.html">ADD.TOOL</a>   Adds a button to a toolbar</p><p><a href="delete.tool.html">DELETE.TOOL</a>   Deletes a button from a toolbar</p><p><a href="delete.toolbar.html">DELETE.TOOLBAR</a>   Deletes custom toolbars</p><p><a href="reset.toolbar.html">RESET.TOOLBAR</a>   Resets a built-in toolbar to its default initial setting</p><p><a href="show.toolbar.html">SHOW.TOOLBAR</a>   Hides or displays a toolbar</p>
+</body>
+</html>

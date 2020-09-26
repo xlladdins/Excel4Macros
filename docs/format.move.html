@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>format.move</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="format.move">FORMAT.MOVE macro</h1>
+<p>Equivalent to moving an object with the mouse. Moves the selected object to the specified position and, if successful, returns TRUE. If the selected object cannot be moved, FORMAT.MOVE returns FALSE. There are three syntax forms of this function. Use syntax 1 to move worksheet objects. Use syntax 2 to move chart items. Use syntax 3 to move pie-chart and doughnut-chart items. It is generally easier to use the macro recorder to enter this function on your macro sheet.</p>
+<p>Syntax 1   Moves worksheet items</p>
+<p>Syntax 2   Moves chart items</p>
+<p>Syntax 3   Moves pie-chart and doughnut-chart items</p>
+<h1 id="format.move-syntax-1">FORMAT.MOVE Syntax 1</h1>
+<p>Equivalent to moving an object with the mouse. Moves the selected object to the specified position and, if successful, returns TRUE. If the selected object cannot be moved, FORMAT.MOVE returns FALSE. There are three syntax forms of this function. Use syntax 1 to move worksheet objects. Use syntax 2 to move chart items. Use syntax 3 to move pie-chart and doughnut-chart items. It is generally easier to use the macro recorder to enter this function on your macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.MOVE</strong>(<strong>x_offset</strong>, <strong>y_offset</strong>, reference)</p>
+<p><strong>FORMAT.MOVE</strong>?(x_offset, y_offset, reference)</p>
+<p>X_offset    specifies the horizontal position to which you want to move the object and is measured in points from the upper-left corner of the object to the upper-left corner of the cell specified by reference. A point is 1/72nd of an inch.</p>
+<p>Y_offset    specifies the vertical position to which you want to move the object and is measured in points from the upper-left corner of the object to the upper-left corner of the cell specified by reference.</p>
+<p>Reference    specifies which cell or range of cells to place the object in relation to.</p>
+<ul>
+<li><blockquote>
+<p>If reference is a range of cells, only the upper-left cell is used.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If reference is omitted, it is assumed to be cell A1.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Remarks</strong></p>
+<p>The position of an object is based on its upper-left corner. For ovals and arcs, the position is based on the upper-left corner of the bounding rectangle of the object.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula moves an object on the active worksheet so that it is 10 points horizontally offset and 15 points vertically offset from cell D4:</p>
+<p>FORMAT.MOVE(10, 15, !$D$4)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.object.html">CREATE.OBJECT</a>   Creates an object</p><p><a href="format.size.html">FORMAT.SIZE</a>   Sizes an object</p><p><a href="window.move.html">WINDOW.MOVE</a>   Moves a window</p><p>Syntax 2   Moves chart items</p>
+<p>Syntax 3   Moves pie-chart and doughnut-chart items</p>
+<h1 id="format.move-syntax-2">FORMAT.MOVE Syntax 2</h1>
+<p>Equivalent to moving an object with the mouse. Moves the base of the selected object to the specified position and, if successful, returns TRUE. If the selected object cannot be moved, FORMAT.MOVE returns FALSE. There are three syntax forms of this function. Use syntax 3 to move pie-chart and doughnut-chart items. Use syntax 1 to move worksheet objects. It is generally easier to use the macro recorder to enter this function on your macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.MOVE</strong>(<strong>x_pos</strong>, <strong>y_pos</strong>)</p>
+<p><strong>FORMAT.MOVE</strong>?(x_pos, y_pos)</p>
+<p>X_pos    specifies the horizontal position to which you want to move the object and is measured in points from the base of the object to the lower-left corner of the window. A point is 1/72nd of an inch.</p>
+<p>Y_pos    specifies the vertical position to which you want to move the object and is measured in points from the base of the object to the lower-left corner of the window.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>The base of a text label on a chart is the lower-left corner of the text rectangle.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The base of an arrow is the end without the arrowhead.</p>
+</blockquote></li>
+<li><blockquote>
+<p>The base of a pie slice is the point.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>On a chart, the following macro formula moves the base of the selected chart object 10 points to the right of and 20 points above the lower-left corner of the window:</p>
+<p>FORMAT.MOVE(10, 20)</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="format.size.html">FORMAT.SIZE</a>   Sizes an object</p><p><a href="window.move.html">WINDOW.MOVE</a>   Moves a window</p><p>Syntax 1   Moves worksheet items</p>
+<p>Syntax 3   Moves pie-chart and doughnut-chart items</p>
+<h1 id="format.move-syntax-3">FORMAT.MOVE Syntax 3</h1>
+<p>Equivalent to exploding by moving a pie-chart or doughnut-chart slice with the mouse. Sets the percentage of pie-chart or doughnut-chart slice explosion, and, if successful, returns TRUE. If the selected object cannot be exploded, returns FALSE. There are three syntax forms of this function. Use syntax 1 to move worksheet items. Use syntax 2 to move chart items. It is generally easier to use the macro recorder to enter this function on your macro sheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>FORMAT.MOVE</strong>(<strong>explosion_num</strong>)</p>
+<p>Explosion_num    is a number specifying the explosion percentage for the selected pie slice or the entire chart (if the series is selected). Zero is no explosion (the tip of the slice is in the center of the pie).</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="format.size.html">FORMAT.SIZE</a>   Sizes an object</p><p>Syntax 1   Moves worksheet items</p>
+<p>Syntax 2   Moves chart items</p>
+<p><a href="window.move.html">WINDOW.MOVE</a>   Moves a window</p>
+</body>
+</html>

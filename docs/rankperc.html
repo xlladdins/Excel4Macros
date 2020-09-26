@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>rankperc</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="rankperc">RANKPERC macro</h1>
+<p>Returns a table that contains the ordinal and percent rank of each value in a data set.</p>
+<p>If this function is not available, you must install the Analysis ToolPak add-in.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>RANKPERC</strong>(<strong>inprng</strong>, outrng, grouped, labels)</p>
+<p><strong>RANKPERC</strong>?(inprng, outrng, grouped, labels)</p>
+<p>Inprng    is the input range.</p>
+<p>Outrng    is the first cell (the upper-left cell) in the output table or the name, as text, of a new sheet to contain the output table. If FALSE, blank, or omitted, places the output table in a new workbook.</p>
+<p>Grouped    is a text character that indicates whether the data in the input range is organized by row or column.</p>
+<ul>
+<li><blockquote>
+<p>If grouped is "C" or omitted, then the data is organized by column.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If grouped is "R", then the data is organized by row.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p>Labels    is a logical value that describes where the labels are located in the input range, as shown in the following table:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Labels</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Grouped</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Labels are in</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>TRUE</p>
+</blockquote></td>
+<td><blockquote>
+<p>"C"</p>
+</blockquote></td>
+<td><blockquote>
+<p>First row of the input range.</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>TRUE</p>
+</blockquote></td>
+<td><blockquote>
+<p>"R"</p>
+</blockquote></td>
+<td><blockquote>
+<p>First column of the input range.</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>FALSE or omitted</p>
+</blockquote></td>
+<td><blockquote>
+<p>(ignored)</p>
+</blockquote></td>
+<td><blockquote>
+<p>No labels. All cells in the input range are data.</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

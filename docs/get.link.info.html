@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>get.link.info</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.link.info">GET.LINK.INFO macro</h1>
+<p>Returns information about the specified link. Use GET.LINK.INFO to get information about the update settings of a link.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.LINK.INFO</strong>(<strong>link_text, type_num</strong>, type_of_link, reference)</p>
+<p>Link_text    is the path of the link as displayed in the Links dialog box, which appears when you choose the Links command from the Edit menu. The path to the file you wish to return DDE information on must be surrounded by single quotes.</p>
+<p>Type_num    is a number that specifies what type of information about the currently selected link to return. Type_num 2 applies only to publishers and subscribers in Microsoft Excel for the Macintosh.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Returns</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>If the link is set to automatic update, returns 1; otherwise 2.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Date of the latest edition as a serial number. Returns #N/A if link_text is not a publisher or a subscriber.</td>
+</tr>
+</tbody>
+</table>
+<p>Type_of_link    is a number from 1 to 6 that specifies what type of link you want to get information about.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_of_link</strong></td>
+<td><strong>Link document type</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Not applicable</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>DDE link (Microsoft Windows)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Not applicable</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Not applicable</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Publisher (Macintosh)</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Subscriber (Macintosh)</td>
+</tr>
+</tbody>
+</table>
+<p>Reference    specifies the cell range in R1C1 format of the publisher or subscriber that you want information about. Reference is required if you have more than one publisher or subscriber of a single edition name on the active workbook. Use reference to specify the location of the subscriber you want to return information about. If the subscriber is a picture, or if the publisher is an embedded chart, reference is the number of the object as displayed in the Name box.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>If Microsoft Excel cannot find link_text, or if type_of_link does not match the link specified by link_text, GET.LINK.INFO returns the #VALUE! error value.</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you have more than one subscriber to the edition link_text or if the same area is published more than once, you must specify reference.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Example</strong></p>
+<p>In Microsoft Excel for Windows, the following macro formula returns information about a DDE link to a Microsoft Word for Windows document. The document is named NEWPROD.DOC.</p>
+<p>GET.LINK.INFO("WinWord|'C:\WINWORD\NEWPROD.DOC'!DDE_LINK1", 1, 2)</p>
+<p>In Microsoft Excel for the Macintosh, the following macro formula returns information about a link to a publisher defined in cells A1:C3 on a workbook named New Products.</p>
+<p>GET.LINK.INFO("A1:C3 New Products Edition #1", 2, 5, "'New Products'!R1C1:R3C3")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="create.publisher.html">CREATE.PUBLISHER</a>   Creates a publisher from the selection</p><p><a href="subscribe.to.html">SUBSCRIBE.TO</a>   Inserts contents of an edition into the active workbook</p><p><a href="update.link.html">UPDATE.LINK</a>   Updates a link to another workbook</p>
+</body>
+</html>

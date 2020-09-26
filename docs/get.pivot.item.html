@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>get.pivot.item</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="get.pivot.item">GET.PIVOT.ITEM macro</h1>
+<p>Returns information about an item in a PivotTable report.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>GET.PIVOT.ITEM</strong>(<strong>type_num</strong>, pivot_item_name, pivot_field_name, pivot_table_name)</p>
+<p>Type_num    is a value from 1 to 9 the represents the type of information you want about an item in a PivotTable report.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Type_num</strong></td>
+<td><strong>Information</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Returns the position of the item in its field. Returns #N/A if pivot_field_name is a data field. Returns #N/A! if the item is hidden.</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Returns the reference to all the cells in the PivotTable header currently containing pivot_item_name. This reference is returned as text. If pivot_item_name is currently not showing in the PivotTable report, #N/A! is returned.</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Returns the reference to all the data in the PivotTable report which is qualified by pivot_item_name. This reference is returned as text. If pivot_item_name is currently not showing in the PivotTable report, #N/A! is returned.</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Returns an array of text constants representing the children of pivot_item_name if pivot_item_name is a parent. Otherwise the function returns #N/A!.</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Returns a text constant representing the parent of pivot_item_name, if pivot_item_name exists as part of a group. Otherwise the function returns #N/A!.</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Returns TRUE if pivot_item_name is a member of a group which is currently expanded to show detail. Returns FALSE if pivot_item_name is a member of a group currently collapsed to hide detail. If pivot_item_name is not a member of a group, the function returns #N/A!.</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Returns TRUE if pivot_item_name is expanded to show detail. Returns FALSE if pivot_item_name is collapsed to hide detail.</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Returns TRUE if the item pivot_item_name is currently visible, FALSE if it is hidden.</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Returns the name of the item as it appeared in the original at a source. This will differ from the current item name only if the user changes the name of the item after creating the PivotTable report.</td>
+</tr>
+</tbody>
+</table>
+<p>Pivot_item_name    is the name of the item that you want information about. If there is no item named pivot_item_name in the PivotTable report, returns #VALUE!.</p>
+<p>Pivot_field_name    is the name of the field that you want information about. If there is no field named pivot_field_name in the PivotTable report, returns #VALUE!.</p>
+<p>Pivot_table_name    is the name of a PivotTable report containing the field that you want information about. If omitted, uses the PivotTable report containing the active cell. If the active cell is not in a PivotTable report, the #VALUE! error value is returned.</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="get.pivot.field.html">GET.PIVOT.FIELD</a>   Returns information about an item in a PivotTable report.</p><p><a href="get.pivot.table.html">GET.PIVOT.TABLE</a>   Returns information about a PivotTable report.</p>
+</body>
+</html>

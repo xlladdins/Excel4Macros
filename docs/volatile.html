@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>volatile</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="volatile">VOLATILE macro</h1>
+<p>Specifies whether a custom worksheet function is volatile or nonvolatile. A volatile custom function is recalculated every time a calculation occurs on the worksheet.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>VOLATILE</strong>(logical)</p>
+<p>Logical    is a logical value specifying whether the custom function is volatile or nonvolatile. If logical is TRUE or omitted, the function is volatile; if FALSE, nonvolatile.</p>
+<p><strong>Remarks</strong></p>
+<ul>
+<li><blockquote>
+<p>VOLATILE must precede every other formula in the custom function except RESULT and ARGUMENT.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Normally, a worksheet recalculates a cell containing a nonvolatile custom function only when any part of the complete formula in the cell is recalculated. Use VOLATILE(TRUE) to recalculate the function every time the worksheet is recalculated.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Most custom functions are nonvolatile by default, but custom functions with reference arguments are volatile by default. Use VOLATILE(FALSE) to prevent these functions from being recalculated unnecessarily often.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<p><strong>Related Function</strong></p>
+<p>RESULT   Specifies the data type a custom function returns</p>
+
+</body>
+</html>

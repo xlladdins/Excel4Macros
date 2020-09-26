@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>attach.text</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="attach.text">ATTACH.TEXT macro</h1>
+<p>Attaches text to certain parts of the selected chart. Use ATTACH.TEXT to attach text as a title or as a label for an axis or data point.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>ATTACH.TEXT</strong>(<strong>attach_to_num</strong>, series_num, point_num)</p>
+<p><strong>ATTACH.TEXT</strong>?(attach_to_num, series_num, point_num)</p>
+<p>Attach_to_num    specifies which item on a chart to attach text to. Attach_to_num is different for 2-D and 3-D charts. Attach_to_num values for 2-D charts are shown in the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Attach_to_num</strong></td>
+<td><strong>Attaches text to</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Chart title</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Value (y) axis</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Category (x) axis</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Series and data point</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Secondary value (y) axis</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Secondary category (x) axis</td>
+</tr>
+</tbody>
+</table>
+<p>Attach_to_num values for 3-D charts are shown in the following table.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Attach_to_num</strong></td>
+<td><strong>Attaches text to</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Chart title</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Value (z) axis</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Series (y) axis</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Category (x) axis</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Series and data point</td>
+</tr>
+</tbody>
+</table>
+<p>Series_num    specifies the series number if attach_to_num specifies a series or data point. If attach_to_num specifies a series or data point and series_num is omitted, the macro is interrupted.</p>
+<p>Point_num    specifies the number of the data point, but only if you specify a series number. Point_num is required if series_num is specified, unless the chart is an area chart.</p>
+<p><strong>Remarks</strong></p>
+<p>When you record adding an axis title or a chart title, Microsoft Excel records both an ATTACH.TEXT function to attach the text and a FONT.PROPERTIES function to make the text bold.</p>
+<p><strong>Example</strong></p>
+<p>The following macro functions attach the text "Quarterly Sales" to the x (category) axis of the selected chart:</p>
+<p>ATTACH.TEXT(3)</p>
+<p>FORMULA("Quarterly Sales")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="data.label.html">DATA.LABEL</a>   Assigns text labels to point on a chart</p><p><a href="formula.html">FORMULA</a>   Enters values into a cell or range or onto a chart</p>
+</body>
+</html>

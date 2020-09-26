@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>delete.menu</title>
+<link rel="stylesheet" href="../macros.css">
+</head>
+<body>
+<h1 id="delete.menu">DELETE.MENU macro</h1>
+<p>Deletes a menu or submenu. Use DELETE.MENU to delete menus you have added to menu bars when the supporting macro sheet is closed (using an Auto_Close macro), or any time you want to remove a menu.</p>
+<p><strong>Syntax</strong></p>
+<p><strong>DELETE.MENU</strong>(<strong>bar_num, menu</strong>, submenu)</p>
+<p>Bar_num    is the menu bar from which you want to delete the menu. Bar_num can be the number of a Microsoft Excel built-in menu bar or the number returned by a previously run ADD.BAR function. For a list of ID numbers for built-in menu bars, see ADD.COMMAND.</p>
+<p>Menu    is the menu you want to delete. Menu can be either the name of a menu as text or the number of a menu. Menus are numbered starting with 1 from the left of the screen. If the specified menu does not exist, DELETE.MENU returns the #VALUE! error value and interrupts the macro. After a menu is deleted, the menu number for each menu to the right of that menu is decreased by 1.</p>
+<p>Submenu    is the name of the submenu you want to delete or the number of the menu in the list of commands.</p>
+<p><strong>Remarks</strong></p>
+<p>You cannot delete a shortcut menu. Instead, use ENABLE.COMMAND to prevent the user from accessing a shortcut menu.</p>
+<p><strong>Example</strong></p>
+<p>The following macro formula deletes the Reports menu from the custom menu bar created by the ADD.BAR function in a cell named Financials:</p>
+<p>DELETE.MENU(Financials, "Reports")</p>
+<p><strong>Related Functions</strong></p>
+<p><a href="add.menu.html">ADD.MENU</a>   Adds a menu to a menu bar</p><p><a href="add.bar.html">ADD.BAR</a>   Adds a menu bar</p><p><a href="delete.bar.html">DELETE.BAR</a>   Deletes a menu bar</p><p><a href="delete.command.html">DELETE.COMMAND</a>   Deletes a command from a menu</p><p><a href="enable.command.html">ENABLE.COMMAND</a>   Enables or disables a menu or custom command</p>
+</body>
+</html>
