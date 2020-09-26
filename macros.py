@@ -3,7 +3,10 @@
 import glob
 import lxml.etree as etree
 import lxml.html
-#from lxml import html
+import re
+
+# macro name to id map
+macro_id = dict()
 
 def header(title):
 	return f'''<html>
@@ -24,27 +27,27 @@ def split_html(html):
 	'''create files based on <h1> sections'''
 	id = ''
 	tree = lxml.html.parse(html)
-	#print(tree)
 	for x in tree.xpath('//*[count(ancestor::*) = 2]'):
 		if x.tag == 'h1' and x.text:
 			if len(id) > 1:
 				of.write(footer())
 				of.close()
-				print(f'closing docs/{id}.html')
 			id = x.attrib['id']
 			tx = x.text
+
 			#!!! split text on , to get all functons
+			for m in tx.split(", "):
+				macro_id[m] = id
+
 			if len(id) > 1:
 				of = open(f'docs/{id}.html', 'w')
 				of.write(header(tx))
 
 		if len(id) > 1:
-			#print('---')
-			#etree.dump(x)
-			#print('---')
-			#print(repr(x))
-			of.write(etree.tostring(x, encoding="unicode", method="html"))
-			#print(etree.tostring(x, encoding="unicode", method="html"))
+			line = etree.tostring(x, encoding="unicode", method="html")
+			if x.tag == 'h1':
+				line = line.replace(x.text, x.text + " macro")
+			of.write(line)
 
 	if len(id) > 1:
 		of.write(footer())
@@ -52,3 +55,7 @@ def split_html(html):
 
 for html in glob.glob('*.html'):
 	split_html(html)
+
+# Insert references
+for html in glob.glob('docs/*.html'):
+	print(html)
