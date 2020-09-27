@@ -4,6 +4,9 @@ body {
 	margin-left: 4em;
 	margin-top: 2em;
 }
+nav a {
+	text-decoration: none;
+}
 
 h1 {
 	font-size: x-large;

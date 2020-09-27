@@ -6,8 +6,6 @@ import lxml.html
 import re
 from subprocess import call
 
-# id to text map
-id_text = dict()
 
 def header(title):
 	return f'''<html>
@@ -24,6 +22,11 @@ def footer():
 </html>
 '''
 
+# id to text map
+id_text = dict()
+# id to description map
+id_desc = dict()
+
 # list of lines in file
 def lines_file(file):
 	with open(file) as f:
@@ -33,17 +36,25 @@ def lines_file(file):
 def split_lines(lines):
 	h1 = dict()
 	id = None
+	desc = False
 	pat = re.compile(r'<h1\s+id="(?P<id>\S+)">(?P<text>.+)</h1>')
 	for line in lines:
 		m = re.match(pat, line)
 		if m and not re.match(r'.*syntax.*', m.group('id')):
+			desc = True
 			id = m.group('id')
 			text = m.group('text')
 			if len(id) > 1:
-				h1[id] = []
+				h1[id] = [line]
 				id_text[id] = text
-		if id and len(id) > 1:
+		elif id and len(id) > 1:
+			if desc:
+				print(line)
+				m = re.match(r'<p>([^\.]*)\.', line)
+				print(m.group(1))
+				desc = False
 			h1[id].append(line)
+
 
 	return h1
 
@@ -92,7 +103,7 @@ with open('docs/index.html', 'w') as index:
 
 	index.write(header("Excel4Macros"))
 
-	index.write("<h1>Excel4Macros</h1>\n")
+	index.write("<h1>EXCEL4MACROS</h1>\n")
 	nav = [f'<a href="#{k}">{k}</a>' for k in macros.keys()]
 	index.write("<p>" + ' | '.join(nav) + "</p>\n")
 	for k, v in macros.items():
