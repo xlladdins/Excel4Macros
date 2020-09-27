@@ -49,9 +49,9 @@ def split_lines(lines):
 				id_text[id] = text
 		elif id and len(id) > 1:
 			if desc:
-				print(line)
 				m = re.match(r'<p>([^\.]*)\.', line)
-				print(m.group(1))
+				if m:
+					id_desc[id] = m.group(1)
 				desc = False
 			h1[id].append(line)
 
@@ -88,26 +88,34 @@ for id, lines in pages.items():
 					if macro == "GETBAR": # fix up!!!
 						macro = "GET.BAR"
 					line = f'<p><a href="{macro_id[macro]}.html">{m[1]}</a>{m[2]}{m[3]}'
-			if not re.match(r'^<p>Return to', line):
+			if re.match(r'^<p>Return to', line):
+				of.write('<p>Return to <a href="index.html">index</a></p>\n')
+			else:
 				of.write(line)
 		of.write(footer())
 
 # index
 with open('docs/index.html', 'w') as index:
+	index.write(header("Excel4Macros"))
+
+	index.write("<h1>EXCEL4MACROS</h1>\n")
 	# first letter, list of macros
 	macros = dict()
 	for m in macro_id:
 		macros[m[0]] = []
-	for m in macro_id:
-		macros[m[0]].append(m)
 
-	index.write(header("Excel4Macros"))
-
-	index.write("<h1>EXCEL4MACROS</h1>\n")
 	nav = [f'<a href="#{k}">{k}</a>' for k in macros.keys()]
-	index.write("<p>" + ' | '.join(nav) + "</p>\n")
-	for k, v in macros.items():
-		vs =  [f'<a href="{macro_id[i]}.html">{i}</a>' for i in v]
-		index.write(f'<p id="{k}">' + "  ".join(vs) + "</p>\n")
+	index.write("<nav><p>" + ' | '.join(nav) + "</p></nav>\n")
+	index.write('<table id="macros">\n<tr><th>Macro</th><th>Description</th></tr>\n')
+	A = "A"
+	for k in id_desc:
+		text = id_text[k]
+		if A == text[0]:
+			id = f' id="{A}"'
+		else:
+			id = ""
+			A = text[0]
+		index.write(f'<tr{id}><td><a href="{k}.html">{text}</a></td><td>{id_desc[k]}</td</tr>\n')
+	index.write("</table>\n")
 	
 	index.write(footer())

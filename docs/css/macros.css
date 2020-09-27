@@ -23,4 +23,6 @@ p {
 strong {
 	font-weight: bold;
 }
-
+#macros th {
+	text-align: left;
+}
