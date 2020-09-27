@@ -11,6 +11,9 @@ Microsoft Word documentation from
 [Excel Forum](https://www.excelforum.com/tips-and-tutorials/1170158-xl4-macro-functions.html)
 have been converted from `.doc` format to `.docx` format by opening the files in Word and saving them as `.docx`.
 
-Run `make` to convert these to HTML documentation in the `/docs` directory. 
+Run `make` to convert these to HTML documentation in the `/docs` directory.  
+Run `make clean` to remove all build artifacts.
+
+The documentation is published to [GitHub Pages](https://xlladdins.github.io/Excel4Macros/)
 
 [Security Baseline](https://docs.microsoft.com/en-us/archive/blogs/secguide/security-baseline-for-office-2016-and-office-365-proplus-apps-final)
