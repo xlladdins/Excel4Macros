@@ -13,7 +13,7 @@ def header(title):
 	return f'''<html>
 <head>
 <title>{title}</title>
-<link rel="stylesheet" type="text/css" href="macros.css"/>
+<link rel="stylesheet" type="text/css" href="css/macros.css"/>
 </head>
 <body>
 '''
