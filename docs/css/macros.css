@@ -23,6 +23,24 @@ p {
 strong {
 	font-weight: bold;
 }
+#macros {
+	border-collapse: collapse;
+}
+#macros tr td a {
+	text-decoration: none;
+}
+#macros tr {
+	border: 1px black;
+}
 #macros th {
 	text-align: left;
+	background-color: #dadada;
+	padding: 10px 5px;
+}
+#macros td {
+	vertical-align: top;
+	text-align: left;
+	background-color: #f4f4f4;
+	border-bottom: 1px solid LightGrey;
+	padding: 10px 5px;
 }

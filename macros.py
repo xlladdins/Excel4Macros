@@ -115,6 +115,7 @@ with open('docs/index.html', 'w') as index:
 		else:
 			id = ""
 			A = text[0]
+		text = text.replace(", ", "<br/>")
 		index.write(f'<tr{id}><td><a href="{k}.html">{text}</a></td><td>{id_desc[k]}</td</tr>\n')
 	index.write("</table>\n")
 	
