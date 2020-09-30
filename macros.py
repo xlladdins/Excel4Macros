@@ -78,7 +78,7 @@ for id, lines in pages.items():
 		of.write(header(id))
 		lines[0] = re.sub(r'</h1>', " macro</h1>", lines[0])
 		for line in lines:
-			if re.match(r'.*Related Functions.*', line):
+			if re.match(r'.*Related Function.*', line):
 				related = True
 			# add links for macros
 			if related:
@@ -87,6 +87,7 @@ for id, lines in pages.items():
 					macro = m[1]
 					if macro == "GETBAR": # fix up!!!
 						macro = "GET.BAR"
+					#!!! Tips fixup
 					line = f'<p><a href="{macro_id[macro]}.html">{m[1]}</a>{m[2]}{m[3]}'
 			if re.match(r'^<p>Return to', line):
 				of.write('<p>Return to <a href="index.html">index</a></p>\n')
